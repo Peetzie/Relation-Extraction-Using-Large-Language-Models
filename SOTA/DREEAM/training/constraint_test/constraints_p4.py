@@ -1,0 +1,93 @@
+import os
+import wandb
+import yaml
+from datetime import datetime
+import glob
+
+
+def find_best_checkpoint(path):
+    # Search for best.ckpt in the provided path and its subdirectories
+    search_pattern = os.path.join(path, "**", "best.ckpt")
+    checkpoint_files = glob.glob(search_pattern, recursive=True)
+    if checkpoint_files:
+        return os.path.dirname(
+            checkpoint_files[0]
+        )  # Return the directory containing best.ckpt
+    else:
+        raise FileNotFoundError(f"best.ckpt not found in {path}")
+
+
+def create_sweep_config(seed_val, lambda_val, constraint_type):
+    sweep_config = {
+        "method": "grid",
+        "parameters": {
+            "seed": {"values": [seed_val]},
+            "lambda_": {"values": [lambda_val]},
+            "constraint_type": {"values": [constraint_type]},
+            "epochs": {"values": [10]},  # Replace with appropriate value
+            "lr": {"values": [1e-6]},  # Replace with appropriate value
+            "max_grad_norm": {"values": [2.0]},  # Replace with appropriate value
+        },
+    }
+    return sweep_config
+
+
+def run_training_pipeline(local_config):
+    project_name = local_config["project_name"]
+    lambda_val = local_config["lambda_val"]
+    seed_val = local_config["seed_val"]
+    num_class = local_config["num_class"]
+
+    constraint_types = ["constraints", "no_constraints"]
+
+    for constraint in constraint_types:  # Create a sweep for each constraint type
+        sweep_config = create_sweep_config(seed_val, lambda_val, constraint)
+        sweep_id = wandb.sweep(sweep_config, project=project_name)
+
+        def train(config=None):
+            with wandb.init(config=config) as run:
+                config = wandb.config
+
+                constraint_label = (
+                    "Constraint"
+                    if config.constraint_type == "constraints"
+                    else "NoConstraint"
+                )
+
+                for dataset in local_config["datasets"]:
+                    dataset_name = dataset["name"]
+                    meta_dir = dataset[f"{constraint}_meta_dir"]
+                    data_dir = dataset[f"{constraint}_data_dir"]
+
+                    # Load the checkpoint from Part 3
+                    student_save_path = f"/work3/s174159/LLM_Thesis/SOTA/DREEAM/wandb_out/{project_name.replace(' ', '_')}/{dataset_name.replace(' ', '_')}_{constraint_label}_student_output_seed_{config.seed}"
+                    student_ckpt_dir = find_best_checkpoint(student_save_path)
+
+                    # Construct the training command for Part 4
+                    command = (
+                        f"sh /work3/s174159/LLM_Thesis/SOTA/DREEAM/training/4.sh "
+                        f"'4_{dataset_name.replace(' ', '_')}_FineTune' {student_ckpt_dir} {lambda_val} "
+                        f"{config.seed} {student_save_path} {meta_dir} {data_dir} {num_class} "
+                        f"{config.epochs} {config.lr} {config.max_grad_norm}"
+                    )
+
+                    print(f"Executing: {command}")
+                    os.system(command)
+
+        # Use the sweep ID in the wandb.agent call
+        wandb.agent(sweep_id, function=train)
+
+
+if __name__ == "__main__":
+    # Load the local configuration from the YAML file in the config/baseline subfolder
+    local_config_path = (
+        "/work3/s174159/LLM_Thesis/SOTA/DREEAM/training/config/constraint.yml"
+    )
+    with open(local_config_path) as config_file:
+        local_config = yaml.safe_load(config_file)
+
+    # Ensure values are correctly loaded from the config file
+    print(f"Loaded config: {local_config}")
+
+    # Run the training pipeline with the loaded local configuration
+    run_training_pipeline(local_config)

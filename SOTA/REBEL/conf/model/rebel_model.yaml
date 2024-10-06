@@ -1,0 +1,11 @@
+# @package _global_
+
+model_name_or_path: '/work3/s174159/LLM_Thesis/SOTA/REBEL/model/Rebel-large'
+config_name: '/work3/s174159/LLM_Thesis/SOTA/REBEL/model/Rebel-large'
+tokenizer_name: '/work3/s174159/LLM_Thesis/SOTA/REBEL/model/Rebel-large'
+cache_dir: '/work3/s174159/LLM_Thesis/cache_dir'
+use_fast_tokenizer: True
+
+model_revision: 'main'
+use_auth_token: False
+finetune: True

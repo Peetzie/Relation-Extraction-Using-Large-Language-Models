@@ -1,0 +1,24 @@
+# DSPY
+vllm
+dspy-ai
+matplotlib
+seaborn
+pandas
+numpy
+huggingface
+scikit-learn
+pytorch
+torchaudio
+# Custom
+openpyxl
+scikit-learn
+inquirer
+spacy
+yaspin
+inquirer
+# Fixes
+filelock
+devtools
+python-dotenv
+scikit-learn
+seaborn

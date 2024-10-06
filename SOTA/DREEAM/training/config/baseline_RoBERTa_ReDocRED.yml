@@ -1,0 +1,8 @@
+project_name: "RoBERTa - ReDocRED - BASELINE"
+dataset_name: "ReDocRED"
+lambda_val: 0.1
+seed_val: 66
+num_class: 89
+meta_dir: "/work3/s174159/LLM_Thesis/data/No_Constraints/Data_Finalized/ReDocRED/DREEAM_META"
+data_dir: "/work3/s174159/LLM_Thesis/data/No_Constraints/Data_Finalized/ReDocRED"
+#predictions_output: "/work3/s174159/LLM_Thesis/Results/DREEAM/Baseline"

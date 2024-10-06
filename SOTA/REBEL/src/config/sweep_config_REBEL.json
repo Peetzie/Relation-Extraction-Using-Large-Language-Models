@@ -1,0 +1,43 @@
+{
+    "project_name": "REBEL_REBEL_MODEL_TUNING",
+    "sweep_config": {
+        "method": "bayes",
+        "metric": {
+            "name": "val_F1_micro",
+            "goal": "maximize"
+        },
+        "early_terminate": {
+            "type": "hyperband",
+            "min_iter": 5
+        },
+        "parameters": {
+            "num_train_epochs": {
+                "min": 5,
+                "max": 25
+            },
+            "learning_rate": {
+                "min": 1e-5,
+                "max": 3e-4
+            },
+            "warmup_steps": {
+                "min": 100,
+                "max": 3000
+            },
+            "weight_decay": {
+                "min": 0.0,
+                "max": 0.1
+            },
+            "train_batch_size": {
+                "values": [
+                    4,
+                    8,
+                    16
+                ]
+            },
+            "max_grad_norm": {
+                "min": 0.5,
+                "max": 2.0
+            }
+        }
+    }
+}

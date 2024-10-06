@@ -1,0 +1,10 @@
+#bsub < Combined_RE_Rebel.sh
+bsub < Combined.sh
+bsub < CoNLL04.sh
+bsub < CrossRE.sh
+bsub < DocRED_Distant.sh
+bsub < DocRED_Joint.sh
+bsub < ReDocRED.sh
+bsub < NYT.sh
+bsub < REBEL.sh
+bsub < SciERC.sh

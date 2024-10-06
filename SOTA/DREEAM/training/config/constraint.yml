@@ -1,0 +1,10 @@
+datasets:
+  - name: "Combined_RE"
+    constraints_meta_dir: "/work3/s174159/LLM_Thesis/data/Constraints/Data_Finalized/Combined/DREEAM_META"
+    constraints_data_dir: "/work3/s174159/LLM_Thesis/data/Constraints/Data_Finalized/Combined"
+    no_constraints_meta_dir: "/work3/s174159/LLM_Thesis/data/No_Constraints/Data_Finalized/Combined/DREEAM_META"
+    no_constraints_data_dir: "/work3/s174159/LLM_Thesis/data/No_Constraints/Data_Finalized/Combined"
+project_name: "DREEAM - CombinedRE - CONSTRAINTS TESTING"
+lambda_val: 0.1
+seed_val: 66
+num_class: 131

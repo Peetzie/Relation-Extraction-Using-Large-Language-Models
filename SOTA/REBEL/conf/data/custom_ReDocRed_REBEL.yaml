@@ -1,0 +1,27 @@
+# @package _global_
+
+num_workers: 8
+dataset_name: '/work3/s174159/LLM_Thesis/SOTA/REBEL/datasets/custom.py'
+text_column: 'context'
+target_column: 'triplets'
+train_file: '/work3/s174159/LLM_Thesis/data/No_Constraints/Data_Finalized/ReDocRED/train_annotated.json'
+validation_file: '/work3/s174159/LLM_Thesis/data/No_Constraints/Data_Finalized/ReDocRED/dev.json'
+test_file: '/work3/s174159/LLM_Thesis/data/No_Constraints/Data_Finalized/ReDocRED/test.json'
+overwrite_cache: False
+preprocessing_num_workers: 
+max_source_length: 1024
+max_target_length: 128
+val_max_target_length: 128
+pad_to_max_length: False
+max_train_samples:
+max_val_samples: 
+max_test_samples: 
+num_beams: 
+eval_beams: 5
+ignore_pad_token_for_loss: True
+source_prefix: 
+relations_file: 
+relations: '/work3/s174159/LLM_Thesis/data/No_Constraints/Data_Finalized/ReDocRED/REBEL_META/relations.json'
+entities: '/work3/s174159/LLM_Thesis/data/No_Constraints/Data_Finalized/ReDocRED/REBEL_META/entities.json'
+wandb_project_name: 'Rebel model baselines (ReDocRED)'
+run_name: 'ReDocRED - Baseline - REBEL'

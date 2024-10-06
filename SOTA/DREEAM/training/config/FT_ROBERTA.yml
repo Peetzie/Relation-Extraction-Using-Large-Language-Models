@@ -1,0 +1,7 @@
+project_name: "DREEAM - RoBERTa - Combined - FT"
+dataset_name: "Combined"
+lambda_val: 0.1
+seed_val: 66
+num_class: 131
+meta_dir: "/work3/s174159/LLM_Thesis/data/No_Constraints/Data_Finalized/Reduced/DREEAM_META"
+data_dir: "/work3/s174159/LLM_Thesis/data/No_Constraints/Data_Finalized/Reduced"

@@ -1,0 +1,7276 @@
+{
+  "entity_extraction": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "sentences": "[['In', 'this', 'paper', 'we', 'introduce', 'a', 'modal', 'language', 'LT', 'for', 'imposing', 'constraints', 'on', 'trees', ',', 'and', 'an', 'extension', 'LT', '-LRB-', 'LF', '-RRB-', 'for', 'imposing', 'constraints', 'on', 'trees', 'decorated', 'with', 'feature', 'structures', '.'], ['The', 'motivation', 'for', 'introducing', 'these', 'languages', 'is', 'to', 'provide', 'tools', 'for', 'formalising', 'grammatical', 'frameworks', 'perspicuously', ',', 'and', 'the', 'paper', 'illustrates', 'this', 'by', 'showing', 'how', 'the', 'leading', 'ideas', 'of', 'GPSG', 'can', 'be', 'captured', 'in', 'LT', '-LRB-', 'LF', '-RRB-', '.'], ['In', 'addition', ',', 'the', 'role', 'of', 'modal', 'languages', '-LRB-', 'and', 'in', 'particular', ',', 'what', 'we', 'have', 'called', 'as', 'constraint', 'formalisms', 'for', 'linguistic', 'theorising', 'is', 'discussed', 'in', 'some', 'detail', '.']]",
+        "entities": [
+          [
+            {
+              "name": "modal language LT",
+              "pos": [
+                6,
+                8
+              ],
+              "sent_id": 0,
+              "type": "Method"
+            }
+          ],
+          [
+            {
+              "name": "constraints on trees",
+              "pos": [
+                11,
+                13
+              ],
+              "sent_id": 0,
+              "type": "Scientific term"
+            }
+          ],
+          [
+            {
+              "name": "extension LT -LRB- LF -RRB-",
+              "pos": [
+                17,
+                21
+              ],
+              "sent_id": 0,
+              "type": "Method"
+            }
+          ],
+          [
+            {
+              "name": "constraints on trees decorated with feature structures",
+              "pos": [
+                24,
+                30
+              ],
+              "sent_id": 0,
+              "type": "Scientific term"
+            }
+          ],
+          [
+            {
+              "name": "languages",
+              "pos": [
+                5,
+                5
+              ],
+              "sent_id": 1,
+              "type": "Other"
+            }
+          ],
+          [
+            {
+              "name": "grammatical frameworks",
+              "pos": [
+                12,
+                13
+              ],
+              "sent_id": 1,
+              "type": "Method"
+            }
+          ],
+          [
+            {
+              "name": "GPSG",
+              "pos": [
+                28,
+                28
+              ],
+              "sent_id": 1,
+              "type": "Method"
+            }
+          ],
+          [
+            {
+              "name": "LT -LRB- LF -RRB-",
+              "pos": [
+                33,
+                36
+              ],
+              "sent_id": 1,
+              "type": "Method"
+            }
+          ],
+          [
+            {
+              "name": "modal languages",
+              "pos": [
+                6,
+                7
+              ],
+              "sent_id": 2,
+              "type": "Method"
+            }
+          ],
+          [
+            {
+              "name": "constraint formalisms",
+              "pos": [
+                18,
+                19
+              ],
+              "sent_id": 2,
+              "type": "Method"
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "Used for",
+            "h": 0,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 2,
+            "t": 3,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 4,
+            "t": 5,
+            "evidence": [
+              1
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 6,
+            "t": 7,
+            "evidence": [
+              1
+            ]
+          }
+        ],
+        "entity_types": "['Method', 'Other', 'Scientific term']",
+        "relation_types": "['Used for']"
+      },
+      {
+        "sentences": "[['(', 'Text', ')', 'Crimean', 'Supreme', 'Soviet', 'Chairman', 'Mykola', 'Bahrov', 'met', 'today', 'with', 'U.S.', 'Ambassador', 'to', 'Ukraine', 'William', 'Miller.']]",
+        "entities": [
+          [
+            {
+              "name": "Mykola Bahrov",
+              "pos": [
+                7,
+                9
+              ],
+              "type": "Person",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "U.S.",
+              "pos": [
+                12,
+                13
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Ukraine",
+              "pos": [
+                15,
+                16
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "William Miller.",
+              "pos": [
+                16,
+                18
+              ],
+              "type": "Person",
+              "sent_id": 0
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "Live in",
+            "h": 3,
+            "t": 2,
+            "evidence": [
+              0
+            ]
+          }
+        ],
+        "entity_types": "['Location', 'Person']",
+        "relation_types": "['Live in']"
+      },
+      {
+        "sentences": "[['In', 'this', 'paper', ',', 'we', 'compare', 'the', 'performance', 'of', 'a', 'state-of-the-art', 'statistical', 'parser', '-LRB-', 'Bikel', ',', '2004', '-RRB-', 'in', 'parsing', 'written', 'and', 'spoken', 'language', 'and', 'in', 'generating', 'sub-categorization', 'cues', 'from', 'written', 'and', 'spoken', 'language', '.'], ['Although', 'Bikel', \"'s\", 'parser', 'achieves', 'a', 'higher', 'accuracy', 'for', 'parsing', 'written', 'language', ',', 'it', 'achieves', 'a', 'higher', 'accuracy', 'when', 'extracting', 'subcategorization', 'cues', 'from', 'spoken', 'language', '.'], ['Our', 'experiments', 'also', 'show', 'that', 'current', 'technology', 'for', 'extracting', 'subcategorization', 'frames', 'initially', 'designed', 'for', 'written', 'texts', 'works', 'equally', 'well', 'for', 'spoken', 'language', '.'], ['Additionally', ',', 'we', 'explore', 'the', 'utility', 'of', 'punctuation', 'in', 'helping', 'parsing', 'and', 'extraction', 'of', 'subcategorization', 'cues', '.'], ['Our', 'experiments', 'show', 'that', 'punctuation', 'is', 'of', 'little', 'help', 'in', 'parsing', 'spoken', 'language', 'and', 'extracting', 'subcategorization', 'cues', 'from', 'spoken', 'language', '.'], ['This', 'indicates', 'that', 'there', 'is', 'no', 'need', 'to', 'add', 'punctuation', 'in', 'transcribing', 'spoken', 'corpora', 'simply', 'in', 'order', 'to', 'help', 'parsers', '.']]",
+        "entities": [
+          [
+            {
+              "name": "statistical parser",
+              "pos": [
+                11,
+                12
+              ],
+              "sent_id": 0,
+              "type": "Method"
+            }
+          ],
+          [
+            {
+              "name": "parsing written and spoken language",
+              "pos": [
+                19,
+                23
+              ],
+              "sent_id": 0,
+              "type": "Task"
+            }
+          ],
+          [
+            {
+              "name": "generating sub-categorization cues",
+              "pos": [
+                26,
+                28
+              ],
+              "sent_id": 0,
+              "type": "Task"
+            }
+          ],
+          [
+            {
+              "name": "written and spoken language",
+              "pos": [
+                30,
+                33
+              ],
+              "sent_id": 0,
+              "type": "Material"
+            }
+          ],
+          [
+            {
+              "name": "Bikel 's parser",
+              "pos": [
+                1,
+                3
+              ],
+              "sent_id": 1,
+              "type": "Method"
+            }
+          ],
+          [
+            {
+              "name": "parsing written language",
+              "pos": [
+                9,
+                11
+              ],
+              "sent_id": 1,
+              "type": "Task"
+            }
+          ],
+          [
+            {
+              "name": "accuracy",
+              "pos": [
+                7,
+                7
+              ],
+              "sent_id": 1,
+              "type": "Metric"
+            }
+          ],
+          [
+            {
+              "name": "it",
+              "pos": [
+                13,
+                13
+              ],
+              "sent_id": 1,
+              "type": "Other"
+            }
+          ],
+          [
+            {
+              "name": "subcategorization cues",
+              "pos": [
+                20,
+                21
+              ],
+              "sent_id": 1,
+              "type": "Scientific term"
+            }
+          ],
+          [
+            {
+              "name": "spoken language",
+              "pos": [
+                23,
+                24
+              ],
+              "sent_id": 1,
+              "type": "Material"
+            }
+          ],
+          [
+            {
+              "name": "technology",
+              "pos": [
+                6,
+                6
+              ],
+              "sent_id": 2,
+              "type": "Other"
+            }
+          ],
+          [
+            {
+              "name": "extracting subcategorization frames",
+              "pos": [
+                8,
+                10
+              ],
+              "sent_id": 2,
+              "type": "Task"
+            }
+          ],
+          [
+            {
+              "name": "written texts",
+              "pos": [
+                14,
+                15
+              ],
+              "sent_id": 2,
+              "type": "Material"
+            }
+          ],
+          [
+            {
+              "name": "punctuation",
+              "pos": [
+                7,
+                7
+              ],
+              "sent_id": 3,
+              "type": "Scientific term"
+            }
+          ],
+          [
+            {
+              "name": "parsing",
+              "pos": [
+                10,
+                10
+              ],
+              "sent_id": 3,
+              "type": "Method"
+            }
+          ],
+          [
+            {
+              "name": "extraction of subcategorization cues",
+              "pos": [
+                12,
+                15
+              ],
+              "sent_id": 3,
+              "type": "Task"
+            }
+          ],
+          [
+            {
+              "name": "parsing spoken language",
+              "pos": [
+                10,
+                12
+              ],
+              "sent_id": 4,
+              "type": "Task"
+            }
+          ],
+          [
+            {
+              "name": "extracting subcategorization cues",
+              "pos": [
+                14,
+                16
+              ],
+              "sent_id": 4,
+              "type": "Task"
+            }
+          ],
+          [
+            {
+              "name": "written language",
+              "pos": [
+                10,
+                11
+              ],
+              "sent_id": 1,
+              "type": "Material"
+            }
+          ],
+          [
+            {
+              "name": "spoken corpora",
+              "pos": [
+                12,
+                13
+              ],
+              "sent_id": 5,
+              "type": "Material"
+            }
+          ],
+          [
+            {
+              "name": "parsers",
+              "pos": [
+                19,
+                19
+              ],
+              "sent_id": 5,
+              "type": "Method"
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "Used for",
+            "h": 0,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 0,
+            "t": 2,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Conjunction",
+            "h": 1,
+            "t": 2,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 3,
+            "t": 2,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 4,
+            "t": 5,
+            "evidence": [
+              1
+            ]
+          },
+          {
+            "r": "Evaluate for",
+            "h": 6,
+            "t": 4,
+            "evidence": [
+              1
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 7,
+            "t": 8,
+            "evidence": [
+              1
+            ]
+          },
+          {
+            "r": "Evaluate for",
+            "h": 6,
+            "t": 7,
+            "evidence": [
+              1
+            ]
+          },
+          {
+            "r": "Part of",
+            "h": 8,
+            "t": 9,
+            "evidence": [
+              1
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 10,
+            "t": 11,
+            "evidence": [
+              2
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 10,
+            "t": 9,
+            "evidence": [
+              2
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 11,
+            "t": 12,
+            "evidence": [
+              2
+            ]
+          },
+          {
+            "r": "Compare",
+            "h": 12,
+            "t": 9,
+            "evidence": [
+              2
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 13,
+            "t": 14,
+            "evidence": [
+              3
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 13,
+            "t": 15,
+            "evidence": [
+              3
+            ]
+          },
+          {
+            "r": "Conjunction",
+            "h": 16,
+            "t": 17,
+            "evidence": [
+              4
+            ]
+          },
+          {
+            "r": "Part of",
+            "h": 8,
+            "t": 9,
+            "evidence": [
+              4
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 9,
+            "t": 17,
+            "evidence": [
+              4
+            ]
+          }
+        ],
+        "entity_types": "['Scientific term', 'Metric', 'Task', 'Other', 'Material', 'Method']",
+        "relation_types": "['Conjunction', 'Evaluate for', 'Used for', 'Part of', 'Compare']"
+      },
+      {
+        "sentences": "[['In', 'the', 'field', 'of', 'physics', ',', 'Ouyang', 'Zhongcan', ',', 'a', 'research', 'fellow', 'at', 'the', 'Institute', 'of', 'Theoretical', 'Physics', ',', 'used', 'the', 'liquid', 'crystal', 'method', 'to', 'come', 'up', 'with', 'a', 'biological', 'membrane', 'model', '.']]",
+        "entities": [
+          [
+            {
+              "name": "Ouyang Zhongcan",
+              "pos": [
+                6,
+                8
+              ],
+              "type": "Person",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Institute of Theoretical Physics",
+              "pos": [
+                14,
+                18
+              ],
+              "type": "Organization",
+              "sent_id": 0
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "Works for",
+            "h": 0,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          }
+        ],
+        "entity_types": "['Person', 'Organization']",
+        "relation_types": "['Works for']"
+      },
+      {
+        "sentences": "[['International', 'who', \"'s\", 'who', 'in', 'popular', 'music', ',', 'Volume', '4', 'p.37.', 'Routledge', ',', '2002', 'The', 'band', 'was', 'renamed', 'Rocket', 'Baby', 'Dolls', 'and', 'adopted', 'a', 'Gothic', 'rock', '-', 'Glam', 'rock', 'image', '.']]",
+        "entities": [
+          [
+            {
+              "name": "Rocket Baby Dolls",
+              "pos": [
+                18,
+                21
+              ],
+              "type": "Band",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Gothic rock",
+              "pos": [
+                24,
+                26
+              ],
+              "type": "Music genre",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Glam rock",
+              "pos": [
+                27,
+                29
+              ],
+              "type": "Music genre",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "popular music",
+              "pos": [
+                5,
+                7
+              ],
+              "type": "Music genre",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Routledge",
+              "pos": [
+                11,
+                12
+              ],
+              "type": "Organization",
+              "sent_id": 0
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "General affiliation",
+            "h": 0,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "General affiliation",
+            "h": 0,
+            "t": 2,
+            "evidence": [
+              0
+            ]
+          }
+        ],
+        "entity_types": "['Music genre', 'Organization', 'Band']",
+        "relation_types": "['General affiliation']"
+      },
+      {
+        "sentences": "[['His', 'family', 'in', 'Italy', 'had', 'long', 'had', 'vineyards', 'in', 'Tuscany', ',', 'so', 'he', 'sought', 'a', 'good', 'place', 'to', 'grow', 'grapes', 'and', 'make', 'wine', 'in', 'his', 'adoptive', 'state', ',', 'New', 'Jersey', '.']]",
+        "entities": [
+          [
+            {
+              "name": "Italy",
+              "pos": [
+                3,
+                4
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Tuscany",
+              "pos": [
+                9,
+                10
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "New Jersey",
+              "pos": [
+                28,
+                30
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "h": 0,
+            "t": 1,
+            "r": "Located in",
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "h": 1,
+            "t": 0,
+            "r": "Located in",
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "h": 0,
+            "t": 1,
+            "r": "Contains location",
+            "evidence": [
+              0
+            ]
+          }
+        ],
+        "entity_types": "['Location']",
+        "relation_types": "['Located in', 'Contains location']"
+      },
+      {
+        "sentences": "[['For', 'decades', ',', 'America', \"'s\", 'dominance', 'of', 'grains', ',', 'especially', 'wheat', ',', 'was', 'viewed', 'as', 'a', 'potential', 'diplomatic', 'weapon', ',', 'from', 'the', 'time', 'President', 'Gerald', 'Ford', 'tried', 'to', 'trade', 'grain', 'for', 'discounted', 'oil', 'from', 'the', 'Soviet', 'Union', 'to', 'President', 'Jimmy', 'Carter', \"'s\", 'grain', 'embargo', 'against', 'Moscow', 'in', '1980', '.']]",
+        "entities": [
+          [
+            {
+              "name": "Soviet Union",
+              "pos": [
+                35,
+                37
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Moscow",
+              "pos": [
+                45,
+                46
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "America",
+              "pos": [
+                3,
+                4
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Gerald Ford",
+              "pos": [
+                24,
+                26
+              ],
+              "type": "Person",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Jimmy Carter",
+              "pos": [
+                39,
+                41
+              ],
+              "type": "Person",
+              "sent_id": 0
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "h": 0,
+            "t": 1,
+            "r": "Capital",
+            "evidence": [
+              0
+            ]
+          }
+        ],
+        "entity_types": "['Location', 'Person']",
+        "relation_types": "['Capital']"
+      },
+      {
+        "sentences": "[['PM2303111794', 'Moscow', 'IZVESTIYA', 'in', 'Russian', '23', 'Mar', '94', 'p', '3']]",
+        "entities": [
+          [
+            {
+              "name": "Moscow",
+              "pos": [
+                1,
+                2
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "IZVESTIYA",
+              "pos": [
+                2,
+                3
+              ],
+              "type": "Organization",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "23 Mar 94",
+              "pos": [
+                5,
+                8
+              ],
+              "type": "Other",
+              "sent_id": 0
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "Organization based in",
+            "h": 1,
+            "t": 0,
+            "evidence": [
+              0
+            ]
+          }
+        ],
+        "entity_types": "['Location', 'Organization', 'Other']",
+        "relation_types": "['Organization based in']"
+      },
+      {
+        "sentences": "[['The', 'Best', 'of', 'the', 'Art', 'of', 'Noise', 'is', 'the', 'name', 'of', 'a', 'series', 'of', 'compilation', 'albums', 'with', 'songs', 'by', 'the', 'British', 'synthpop', 'band', 'The', 'Art', 'of', 'Noise', '.'], ['The', 'first', 'version', 'was', 'released', 'on', 'the', 'China', 'Records', 'label', 'in', 'November', '1988', '.'], ['The', 'Best', 'of', 'the', 'Art', 'of', 'Noise', 'was', 'released', 'with', 'at', 'least', 'ten', 'different', 'track', 'listing', 'variations', 'from', '1988', 'to', '1997', '.'], ['The', 'first', 'version', 'was', 'on', 'LP', 'format', 'and', 'contained', '7', '\"', 'single', 'mixes', ',', 'while', 'the', 'corresponding', 'compact', 'disc', 'release', 'that', 'year', 'contained', 'the', 'extended', 'or', '12', '\"', 'single', 'remixes', 'of', 'all', 'of', 'the', 'tracks', '.'], ['However', ',', 'LP', 'releases', 'in', 'territories', 'such', 'as', 'Korea', 'and', 'Argentina', 'featured', 'a', 'combination', 'of', 'both', 'track', 'listings', '.'], ['A', 'Japanese', 'CD', 'version', 'from', '1991', 'was', 'identical', 'to', 'the', 'standard', 'CD', 'but', 'contained', 'two', 'more', 'mixes', 'of', '\"', 'Kiss', '\"', 'as', 'bonus', 'tracks', '.'], ['In', '1992', ',', 'China', 'Records', 'reissued', 'The', 'Best', 'of', 'and', 'added', '\"', 'Yebo', ',', '\"', '\"', 'Instruments', 'of', 'Darkness', '\"', 'and', '\"', 'Robinson', 'Crusoe', ',', '\"', 'while', 'omitting', 'the', 'three', 'tracks', 'that', 'were', 'licensed', 'from', 'ZTT', 'Records', 'and', 'included', 'on', 'the', '1988', 'release', ':', '\"', 'Beatbox', ',', '\"', '\"', 'Moments', 'in', 'Love', '\"', 'and', '\"', 'Close', '(', 'To', 'the', 'Edit', ')', '.', '\"'], ['Once', 'again', ',', 'a', 'number', 'of', 'different', 'variations', 'were', 'issued', '.'], ['The', 'United', 'Kingdom', 'and', 'Holland', 'issued', 'a', 'double', 'disc', 'limited', 'edition', 'version', 'with', 'both', 'the', 'standard', 'disc', 'of', '7', '\"', 'mixes', 'and', 'a', 'second', 'disc', 'of', 'extended', 'and', '12', '\"', 'remixes', '.'], ['The', 'compilation', 'has', 'also', 'been', 'issued', 'with', 'two', 'different', 'color', 'variations', 'on', 'the', 'cover', '.'], ['All', 'editions', 'prior', 'to', '1992', 'were', 'issued', 'with', 'a', 'blue', 'cover', ',', 'while', 'most', 'editions', 'afterward', 'had', 'a', 'pink', 'cover', '.'], ['The', 'German', 'and', 'Australian', 'editions', 'as', 'well', 'as', 'the', 'UK', '\/', 'Holland', 'limited', 'edition', 'two', 'disc', 'set', 'all', 'retained', 'the', 'blue', 'cover', '.']]",
+        "entities": [
+          [
+            {
+              "pos": [
+                0,
+                7
+              ],
+              "type": "Other",
+              "sent_id": 0,
+              "name": "The Best of the Art of Noise",
+              "global_pos": [
+                0,
+                0
+              ],
+              "index": "0_0"
+            },
+            {
+              "pos": [
+                0,
+                7
+              ],
+              "type": "Other",
+              "sent_id": 2,
+              "name": "The Best of the Art of Noise",
+              "global_pos": [
+                42,
+                42
+              ],
+              "index": "0_1"
+            },
+            {
+              "sent_id": 6,
+              "type": "Other",
+              "pos": [
+                6,
+                8
+              ],
+              "name": "The Best",
+              "global_pos": [
+                150,
+                150
+              ],
+              "index": "0_2"
+            }
+          ],
+          [
+            {
+              "name": "United Kingdom",
+              "pos": [
+                1,
+                3
+              ],
+              "sent_id": 8,
+              "type": "Location",
+              "global_pos": [
+                219,
+                219
+              ],
+              "index": "1_0"
+            },
+            {
+              "name": "UK",
+              "pos": [
+                9,
+                10
+              ],
+              "sent_id": 11,
+              "type": "Location",
+              "global_pos": [
+                295,
+                295
+              ],
+              "index": "1_1"
+            },
+            {
+              "name": "British",
+              "pos": [
+                20,
+                21
+              ],
+              "sent_id": 0,
+              "type": "Location",
+              "global_pos": [
+                20,
+                20
+              ],
+              "index": "1_2"
+            }
+          ],
+          [
+            {
+              "pos": [
+                23,
+                27
+              ],
+              "type": "Organization",
+              "sent_id": 0,
+              "name": "The Art of Noise",
+              "global_pos": [
+                23,
+                23
+              ],
+              "index": "2_0"
+            }
+          ],
+          [
+            {
+              "name": "China Records",
+              "pos": [
+                7,
+                9
+              ],
+              "sent_id": 1,
+              "type": "Organization",
+              "global_pos": [
+                35,
+                35
+              ],
+              "index": "3_0"
+            },
+            {
+              "name": "China Records",
+              "pos": [
+                3,
+                5
+              ],
+              "sent_id": 6,
+              "type": "Organization",
+              "global_pos": [
+                147,
+                147
+              ],
+              "index": "3_1"
+            }
+          ],
+          [
+            {
+              "pos": [
+                11,
+                13
+              ],
+              "type": "Time",
+              "sent_id": 1,
+              "name": "November 1988",
+              "global_pos": [
+                39,
+                39
+              ],
+              "index": "4_0"
+            }
+          ],
+          [
+            {
+              "name": "ten",
+              "pos": [
+                12,
+                13
+              ],
+              "sent_id": 2,
+              "type": "Number",
+              "global_pos": [
+                54,
+                54
+              ],
+              "index": "5_0"
+            }
+          ],
+          [
+            {
+              "pos": [
+                41,
+                42
+              ],
+              "type": "Time",
+              "sent_id": 6,
+              "name": "1988",
+              "global_pos": [
+                185,
+                185
+              ],
+              "index": "6_0"
+            },
+            {
+              "pos": [
+                18,
+                19
+              ],
+              "type": "Time",
+              "sent_id": 2,
+              "name": "1988",
+              "global_pos": [
+                60,
+                60
+              ],
+              "index": "6_1"
+            }
+          ],
+          [
+            {
+              "pos": [
+                20,
+                21
+              ],
+              "type": "Time",
+              "sent_id": 2,
+              "name": "1997",
+              "global_pos": [
+                62,
+                62
+              ],
+              "index": "7_0"
+            }
+          ],
+          [
+            {
+              "name": "LP",
+              "pos": [
+                2,
+                3
+              ],
+              "sent_id": 4,
+              "type": "Other",
+              "global_pos": [
+                102,
+                102
+              ],
+              "index": "8_0"
+            },
+            {
+              "name": "LP",
+              "pos": [
+                5,
+                6
+              ],
+              "sent_id": 3,
+              "type": "Other",
+              "global_pos": [
+                69,
+                69
+              ],
+              "index": "8_1"
+            }
+          ],
+          [
+            {
+              "pos": [
+                9,
+                10
+              ],
+              "type": "Number",
+              "sent_id": 3,
+              "name": "7",
+              "global_pos": [
+                73,
+                73
+              ],
+              "index": "9_0"
+            },
+            {
+              "pos": [
+                18,
+                19
+              ],
+              "type": "Number",
+              "sent_id": 8,
+              "name": "7",
+              "global_pos": [
+                236,
+                236
+              ],
+              "index": "9_1"
+            }
+          ],
+          [
+            {
+              "pos": [
+                26,
+                27
+              ],
+              "type": "Number",
+              "sent_id": 3,
+              "name": "12",
+              "global_pos": [
+                90,
+                90
+              ],
+              "index": "10_0"
+            },
+            {
+              "pos": [
+                28,
+                29
+              ],
+              "type": "Number",
+              "sent_id": 8,
+              "name": "12",
+              "global_pos": [
+                246,
+                246
+              ],
+              "index": "10_1"
+            }
+          ],
+          [
+            {
+              "name": "Korea",
+              "pos": [
+                8,
+                9
+              ],
+              "sent_id": 4,
+              "type": "Location",
+              "global_pos": [
+                108,
+                108
+              ],
+              "index": "11_0"
+            }
+          ],
+          [
+            {
+              "name": "Argentina",
+              "pos": [
+                10,
+                11
+              ],
+              "sent_id": 4,
+              "type": "Location",
+              "global_pos": [
+                110,
+                110
+              ],
+              "index": "12_0"
+            }
+          ],
+          [
+            {
+              "name": "Japanese",
+              "pos": [
+                1,
+                2
+              ],
+              "sent_id": 5,
+              "type": "Location",
+              "global_pos": [
+                120,
+                120
+              ],
+              "index": "13_0"
+            }
+          ],
+          [
+            {
+              "pos": [
+                5,
+                6
+              ],
+              "type": "Time",
+              "sent_id": 5,
+              "name": "1991",
+              "global_pos": [
+                124,
+                124
+              ],
+              "index": "14_0"
+            }
+          ],
+          [
+            {
+              "pos": [
+                14,
+                15
+              ],
+              "type": "Number",
+              "sent_id": 5,
+              "name": "two",
+              "global_pos": [
+                133,
+                133
+              ],
+              "index": "15_0"
+            },
+            {
+              "name": "two",
+              "pos": [
+                7,
+                8
+              ],
+              "sent_id": 9,
+              "type": "Number",
+              "global_pos": [
+                257,
+                257
+              ],
+              "index": "15_1"
+            },
+            {
+              "name": "two",
+              "pos": [
+                14,
+                15
+              ],
+              "sent_id": 11,
+              "type": "Number",
+              "global_pos": [
+                300,
+                300
+              ],
+              "index": "15_2"
+            }
+          ],
+          [
+            {
+              "pos": [
+                19,
+                20
+              ],
+              "type": "Other",
+              "sent_id": 5,
+              "name": "Kiss",
+              "global_pos": [
+                138,
+                138
+              ],
+              "index": "16_0"
+            }
+          ],
+          [
+            {
+              "pos": [
+                1,
+                2
+              ],
+              "type": "Time",
+              "sent_id": 6,
+              "name": "1992",
+              "global_pos": [
+                145,
+                145
+              ],
+              "index": "17_0"
+            },
+            {
+              "pos": [
+                4,
+                5
+              ],
+              "type": "Time",
+              "sent_id": 10,
+              "name": "1992",
+              "global_pos": [
+                269,
+                269
+              ],
+              "index": "17_1"
+            }
+          ],
+          [
+            {
+              "pos": [
+                12,
+                13
+              ],
+              "type": "Other",
+              "sent_id": 6,
+              "name": "Yebo",
+              "global_pos": [
+                156,
+                156
+              ],
+              "index": "18_0"
+            }
+          ],
+          [
+            {
+              "name": "Instruments of Darkness",
+              "pos": [
+                16,
+                19
+              ],
+              "sent_id": 6,
+              "type": "Other",
+              "global_pos": [
+                160,
+                160
+              ],
+              "index": "19_0"
+            }
+          ],
+          [
+            {
+              "name": "Robinson Crusoe",
+              "pos": [
+                22,
+                24
+              ],
+              "sent_id": 6,
+              "type": "Other",
+              "global_pos": [
+                166,
+                166
+              ],
+              "index": "20_0"
+            }
+          ],
+          [
+            {
+              "name": "three",
+              "pos": [
+                29,
+                30
+              ],
+              "sent_id": 6,
+              "type": "Number",
+              "global_pos": [
+                173,
+                173
+              ],
+              "index": "21_0"
+            }
+          ],
+          [
+            {
+              "name": "ZTT Records",
+              "pos": [
+                35,
+                37
+              ],
+              "sent_id": 6,
+              "type": "Organization",
+              "global_pos": [
+                179,
+                179
+              ],
+              "index": "22_0"
+            }
+          ],
+          [
+            {
+              "name": "Beatbox",
+              "pos": [
+                45,
+                46
+              ],
+              "sent_id": 6,
+              "type": "Other",
+              "global_pos": [
+                189,
+                189
+              ],
+              "index": "23_0"
+            }
+          ],
+          [
+            {
+              "name": "Moments in Love",
+              "pos": [
+                49,
+                52
+              ],
+              "sent_id": 6,
+              "type": "Other",
+              "global_pos": [
+                193,
+                193
+              ],
+              "index": "24_0"
+            }
+          ],
+          [
+            {
+              "sent_id": 6,
+              "type": "Other",
+              "pos": [
+                55,
+                56
+              ],
+              "name": "Close",
+              "global_pos": [
+                199,
+                199
+              ],
+              "index": "25_0"
+            }
+          ],
+          [
+            {
+              "name": "Holland",
+              "pos": [
+                4,
+                5
+              ],
+              "sent_id": 8,
+              "type": "Location",
+              "global_pos": [
+                222,
+                222
+              ],
+              "index": "26_0"
+            },
+            {
+              "name": "Holland",
+              "pos": [
+                11,
+                12
+              ],
+              "sent_id": 11,
+              "type": "Location",
+              "global_pos": [
+                297,
+                297
+              ],
+              "index": "26_1"
+            }
+          ],
+          [
+            {
+              "name": "German",
+              "pos": [
+                1,
+                2
+              ],
+              "sent_id": 11,
+              "type": "Location",
+              "global_pos": [
+                287,
+                287
+              ],
+              "index": "27_0"
+            }
+          ],
+          [
+            {
+              "name": "Australian",
+              "pos": [
+                3,
+                4
+              ],
+              "sent_id": 11,
+              "type": "Location",
+              "global_pos": [
+                289,
+                289
+              ],
+              "index": "28_0"
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "Record label",
+            "h": 19,
+            "t": 3,
+            "evidence": [
+              6
+            ]
+          },
+          {
+            "r": "Publication date",
+            "h": 19,
+            "t": 17,
+            "evidence": [
+              6
+            ]
+          },
+          {
+            "r": "Performer",
+            "h": 19,
+            "t": 2,
+            "evidence": [
+              0,
+              6
+            ]
+          },
+          {
+            "r": "Publication date",
+            "h": 23,
+            "t": 6,
+            "evidence": [
+              6
+            ]
+          },
+          {
+            "r": "Record label",
+            "h": 23,
+            "t": 22,
+            "evidence": [
+              6
+            ]
+          },
+          {
+            "r": "Performer",
+            "h": 23,
+            "t": 2,
+            "evidence": [
+              0,
+              6
+            ]
+          },
+          {
+            "r": "Publication date",
+            "h": 24,
+            "t": 6,
+            "evidence": [
+              6
+            ]
+          },
+          {
+            "r": "Record label",
+            "h": 24,
+            "t": 22,
+            "evidence": [
+              6
+            ]
+          },
+          {
+            "r": "Performer",
+            "h": 24,
+            "t": 2,
+            "evidence": [
+              0,
+              6
+            ]
+          },
+          {
+            "r": "Record label",
+            "h": 0,
+            "t": 3,
+            "evidence": [
+              1,
+              6
+            ]
+          },
+          {
+            "r": "Performer",
+            "h": 0,
+            "t": 2,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Publication date",
+            "h": 0,
+            "t": 4,
+            "evidence": [
+              1
+            ]
+          },
+          {
+            "r": "Record label",
+            "h": 18,
+            "t": 3,
+            "evidence": [
+              6
+            ]
+          },
+          {
+            "r": "Performer",
+            "h": 18,
+            "t": 2,
+            "evidence": [
+              0,
+              6
+            ]
+          },
+          {
+            "r": "Record label",
+            "h": 20,
+            "t": 3,
+            "evidence": [
+              6
+            ]
+          },
+          {
+            "r": "Country of origin",
+            "h": 20,
+            "t": 1,
+            "evidence": [
+              0,
+              6
+            ]
+          },
+          {
+            "r": "Performer",
+            "h": 20,
+            "t": 2,
+            "evidence": [
+              0,
+              6
+            ]
+          },
+          {
+            "r": "Record label",
+            "h": 25,
+            "t": 22,
+            "evidence": [
+              6
+            ]
+          },
+          {
+            "r": "Performer",
+            "h": 25,
+            "t": 2,
+            "evidence": [
+              0,
+              6
+            ]
+          },
+          {
+            "r": "Country",
+            "h": 2,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Country of origin",
+            "h": 16,
+            "t": 13,
+            "evidence": [
+              5
+            ]
+          },
+          {
+            "r": "Performer",
+            "h": 16,
+            "t": 2,
+            "evidence": [
+              0,
+              5
+            ]
+          },
+          {
+            "r": "Publication date",
+            "h": 0,
+            "t": 6,
+            "evidence": [
+              0,
+              2
+            ]
+          },
+          {
+            "h": 23,
+            "t": 24,
+            "r": "Follows",
+            "evidence": []
+          },
+          {
+            "h": 2,
+            "t": 22,
+            "r": "Record label",
+            "evidence": []
+          },
+          {
+            "h": 2,
+            "t": 3,
+            "r": "Record label",
+            "evidence": []
+          },
+          {
+            "h": 2,
+            "t": 19,
+            "r": "Notable work",
+            "evidence": [
+              0,
+              6
+            ]
+          },
+          {
+            "h": 2,
+            "t": 23,
+            "r": "Notable work",
+            "evidence": [
+              0,
+              6
+            ]
+          },
+          {
+            "h": 2,
+            "t": 24,
+            "r": "Notable work",
+            "evidence": [
+              0,
+              6
+            ]
+          },
+          {
+            "h": 2,
+            "t": 0,
+            "r": "Notable work",
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "h": 2,
+            "t": 18,
+            "r": "Notable work",
+            "evidence": [
+              0,
+              6
+            ]
+          },
+          {
+            "h": 2,
+            "t": 20,
+            "r": "Notable work",
+            "evidence": [
+              0,
+              6
+            ]
+          },
+          {
+            "h": 2,
+            "t": 25,
+            "r": "Notable work",
+            "evidence": [
+              0,
+              6
+            ]
+          },
+          {
+            "h": 2,
+            "t": 16,
+            "r": "Notable work",
+            "evidence": [
+              0,
+              5
+            ]
+          },
+          {
+            "h": 24,
+            "t": 23,
+            "r": "Follows",
+            "evidence": []
+          },
+          {
+            "h": 2,
+            "t": 1,
+            "r": "Located in",
+            "evidence": [
+              0
+            ]
+          }
+        ],
+        "entity_types": "['Location', 'Other', 'Organization', 'Time', 'Number']",
+        "relation_types": "['Country', 'Performer', 'Country of origin', 'Notable work', 'Located in', 'Follows', 'Publication date', 'Record label']"
+      },
+      {
+        "sentences": "[['Mars', 'has', 'four', 'known', 'co-orbital', 'asteroids', '(', '5261', 'Eureka', ',', ',', 'all', 'at', 'the', 'Lagrangian', 'point', 's', ')', ',', 'and', 'Jupiter', 'has', 'many', '(', 'an', 'estimated', 'one', 'million', 'greater', 'than', '1', 'km', 'in', 'diameter', ',', 'the', 'Jovian', 'trojans', ')', ';', 'there', 'are', 'also', 'other', 'small', 'co-orbital', 'moons', 'in', 'the', 'Saturnian', 'system', ':', 'Telesto', 'and', 'Calypso', 'with', 'Tethys', ',', 'and', 'Helene', 'and', 'Polydeuces', 'with', 'Dione', '.']]",
+        "entities": [
+          [
+            {
+              "name": "Mars",
+              "pos": [
+                0,
+                1
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "5261 Eureka",
+              "pos": [
+                7,
+                9
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Jupiter",
+              "pos": [
+                20,
+                21
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Jovian trojans",
+              "pos": [
+                36,
+                38
+              ],
+              "type": "Other",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Telesto",
+              "pos": [
+                52,
+                53
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Saturnian system",
+              "pos": [
+                49,
+                51
+              ],
+              "type": "Other",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Calypso",
+              "pos": [
+                54,
+                55
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Tethys",
+              "pos": [
+                56,
+                57
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Helene",
+              "pos": [
+                59,
+                60
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Polydeuces",
+              "pos": [
+                61,
+                62
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Dione",
+              "pos": [
+                63,
+                64
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Lagrangian point",
+              "pos": [
+                14,
+                16
+              ],
+              "type": "Other",
+              "sent_id": 0
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "Related to",
+            "h": 0,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Compare",
+            "h": 0,
+            "t": 2,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Related to",
+            "h": 2,
+            "t": 3,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Part of",
+            "h": 4,
+            "t": 5,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Part of",
+            "h": 6,
+            "t": 5,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Part of",
+            "h": 7,
+            "t": 5,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Part of",
+            "h": 8,
+            "t": 5,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Part of",
+            "h": 9,
+            "t": 5,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Part of",
+            "h": 10,
+            "t": 5,
+            "evidence": [
+              0
+            ]
+          }
+        ],
+        "entity_types": "['Other', 'Astronomical object']",
+        "relation_types": "['Compare', 'Related to', 'Part of']"
+      }
+    ],
+    "signature_instructions": "Extract entities from a provided text based on specified entity types.\nThe output is a list of tuples in the format (entity, type, location, evidence), where:\n- 'entity' is the extracted term,\n- 'type' is its classification (e.g., Person, Location),\n- 'location' is the index range within the text where the entity is found, represented as a list [Start, End],\n- 'evidence' is a list of indices indicating the specific sublists (within the list of lists) that contain the entity.",
+    "signature_prefix": "Answer:",
+    "extended_signature_instructions": "Extract entities from a provided text based on specified entity types.\nThe output is a list of tuples in the format (entity, type, location, evidence), where:\n- 'entity' is the extracted term,\n- 'type' is its classification (e.g., Person, Location),\n- 'location' is the index range within the text where the entity is found, represented as a list [Start, End],\n- 'evidence' is a list of indices indicating the specific sublists (within the list of lists) that contain the entity.",
+    "extended_signature_prefix": "Answer:"
+  },
+  "tuple_to_json": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "sentences": "[['We', 'argue', 'in', 'favor', 'of', 'the', 'the', 'use', 'of', 'labeled', 'directed', 'graph', 'to', 'represent', 'various', 'types', 'of', 'linguistic', 'structures', ',', 'and', 'illustrate', 'how', 'this', 'allows', 'one', 'to', 'view', 'NLP', 'tasks', 'as', 'graph', 'transformations', '.'], ['We', 'present', 'a', 'general', 'method', 'for', 'learning', 'such', 'transformations', 'from', 'an', 'annotated', 'corpus', 'and', 'describe', 'experiments', 'with', 'two', 'applications', 'of', 'the', 'method', ':', 'identification', 'of', 'non-local', 'depenencies', '-LRB-', 'using', 'Penn', 'Treebank', 'data', '-RRB-', 'and', 'semantic', 'role', 'labeling', '-LRB-', 'using', 'Proposition', 'Bank', 'data', '-RRB-', '.']]",
+        "entities": [
+          [
+            {
+              "name": "labeled directed graph",
+              "pos": [
+                9,
+                11
+              ],
+              "sent_id": 0,
+              "type": "Method"
+            }
+          ],
+          [
+            {
+              "name": "linguistic structures",
+              "pos": [
+                17,
+                18
+              ],
+              "sent_id": 0,
+              "type": "Scientific term"
+            }
+          ],
+          [
+            {
+              "name": "NLP tasks",
+              "pos": [
+                28,
+                29
+              ],
+              "sent_id": 0,
+              "type": "Task"
+            }
+          ],
+          [
+            {
+              "name": "this",
+              "pos": [
+                23,
+                23
+              ],
+              "sent_id": 0,
+              "type": "Other"
+            }
+          ],
+          [
+            {
+              "name": "method",
+              "pos": [
+                4,
+                4
+              ],
+              "sent_id": 1,
+              "type": "Method"
+            }
+          ],
+          [
+            {
+              "name": "transformations",
+              "pos": [
+                8,
+                8
+              ],
+              "sent_id": 1,
+              "type": "Other"
+            }
+          ],
+          [
+            {
+              "name": "annotated corpus",
+              "pos": [
+                11,
+                12
+              ],
+              "sent_id": 1,
+              "type": "Material"
+            }
+          ],
+          [
+            {
+              "name": "method",
+              "pos": [
+                21,
+                21
+              ],
+              "sent_id": 1,
+              "type": "Other"
+            }
+          ],
+          [
+            {
+              "name": "applications",
+              "pos": [
+                18,
+                18
+              ],
+              "sent_id": 1,
+              "type": "Other"
+            }
+          ],
+          [
+            {
+              "name": "identification of non-local depenencies",
+              "pos": [
+                23,
+                26
+              ],
+              "sent_id": 1,
+              "type": "Task"
+            }
+          ],
+          [
+            {
+              "name": "Penn Treebank data",
+              "pos": [
+                29,
+                31
+              ],
+              "sent_id": 1,
+              "type": "Material"
+            }
+          ],
+          [
+            {
+              "name": "semantic role labeling",
+              "pos": [
+                34,
+                36
+              ],
+              "sent_id": 1,
+              "type": "Task"
+            }
+          ],
+          [
+            {
+              "name": "Proposition Bank data",
+              "pos": [
+                39,
+                41
+              ],
+              "sent_id": 1,
+              "type": "Material"
+            }
+          ],
+          [
+            {
+              "name": "graph transformations",
+              "pos": [
+                31,
+                32
+              ],
+              "sent_id": 0,
+              "type": "Task"
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "Used for",
+            "h": 0,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 0,
+            "t": 2,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 3,
+            "t": 2,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 4,
+            "t": 5,
+            "evidence": [
+              1
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 6,
+            "t": 4,
+            "evidence": [
+              1
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 7,
+            "t": 8,
+            "evidence": [
+              1
+            ]
+          },
+          {
+            "r": "Hyponym of",
+            "h": 9,
+            "t": 8,
+            "evidence": [
+              1
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 10,
+            "t": 9,
+            "evidence": [
+              1
+            ]
+          },
+          {
+            "r": "Hyponym of",
+            "h": 11,
+            "t": 8,
+            "evidence": [
+              1
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 12,
+            "t": 11,
+            "evidence": [
+              1
+            ]
+          }
+        ],
+        "entity_types": "['Scientific term', 'Task', 'Other', 'Material', 'Method']",
+        "relation_types": "['Hyponym of', 'Used for']"
+      },
+      {
+        "sentences": "[['Ningxia', ',', 'while', 'far', 'too', 'small', 'to', 'blame', 'for', 'the', 'country', \"'s\", 'water', 'travails', ',', 'typifies', 'the', 'challenges', 'China', 'will', 'face', 'as', 'it', 'weighs', 'logic', 'against', 'history', 'in', 'parceling', 'out', 'water', '.']]",
+        "entities": [
+          [
+            {
+              "name": "Ningxia",
+              "pos": [
+                0,
+                1
+              ],
+              "type": "Person",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "China",
+              "pos": [
+                18,
+                19
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "h": 0,
+            "t": 1,
+            "r": "Located in",
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "h": 1,
+            "t": 0,
+            "r": "Located in",
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "h": 1,
+            "t": 0,
+            "r": "Contains location",
+            "evidence": [
+              0
+            ]
+          }
+        ],
+        "entity_types": "['Location', 'Person']",
+        "relation_types": "['Located in', 'Contains location']"
+      },
+      {
+        "sentences": "[['The', 'Tale', 'of', 'Jemima', 'Puddle-Duck', 'and', 'The', 'Tale', 'of', 'Tom', 'Kitten', 'are', 'representative', 'of', 'Hill', 'Top', 'Farm', 'and', 'her', 'farming', 'life', 'and', 'reflect', 'her', 'happiness', 'with', 'her', 'country', 'life.', 'John', 'Heelis', ',', '(', '1999', ')', 'The', 'Tale', 'of', 'Mrs', 'William', 'Heelis', '-', 'Beatrix', 'Potter', ';', 'Lear', ',', 'Ch', '.']]",
+        "entities": [
+          [
+            {
+              "name": "The Tale of Jemima Puddle-Duck",
+              "pos": [
+                0,
+                5
+              ],
+              "type": "Book",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Hill Top Farm",
+              "pos": [
+                14,
+                17
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "The Tale of Tom Kitten",
+              "pos": [
+                6,
+                11
+              ],
+              "type": "Book",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "The Tale of Mrs William Heelis - Beatrix Potter",
+              "pos": [
+                35,
+                44
+              ],
+              "type": "Book",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "John Heelis",
+              "pos": [
+                29,
+                31
+              ],
+              "type": "Writer",
+              "sent_id": 0
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "Related to",
+            "h": 0,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Related to",
+            "h": 2,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Artifact",
+            "h": 3,
+            "t": 4,
+            "evidence": [
+              0
+            ]
+          }
+        ],
+        "entity_types": "['Book', 'Location', 'Writer']",
+        "relation_types": "['Related to', 'Artifact']"
+      },
+      {
+        "sentences": "[['His', 'family', 'in', 'Italy', 'had', 'long', 'had', 'vineyards', 'in', 'Tuscany', ',', 'so', 'he', 'sought', 'a', 'good', 'place', 'to', 'grow', 'grapes', 'and', 'make', 'wine', 'in', 'his', 'adoptive', 'state', ',', 'New', 'Jersey', '.']]",
+        "entities": [
+          [
+            {
+              "name": "Italy",
+              "pos": [
+                3,
+                4
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Tuscany",
+              "pos": [
+                9,
+                10
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "New Jersey",
+              "pos": [
+                28,
+                30
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "h": 0,
+            "t": 1,
+            "r": "Located in",
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "h": 1,
+            "t": 0,
+            "r": "Located in",
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "h": 0,
+            "t": 1,
+            "r": "Contains location",
+            "evidence": [
+              0
+            ]
+          }
+        ],
+        "entity_types": "['Location']",
+        "relation_types": "['Located in', 'Contains location']"
+      },
+      {
+        "sentences": "[['From', '1930', 'to', '1934', ',', 'Wu', 'studied', 'at', 'National', 'Central', 'University', '(', 'later', 'renamed', 'Nanjing', 'University', ')', ',', 'first', 'in', 'mathematics', ',', 'but', 'later', 'transferring', 'to', 'physics', '.']]",
+        "entities": [
+          [
+            {
+              "name": "Wu",
+              "pos": [
+                5,
+                6
+              ],
+              "type": "Scientist",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "National Central University",
+              "pos": [
+                8,
+                11
+              ],
+              "type": "University",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Nanjing University",
+              "pos": [
+                14,
+                16
+              ],
+              "type": "University",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "mathematics",
+              "pos": [
+                20,
+                21
+              ],
+              "type": "Discipline",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "physics",
+              "pos": [
+                26,
+                27
+              ],
+              "type": "Discipline",
+              "sent_id": 0
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "Physical",
+            "h": 0,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Role",
+            "h": 0,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Named",
+            "h": 1,
+            "t": 2,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "General affiliation",
+            "h": 1,
+            "t": 3,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "General affiliation",
+            "h": 1,
+            "t": 4,
+            "evidence": [
+              0
+            ]
+          }
+        ],
+        "entity_types": "['University', 'Scientist', 'Discipline']",
+        "relation_types": "['Role', 'General affiliation', 'Named', 'Physical']"
+      },
+      {
+        "sentences": "[['We', 'directly', 'investigate', 'a', 'subject', 'of', 'much', 'recent', 'debate', ':', 'do', 'word', 'sense', 'disambigation', 'models', 'help', 'statistical', 'machine', 'translation', 'quality', '?'], ['We', 'present', 'empirical', 'results', 'casting', 'doubt', 'on', 'this', 'common', ',', 'but', 'unproved', ',', 'assumption', '.'], ['Using', 'a', 'state-of-the-art', 'Chinese', 'word', 'sense', 'disambiguation', 'model', 'to', 'choose', 'translation', 'candidates', 'for', 'a', 'typical', 'IBM', 'statistical', 'MT', 'system', ',', 'we', 'find', 'that', 'word', 'sense', 'disambiguation', 'does', 'not', 'yield', 'significantly', 'better', 'translation', 'quality', 'than', 'the', 'statistical', 'machine', 'translation', 'system', 'alone', '.'], ['Error', 'analysis', 'suggests', 'several', 'key', 'factors', 'behind', 'this', 'surprising', 'finding', ',', 'including', 'inherent', 'limitations', 'of', 'current', 'statistical', 'MT', 'architectures', '.']]",
+        "entities": [
+          [
+            {
+              "name": "word sense disambigation models",
+              "pos": [
+                11,
+                14
+              ],
+              "sent_id": 0,
+              "type": "Method"
+            }
+          ],
+          [
+            {
+              "name": "statistical machine translation quality",
+              "pos": [
+                16,
+                19
+              ],
+              "sent_id": 0,
+              "type": "Metric"
+            }
+          ],
+          [
+            {
+              "name": "Chinese word sense disambiguation model",
+              "pos": [
+                3,
+                7
+              ],
+              "sent_id": 2,
+              "type": "Method"
+            }
+          ],
+          [
+            {
+              "name": "translation candidates",
+              "pos": [
+                10,
+                11
+              ],
+              "sent_id": 2,
+              "type": "Scientific term"
+            }
+          ],
+          [
+            {
+              "name": "IBM statistical MT system",
+              "pos": [
+                15,
+                18
+              ],
+              "sent_id": 2,
+              "type": "Method"
+            }
+          ],
+          [
+            {
+              "name": "word sense disambiguation",
+              "pos": [
+                23,
+                25
+              ],
+              "sent_id": 2,
+              "type": "Method"
+            }
+          ],
+          [
+            {
+              "name": "statistical machine translation system",
+              "pos": [
+                35,
+                38
+              ],
+              "sent_id": 2,
+              "type": "Method"
+            }
+          ],
+          [
+            {
+              "name": "translation quality",
+              "pos": [
+                31,
+                32
+              ],
+              "sent_id": 2,
+              "type": "Metric"
+            }
+          ],
+          [
+            {
+              "name": "Error analysis",
+              "pos": [
+                0,
+                1
+              ],
+              "sent_id": 3,
+              "type": "Method"
+            }
+          ],
+          [
+            {
+              "name": "statistical MT architectures",
+              "pos": [
+                16,
+                18
+              ],
+              "sent_id": 3,
+              "type": "Method"
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "Used for",
+            "h": 0,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 2,
+            "t": 3,
+            "evidence": [
+              2
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 3,
+            "t": 4,
+            "evidence": [
+              2
+            ]
+          },
+          {
+            "r": "Compare",
+            "h": 5,
+            "t": 6,
+            "evidence": [
+              2
+            ]
+          },
+          {
+            "r": "Evaluate for",
+            "h": 7,
+            "t": 5,
+            "evidence": [
+              2
+            ]
+          },
+          {
+            "r": "Evaluate for",
+            "h": 7,
+            "t": 6,
+            "evidence": [
+              2
+            ]
+          }
+        ],
+        "entity_types": "['Method', 'Metric', 'Scientific term']",
+        "relation_types": "['Compare', 'Evaluate for', 'Used for']"
+      },
+      {
+        "sentences": "[['Camilla', 'is', 'the', '6th', 'trinary', 'asteroid', 'that', 'has', 'been', 'discovered', 'in', 'the', 'asteroid', 'belt', ',', 'after', '87', 'Sylvia', ',', '45', 'Eugenia', ',', '216', 'Kleopatra', ',', '93', 'Minerva', 'and', '130', 'Elektra', '.']]",
+        "entities": [
+          [
+            {
+              "name": "Camilla",
+              "pos": [
+                0,
+                1
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "87 Sylvia",
+              "pos": [
+                16,
+                18
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "45 Eugenia",
+              "pos": [
+                19,
+                21
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "216 Kleopatra",
+              "pos": [
+                22,
+                24
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "93 Minerva",
+              "pos": [
+                25,
+                27
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "130 Elektra",
+              "pos": [
+                28,
+                30
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ]
+        ],
+        "relations": [],
+        "entity_types": "['Astronomical object']",
+        "relation_types": "[]"
+      },
+      {
+        "sentences": "[['In', '1930', 'he', 'was', 'nominated', 'for', 'the', 'Nobel', 'Prize', 'in', 'Literature', 'by', 'Swedish', 'author', 'Anders', '\u00d6sterling', ',', 'but', 'was', 'passed', 'over', 'in', 'favor', 'of', 'Sinclair', 'Lewis', '.']]",
+        "entities": [
+          [
+            {
+              "name": "Swedish author",
+              "pos": [
+                12,
+                14
+              ],
+              "type": "Other",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Anders \u00d6sterling",
+              "pos": [
+                14,
+                16
+              ],
+              "type": "Writer",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Nobel Prize in Literature",
+              "pos": [
+                7,
+                11
+              ],
+              "type": "Award",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Sinclair Lewis",
+              "pos": [
+                24,
+                26
+              ],
+              "type": "Writer",
+              "sent_id": 0
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "Named",
+            "h": 0,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Role",
+            "h": 1,
+            "t": 2,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Win defeat",
+            "h": 3,
+            "t": 2,
+            "evidence": [
+              0
+            ]
+          }
+        ],
+        "entity_types": "['Award', 'Other', 'Writer']",
+        "relation_types": "['Role', 'Win defeat', 'Named']"
+      },
+      {
+        "sentences": "[['Traditional', 'linear', 'Fukunaga-Koontz', 'Transform', '-LRB-', 'FKT', '-RRB-', '-LSB-', '1', '-RSB-', 'is', 'a', 'powerful', 'discriminative', 'subspaces', 'building', 'approach', '.'], ['Previous', 'work', 'has', 'successfully', 'extended', 'FKT', 'to', 'be', 'able', 'to', 'deal', 'with', 'small-sample-size', '.'], ['In', 'this', 'paper', ',', 'we', 'extend', 'traditional', 'linear', 'FKT', 'to', 'enable', 'it', 'to', 'work', 'in', 'multi-class', 'problem', 'and', 'also', 'in', 'higher', 'dimensional', '-LRB-', 'kernel', '-RRB-', 'subspaces', 'and', 'therefore', 'provide', 'enhanced', 'discrimination', 'ability', '.'], ['We', 'verify', 'the', 'effectiveness', 'of', 'the', 'proposed', 'Kernel', 'Fukunaga-Koontz', 'Transform', 'by', 'demonstrating', 'its', 'effectiveness', 'in', 'face', 'recognition', 'applications', ';', 'however', 'the', 'proposed', 'non-linear', 'generalization', 'can', 'be', 'applied', 'to', 'any', 'other', 'domain', 'specific', 'problems', '.']]",
+        "entities": [
+          [
+            {
+              "name": "linear Fukunaga-Koontz Transform -LRB- FKT -RRB-",
+              "pos": [
+                1,
+                6
+              ],
+              "sent_id": 0,
+              "type": "Method"
+            }
+          ],
+          [
+            {
+              "name": "discriminative subspaces building approach",
+              "pos": [
+                13,
+                16
+              ],
+              "sent_id": 0,
+              "type": "Method"
+            }
+          ],
+          [
+            {
+              "name": "FKT",
+              "pos": [
+                5,
+                5
+              ],
+              "sent_id": 1,
+              "type": "Method"
+            }
+          ],
+          [
+            {
+              "name": "small-sample-size",
+              "pos": [
+                12,
+                12
+              ],
+              "sent_id": 1,
+              "type": "Scientific term"
+            }
+          ],
+          [
+            {
+              "name": "linear FKT",
+              "pos": [
+                7,
+                8
+              ],
+              "sent_id": 2,
+              "type": "Method"
+            }
+          ],
+          [
+            {
+              "name": "it",
+              "pos": [
+                11,
+                11
+              ],
+              "sent_id": 2,
+              "type": "Other"
+            }
+          ],
+          [
+            {
+              "name": "multi-class problem",
+              "pos": [
+                15,
+                16
+              ],
+              "sent_id": 2,
+              "type": "Task"
+            }
+          ],
+          [
+            {
+              "name": "higher dimensional -LRB- kernel -RRB- subspaces",
+              "pos": [
+                20,
+                25
+              ],
+              "sent_id": 2,
+              "type": "Scientific term"
+            }
+          ],
+          [
+            {
+              "name": "discrimination ability",
+              "pos": [
+                30,
+                31
+              ],
+              "sent_id": 2,
+              "type": "Scientific term"
+            }
+          ],
+          [
+            {
+              "name": "face recognition applications",
+              "pos": [
+                15,
+                17
+              ],
+              "sent_id": 3,
+              "type": "Task"
+            }
+          ],
+          [
+            {
+              "name": "Kernel Fukunaga-Koontz Transform",
+              "pos": [
+                7,
+                9
+              ],
+              "sent_id": 3,
+              "type": "Method"
+            }
+          ],
+          [
+            {
+              "name": "non-linear generalization",
+              "pos": [
+                22,
+                23
+              ],
+              "sent_id": 3,
+              "type": "Method"
+            }
+          ],
+          [
+            {
+              "name": "domain specific problems",
+              "pos": [
+                30,
+                32
+              ],
+              "sent_id": 3,
+              "type": "Task"
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "Hyponym of",
+            "h": 0,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 2,
+            "t": 3,
+            "evidence": [
+              1
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 4,
+            "t": 5,
+            "evidence": [
+              2
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 5,
+            "t": 6,
+            "evidence": [
+              2
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 5,
+            "t": 7,
+            "evidence": [
+              2
+            ]
+          },
+          {
+            "r": "Feature of ",
+            "h": 5,
+            "t": 8,
+            "evidence": [
+              2
+            ]
+          },
+          {
+            "r": "Conjunction",
+            "h": 6,
+            "t": 7,
+            "evidence": [
+              2
+            ]
+          },
+          {
+            "r": "Evaluate for",
+            "h": 9,
+            "t": 10,
+            "evidence": [
+              3
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 11,
+            "t": 12,
+            "evidence": [
+              3
+            ]
+          }
+        ],
+        "entity_types": "['Method', 'Other', 'Task', 'Scientific term']",
+        "relation_types": "['Conjunction', 'Feature of ', 'Evaluate for', 'Hyponym of', 'Used for']"
+      },
+      {
+        "sentences": "[['International', 'who', \"'s\", 'who', 'in', 'popular', 'music', ',', 'Volume', '4', 'p.37.', 'Routledge', ',', '2002', 'The', 'band', 'was', 'renamed', 'Rocket', 'Baby', 'Dolls', 'and', 'adopted', 'a', 'Gothic', 'rock', '-', 'Glam', 'rock', 'image', '.']]",
+        "entities": [
+          [
+            {
+              "name": "Rocket Baby Dolls",
+              "pos": [
+                18,
+                21
+              ],
+              "type": "Band",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Gothic rock",
+              "pos": [
+                24,
+                26
+              ],
+              "type": "Music genre",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Glam rock",
+              "pos": [
+                27,
+                29
+              ],
+              "type": "Music genre",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "popular music",
+              "pos": [
+                5,
+                7
+              ],
+              "type": "Music genre",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Routledge",
+              "pos": [
+                11,
+                12
+              ],
+              "type": "Organization",
+              "sent_id": 0
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "General affiliation",
+            "h": 0,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "General affiliation",
+            "h": 0,
+            "t": 2,
+            "evidence": [
+              0
+            ]
+          }
+        ],
+        "entity_types": "['Music genre', 'Organization', 'Band']",
+        "relation_types": "['General affiliation']"
+      }
+    ],
+    "signature_instructions": "Convert extracted entity tuples into JSON format.\nThe output is a list of dictionaries, each containing:\n- 'entity': the extracted term,\n- 'type': its classification (e.g., Person, Location),\n- 'location': the index range within the text where the entity is found,\n- 'evidence': a list of indices indicating the sublists containing the entity.\nThe output should be formatted as a JSON list.",
+    "signature_prefix": "Answer:",
+    "extended_signature_instructions": "Convert extracted entity tuples into JSON format.\nThe output is a list of dictionaries, each containing:\n- 'entity': the extracted term,\n- 'type': its classification (e.g., Person, Location),\n- 'location': the index range within the text where the entity is found,\n- 'evidence': a list of indices indicating the sublists containing the entity.\nThe output should be formatted as a JSON list.",
+    "extended_signature_prefix": "Answer:"
+  },
+  "relation_extraction": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "sentences": "[['Most', 'of', 'the', 'work', 'conducted', 'by', 'the', 'Warren', 'Commission', ',', 'which', 'concluded', 'that', 'Lee', 'Harvey', 'Oswald', 'acted', 'alone', 'in', 'the', 'Kennedy', 'slaying', ',', 'has', 'been', 'opened', 'to', 'the', 'public', ',', 'a', 'move', 'that', 'has', 'helped', 'researchers', 'evaluate', '_', 'and', 'in', 'many', 'cases', 'strongly', 'criticize', '_', 'that', 'investigation', '.']]",
+        "entities": [
+          [
+            {
+              "name": "Warren Commission",
+              "pos": [
+                7,
+                9
+              ],
+              "type": "Organization",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Lee Harvey Oswald",
+              "pos": [
+                13,
+                16
+              ],
+              "type": "Person",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Kennedy",
+              "pos": [
+                20,
+                21
+              ],
+              "type": "Person",
+              "sent_id": 0
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "Kill",
+            "h": 1,
+            "t": 2,
+            "evidence": [
+              0
+            ]
+          }
+        ],
+        "entity_types": "['Person', 'Organization']",
+        "relation_types": "['Kill']"
+      },
+      {
+        "sentences": "[['Camilla', 'is', 'the', '6th', 'trinary', 'asteroid', 'that', 'has', 'been', 'discovered', 'in', 'the', 'asteroid', 'belt', ',', 'after', '87', 'Sylvia', ',', '45', 'Eugenia', ',', '216', 'Kleopatra', ',', '93', 'Minerva', 'and', '130', 'Elektra', '.']]",
+        "entities": [
+          [
+            {
+              "name": "Camilla",
+              "pos": [
+                0,
+                1
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "87 Sylvia",
+              "pos": [
+                16,
+                18
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "45 Eugenia",
+              "pos": [
+                19,
+                21
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "216 Kleopatra",
+              "pos": [
+                22,
+                24
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "93 Minerva",
+              "pos": [
+                25,
+                27
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "130 Elektra",
+              "pos": [
+                28,
+                30
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ]
+        ],
+        "relations": [],
+        "entity_types": "['Astronomical object']",
+        "relation_types": "[]"
+      },
+      {
+        "sentences": "[['May', '25', 'Third', 'one-day', 'international', '(', 'at', 'Lord', \"'s\", ',', 'London', ')']]",
+        "entities": [
+          [
+            {
+              "name": "Lord 's",
+              "pos": [
+                7,
+                9
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "London",
+              "pos": [
+                10,
+                11
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "Physical",
+            "h": 0,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          }
+        ],
+        "entity_types": "['Location']",
+        "relation_types": "['Physical']"
+      },
+      {
+        "sentences": "[['Separated', 'during', 'the', 'war', 'and', 'imprisoned', 'in', 'numerous', 'concentration', 'camps', 'Sima', 'miraculously', 'reunited', 'with', 'her', 'husband', 'after', 'the', 'war', 'living', 'in', 'a', 'displaced', 'persons', 'camp', 'in', 'Heidenheim', ',', 'Germany', 'between', '1945', 'and', '1949', '.']]",
+        "entities": [
+          [
+            {
+              "name": "Germany",
+              "pos": [
+                28,
+                29
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Heidenheim",
+              "pos": [
+                26,
+                27
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Sima",
+              "pos": [
+                10,
+                11
+              ],
+              "type": "Person",
+              "sent_id": 0
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "h": 0,
+            "t": 1,
+            "r": "Contains location",
+            "evidence": [
+              0
+            ]
+          }
+        ],
+        "entity_types": "['Location', 'Person']",
+        "relation_types": "['Contains location']"
+      },
+      {
+        "sentences": "[['The', 'Best', 'of', 'the', 'Art', 'of', 'Noise', 'is', 'the', 'name', 'of', 'a', 'series', 'of', 'compilation', 'albums', 'with', 'songs', 'by', 'the', 'British', 'synthpop', 'band', 'The', 'Art', 'of', 'Noise', '.'], ['The', 'first', 'version', 'was', 'released', 'on', 'the', 'China', 'Records', 'label', 'in', 'November', '1988', '.'], ['The', 'Best', 'of', 'the', 'Art', 'of', 'Noise', 'was', 'released', 'with', 'at', 'least', 'ten', 'different', 'track', 'listing', 'variations', 'from', '1988', 'to', '1997', '.'], ['The', 'first', 'version', 'was', 'on', 'LP', 'format', 'and', 'contained', '7', '\"', 'single', 'mixes', ',', 'while', 'the', 'corresponding', 'compact', 'disc', 'release', 'that', 'year', 'contained', 'the', 'extended', 'or', '12', '\"', 'single', 'remixes', 'of', 'all', 'of', 'the', 'tracks', '.'], ['However', ',', 'LP', 'releases', 'in', 'territories', 'such', 'as', 'Korea', 'and', 'Argentina', 'featured', 'a', 'combination', 'of', 'both', 'track', 'listings', '.'], ['A', 'Japanese', 'CD', 'version', 'from', '1991', 'was', 'identical', 'to', 'the', 'standard', 'CD', 'but', 'contained', 'two', 'more', 'mixes', 'of', '\"', 'Kiss', '\"', 'as', 'bonus', 'tracks', '.'], ['In', '1992', ',', 'China', 'Records', 'reissued', 'The', 'Best', 'of', 'and', 'added', '\"', 'Yebo', ',', '\"', '\"', 'Instruments', 'of', 'Darkness', '\"', 'and', '\"', 'Robinson', 'Crusoe', ',', '\"', 'while', 'omitting', 'the', 'three', 'tracks', 'that', 'were', 'licensed', 'from', 'ZTT', 'Records', 'and', 'included', 'on', 'the', '1988', 'release', ':', '\"', 'Beatbox', ',', '\"', '\"', 'Moments', 'in', 'Love', '\"', 'and', '\"', 'Close', '(', 'To', 'the', 'Edit', ')', '.', '\"'], ['Once', 'again', ',', 'a', 'number', 'of', 'different', 'variations', 'were', 'issued', '.'], ['The', 'United', 'Kingdom', 'and', 'Holland', 'issued', 'a', 'double', 'disc', 'limited', 'edition', 'version', 'with', 'both', 'the', 'standard', 'disc', 'of', '7', '\"', 'mixes', 'and', 'a', 'second', 'disc', 'of', 'extended', 'and', '12', '\"', 'remixes', '.'], ['The', 'compilation', 'has', 'also', 'been', 'issued', 'with', 'two', 'different', 'color', 'variations', 'on', 'the', 'cover', '.'], ['All', 'editions', 'prior', 'to', '1992', 'were', 'issued', 'with', 'a', 'blue', 'cover', ',', 'while', 'most', 'editions', 'afterward', 'had', 'a', 'pink', 'cover', '.'], ['The', 'German', 'and', 'Australian', 'editions', 'as', 'well', 'as', 'the', 'UK', '\/', 'Holland', 'limited', 'edition', 'two', 'disc', 'set', 'all', 'retained', 'the', 'blue', 'cover', '.']]",
+        "entities": [
+          [
+            {
+              "pos": [
+                0,
+                7
+              ],
+              "type": "Other",
+              "sent_id": 0,
+              "name": "The Best of the Art of Noise",
+              "global_pos": [
+                0,
+                0
+              ],
+              "index": "0_0"
+            },
+            {
+              "pos": [
+                0,
+                7
+              ],
+              "type": "Other",
+              "sent_id": 2,
+              "name": "The Best of the Art of Noise",
+              "global_pos": [
+                42,
+                42
+              ],
+              "index": "0_1"
+            },
+            {
+              "sent_id": 6,
+              "type": "Other",
+              "pos": [
+                6,
+                8
+              ],
+              "name": "The Best",
+              "global_pos": [
+                150,
+                150
+              ],
+              "index": "0_2"
+            }
+          ],
+          [
+            {
+              "name": "United Kingdom",
+              "pos": [
+                1,
+                3
+              ],
+              "sent_id": 8,
+              "type": "Location",
+              "global_pos": [
+                219,
+                219
+              ],
+              "index": "1_0"
+            },
+            {
+              "name": "UK",
+              "pos": [
+                9,
+                10
+              ],
+              "sent_id": 11,
+              "type": "Location",
+              "global_pos": [
+                295,
+                295
+              ],
+              "index": "1_1"
+            },
+            {
+              "name": "British",
+              "pos": [
+                20,
+                21
+              ],
+              "sent_id": 0,
+              "type": "Location",
+              "global_pos": [
+                20,
+                20
+              ],
+              "index": "1_2"
+            }
+          ],
+          [
+            {
+              "pos": [
+                23,
+                27
+              ],
+              "type": "Organization",
+              "sent_id": 0,
+              "name": "The Art of Noise",
+              "global_pos": [
+                23,
+                23
+              ],
+              "index": "2_0"
+            }
+          ],
+          [
+            {
+              "name": "China Records",
+              "pos": [
+                7,
+                9
+              ],
+              "sent_id": 1,
+              "type": "Organization",
+              "global_pos": [
+                35,
+                35
+              ],
+              "index": "3_0"
+            },
+            {
+              "name": "China Records",
+              "pos": [
+                3,
+                5
+              ],
+              "sent_id": 6,
+              "type": "Organization",
+              "global_pos": [
+                147,
+                147
+              ],
+              "index": "3_1"
+            }
+          ],
+          [
+            {
+              "pos": [
+                11,
+                13
+              ],
+              "type": "Time",
+              "sent_id": 1,
+              "name": "November 1988",
+              "global_pos": [
+                39,
+                39
+              ],
+              "index": "4_0"
+            }
+          ],
+          [
+            {
+              "name": "ten",
+              "pos": [
+                12,
+                13
+              ],
+              "sent_id": 2,
+              "type": "Number",
+              "global_pos": [
+                54,
+                54
+              ],
+              "index": "5_0"
+            }
+          ],
+          [
+            {
+              "pos": [
+                41,
+                42
+              ],
+              "type": "Time",
+              "sent_id": 6,
+              "name": "1988",
+              "global_pos": [
+                185,
+                185
+              ],
+              "index": "6_0"
+            },
+            {
+              "pos": [
+                18,
+                19
+              ],
+              "type": "Time",
+              "sent_id": 2,
+              "name": "1988",
+              "global_pos": [
+                60,
+                60
+              ],
+              "index": "6_1"
+            }
+          ],
+          [
+            {
+              "pos": [
+                20,
+                21
+              ],
+              "type": "Time",
+              "sent_id": 2,
+              "name": "1997",
+              "global_pos": [
+                62,
+                62
+              ],
+              "index": "7_0"
+            }
+          ],
+          [
+            {
+              "name": "LP",
+              "pos": [
+                2,
+                3
+              ],
+              "sent_id": 4,
+              "type": "Other",
+              "global_pos": [
+                102,
+                102
+              ],
+              "index": "8_0"
+            },
+            {
+              "name": "LP",
+              "pos": [
+                5,
+                6
+              ],
+              "sent_id": 3,
+              "type": "Other",
+              "global_pos": [
+                69,
+                69
+              ],
+              "index": "8_1"
+            }
+          ],
+          [
+            {
+              "pos": [
+                9,
+                10
+              ],
+              "type": "Number",
+              "sent_id": 3,
+              "name": "7",
+              "global_pos": [
+                73,
+                73
+              ],
+              "index": "9_0"
+            },
+            {
+              "pos": [
+                18,
+                19
+              ],
+              "type": "Number",
+              "sent_id": 8,
+              "name": "7",
+              "global_pos": [
+                236,
+                236
+              ],
+              "index": "9_1"
+            }
+          ],
+          [
+            {
+              "pos": [
+                26,
+                27
+              ],
+              "type": "Number",
+              "sent_id": 3,
+              "name": "12",
+              "global_pos": [
+                90,
+                90
+              ],
+              "index": "10_0"
+            },
+            {
+              "pos": [
+                28,
+                29
+              ],
+              "type": "Number",
+              "sent_id": 8,
+              "name": "12",
+              "global_pos": [
+                246,
+                246
+              ],
+              "index": "10_1"
+            }
+          ],
+          [
+            {
+              "name": "Korea",
+              "pos": [
+                8,
+                9
+              ],
+              "sent_id": 4,
+              "type": "Location",
+              "global_pos": [
+                108,
+                108
+              ],
+              "index": "11_0"
+            }
+          ],
+          [
+            {
+              "name": "Argentina",
+              "pos": [
+                10,
+                11
+              ],
+              "sent_id": 4,
+              "type": "Location",
+              "global_pos": [
+                110,
+                110
+              ],
+              "index": "12_0"
+            }
+          ],
+          [
+            {
+              "name": "Japanese",
+              "pos": [
+                1,
+                2
+              ],
+              "sent_id": 5,
+              "type": "Location",
+              "global_pos": [
+                120,
+                120
+              ],
+              "index": "13_0"
+            }
+          ],
+          [
+            {
+              "pos": [
+                5,
+                6
+              ],
+              "type": "Time",
+              "sent_id": 5,
+              "name": "1991",
+              "global_pos": [
+                124,
+                124
+              ],
+              "index": "14_0"
+            }
+          ],
+          [
+            {
+              "pos": [
+                14,
+                15
+              ],
+              "type": "Number",
+              "sent_id": 5,
+              "name": "two",
+              "global_pos": [
+                133,
+                133
+              ],
+              "index": "15_0"
+            },
+            {
+              "name": "two",
+              "pos": [
+                7,
+                8
+              ],
+              "sent_id": 9,
+              "type": "Number",
+              "global_pos": [
+                257,
+                257
+              ],
+              "index": "15_1"
+            },
+            {
+              "name": "two",
+              "pos": [
+                14,
+                15
+              ],
+              "sent_id": 11,
+              "type": "Number",
+              "global_pos": [
+                300,
+                300
+              ],
+              "index": "15_2"
+            }
+          ],
+          [
+            {
+              "pos": [
+                19,
+                20
+              ],
+              "type": "Other",
+              "sent_id": 5,
+              "name": "Kiss",
+              "global_pos": [
+                138,
+                138
+              ],
+              "index": "16_0"
+            }
+          ],
+          [
+            {
+              "pos": [
+                1,
+                2
+              ],
+              "type": "Time",
+              "sent_id": 6,
+              "name": "1992",
+              "global_pos": [
+                145,
+                145
+              ],
+              "index": "17_0"
+            },
+            {
+              "pos": [
+                4,
+                5
+              ],
+              "type": "Time",
+              "sent_id": 10,
+              "name": "1992",
+              "global_pos": [
+                269,
+                269
+              ],
+              "index": "17_1"
+            }
+          ],
+          [
+            {
+              "pos": [
+                12,
+                13
+              ],
+              "type": "Other",
+              "sent_id": 6,
+              "name": "Yebo",
+              "global_pos": [
+                156,
+                156
+              ],
+              "index": "18_0"
+            }
+          ],
+          [
+            {
+              "name": "Instruments of Darkness",
+              "pos": [
+                16,
+                19
+              ],
+              "sent_id": 6,
+              "type": "Other",
+              "global_pos": [
+                160,
+                160
+              ],
+              "index": "19_0"
+            }
+          ],
+          [
+            {
+              "name": "Robinson Crusoe",
+              "pos": [
+                22,
+                24
+              ],
+              "sent_id": 6,
+              "type": "Other",
+              "global_pos": [
+                166,
+                166
+              ],
+              "index": "20_0"
+            }
+          ],
+          [
+            {
+              "name": "three",
+              "pos": [
+                29,
+                30
+              ],
+              "sent_id": 6,
+              "type": "Number",
+              "global_pos": [
+                173,
+                173
+              ],
+              "index": "21_0"
+            }
+          ],
+          [
+            {
+              "name": "ZTT Records",
+              "pos": [
+                35,
+                37
+              ],
+              "sent_id": 6,
+              "type": "Organization",
+              "global_pos": [
+                179,
+                179
+              ],
+              "index": "22_0"
+            }
+          ],
+          [
+            {
+              "name": "Beatbox",
+              "pos": [
+                45,
+                46
+              ],
+              "sent_id": 6,
+              "type": "Other",
+              "global_pos": [
+                189,
+                189
+              ],
+              "index": "23_0"
+            }
+          ],
+          [
+            {
+              "name": "Moments in Love",
+              "pos": [
+                49,
+                52
+              ],
+              "sent_id": 6,
+              "type": "Other",
+              "global_pos": [
+                193,
+                193
+              ],
+              "index": "24_0"
+            }
+          ],
+          [
+            {
+              "sent_id": 6,
+              "type": "Other",
+              "pos": [
+                55,
+                56
+              ],
+              "name": "Close",
+              "global_pos": [
+                199,
+                199
+              ],
+              "index": "25_0"
+            }
+          ],
+          [
+            {
+              "name": "Holland",
+              "pos": [
+                4,
+                5
+              ],
+              "sent_id": 8,
+              "type": "Location",
+              "global_pos": [
+                222,
+                222
+              ],
+              "index": "26_0"
+            },
+            {
+              "name": "Holland",
+              "pos": [
+                11,
+                12
+              ],
+              "sent_id": 11,
+              "type": "Location",
+              "global_pos": [
+                297,
+                297
+              ],
+              "index": "26_1"
+            }
+          ],
+          [
+            {
+              "name": "German",
+              "pos": [
+                1,
+                2
+              ],
+              "sent_id": 11,
+              "type": "Location",
+              "global_pos": [
+                287,
+                287
+              ],
+              "index": "27_0"
+            }
+          ],
+          [
+            {
+              "name": "Australian",
+              "pos": [
+                3,
+                4
+              ],
+              "sent_id": 11,
+              "type": "Location",
+              "global_pos": [
+                289,
+                289
+              ],
+              "index": "28_0"
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "Record label",
+            "h": 19,
+            "t": 3,
+            "evidence": [
+              6
+            ]
+          },
+          {
+            "r": "Publication date",
+            "h": 19,
+            "t": 17,
+            "evidence": [
+              6
+            ]
+          },
+          {
+            "r": "Performer",
+            "h": 19,
+            "t": 2,
+            "evidence": [
+              0,
+              6
+            ]
+          },
+          {
+            "r": "Publication date",
+            "h": 23,
+            "t": 6,
+            "evidence": [
+              6
+            ]
+          },
+          {
+            "r": "Record label",
+            "h": 23,
+            "t": 22,
+            "evidence": [
+              6
+            ]
+          },
+          {
+            "r": "Performer",
+            "h": 23,
+            "t": 2,
+            "evidence": [
+              0,
+              6
+            ]
+          },
+          {
+            "r": "Publication date",
+            "h": 24,
+            "t": 6,
+            "evidence": [
+              6
+            ]
+          },
+          {
+            "r": "Record label",
+            "h": 24,
+            "t": 22,
+            "evidence": [
+              6
+            ]
+          },
+          {
+            "r": "Performer",
+            "h": 24,
+            "t": 2,
+            "evidence": [
+              0,
+              6
+            ]
+          },
+          {
+            "r": "Record label",
+            "h": 0,
+            "t": 3,
+            "evidence": [
+              1,
+              6
+            ]
+          },
+          {
+            "r": "Performer",
+            "h": 0,
+            "t": 2,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Publication date",
+            "h": 0,
+            "t": 4,
+            "evidence": [
+              1
+            ]
+          },
+          {
+            "r": "Record label",
+            "h": 18,
+            "t": 3,
+            "evidence": [
+              6
+            ]
+          },
+          {
+            "r": "Performer",
+            "h": 18,
+            "t": 2,
+            "evidence": [
+              0,
+              6
+            ]
+          },
+          {
+            "r": "Record label",
+            "h": 20,
+            "t": 3,
+            "evidence": [
+              6
+            ]
+          },
+          {
+            "r": "Country of origin",
+            "h": 20,
+            "t": 1,
+            "evidence": [
+              0,
+              6
+            ]
+          },
+          {
+            "r": "Performer",
+            "h": 20,
+            "t": 2,
+            "evidence": [
+              0,
+              6
+            ]
+          },
+          {
+            "r": "Record label",
+            "h": 25,
+            "t": 22,
+            "evidence": [
+              6
+            ]
+          },
+          {
+            "r": "Performer",
+            "h": 25,
+            "t": 2,
+            "evidence": [
+              0,
+              6
+            ]
+          },
+          {
+            "r": "Country",
+            "h": 2,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Country of origin",
+            "h": 16,
+            "t": 13,
+            "evidence": [
+              5
+            ]
+          },
+          {
+            "r": "Performer",
+            "h": 16,
+            "t": 2,
+            "evidence": [
+              0,
+              5
+            ]
+          },
+          {
+            "r": "Publication date",
+            "h": 0,
+            "t": 6,
+            "evidence": [
+              0,
+              2
+            ]
+          },
+          {
+            "h": 23,
+            "t": 24,
+            "r": "Follows",
+            "evidence": []
+          },
+          {
+            "h": 2,
+            "t": 22,
+            "r": "Record label",
+            "evidence": []
+          },
+          {
+            "h": 2,
+            "t": 3,
+            "r": "Record label",
+            "evidence": []
+          },
+          {
+            "h": 2,
+            "t": 19,
+            "r": "Notable work",
+            "evidence": [
+              0,
+              6
+            ]
+          },
+          {
+            "h": 2,
+            "t": 23,
+            "r": "Notable work",
+            "evidence": [
+              0,
+              6
+            ]
+          },
+          {
+            "h": 2,
+            "t": 24,
+            "r": "Notable work",
+            "evidence": [
+              0,
+              6
+            ]
+          },
+          {
+            "h": 2,
+            "t": 0,
+            "r": "Notable work",
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "h": 2,
+            "t": 18,
+            "r": "Notable work",
+            "evidence": [
+              0,
+              6
+            ]
+          },
+          {
+            "h": 2,
+            "t": 20,
+            "r": "Notable work",
+            "evidence": [
+              0,
+              6
+            ]
+          },
+          {
+            "h": 2,
+            "t": 25,
+            "r": "Notable work",
+            "evidence": [
+              0,
+              6
+            ]
+          },
+          {
+            "h": 2,
+            "t": 16,
+            "r": "Notable work",
+            "evidence": [
+              0,
+              5
+            ]
+          },
+          {
+            "h": 24,
+            "t": 23,
+            "r": "Follows",
+            "evidence": []
+          },
+          {
+            "h": 2,
+            "t": 1,
+            "r": "Located in",
+            "evidence": [
+              0
+            ]
+          }
+        ],
+        "entity_types": "['Location', 'Other', 'Organization', 'Time', 'Number']",
+        "relation_types": "['Country', 'Performer', 'Country of origin', 'Notable work', 'Located in', 'Follows', 'Publication date', 'Record label']"
+      },
+      {
+        "sentences": "[['In', '1930', 'he', 'was', 'nominated', 'for', 'the', 'Nobel', 'Prize', 'in', 'Literature', 'by', 'Swedish', 'author', 'Anders', '\u00d6sterling', ',', 'but', 'was', 'passed', 'over', 'in', 'favor', 'of', 'Sinclair', 'Lewis', '.']]",
+        "entities": [
+          [
+            {
+              "name": "Swedish author",
+              "pos": [
+                12,
+                14
+              ],
+              "type": "Other",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Anders \u00d6sterling",
+              "pos": [
+                14,
+                16
+              ],
+              "type": "Writer",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Nobel Prize in Literature",
+              "pos": [
+                7,
+                11
+              ],
+              "type": "Award",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Sinclair Lewis",
+              "pos": [
+                24,
+                26
+              ],
+              "type": "Writer",
+              "sent_id": 0
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "Named",
+            "h": 0,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Role",
+            "h": 1,
+            "t": 2,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Win defeat",
+            "h": 3,
+            "t": 2,
+            "evidence": [
+              0
+            ]
+          }
+        ],
+        "entity_types": "['Award', 'Other', 'Writer']",
+        "relation_types": "['Role', 'Win defeat', 'Named']"
+      },
+      {
+        "sentences": "[['Cinqu\u00e9', 'Lee', '(', 'born', 'July', '1966', ')', 'is', 'an', 'American', 'actor', 'and', 'filmmaker', '.'], ['He', 'is', 'the', 'younger', 'brother', 'of', 'filmmaker', 'Spike', 'Lee', '.'], ['Lee', 'has', 'worked', 'in', 'number', 'of', 'different', 'positions', 'of', 'his', 'older', 'brother', \"'s\", 'films', ',', 'as', 'a', 'camera', 'operator', ',', 'video', 'archivist', 'and', 'most', 'notably', 'as', 'a', 'co', '-', 'screenwriter', 'in', 'the', '1994', 'film', 'Crooklyn', '.'], ['He', 'also', 'had', 'small', 'roles', 'in', 'School', 'Daze', '(', '1988', ')', 'and', 'Oldboy', '(', '2013', ')', '.'], ['As', 'an', 'actor', ',', 'he', 'appeared', 'in', 'the', 'Jim', 'Jarmusch', '-', 'directed', 'films', 'Mystery', 'Train', '(', '1989', ')', 'and', 'Coffee', 'and', 'Cigarettes', '(', '2003', ')', ',', 'and', 'a', 'number', 'of', 'other', 'independent', 'films', '.'], ['Lee', 'is', 'also', 'a', 'filmmaker', 'himself', ',', 'directing', ',', 'producing', 'and', 'writing', 'the', 'films', 'Nowhere', 'Fast', '(', '1997', ')', ',', 'Sink', 'Like', 'a', 'Stone', '(', '2000', ',', 'short', 'film', ')', ',', 'UR4', 'Given', '(', '2004', ')', ',', 'Window', 'on', 'Your', 'Present', '(', '2010', ')', 'and', 'Burn', 'Out', 'the', 'Day', '(', '2010', ',', 'co', '-', 'directed', 'with', 'Sean', 'Bohary', ')', '.']]",
+        "entities": [
+          [
+            {
+              "name": "Lee",
+              "pos": [
+                0,
+                1
+              ],
+              "sent_id": 2,
+              "type": "Person",
+              "global_pos": [
+                24,
+                24
+              ],
+              "index": "0_0"
+            },
+            {
+              "name": "Lee",
+              "pos": [
+                0,
+                1
+              ],
+              "sent_id": 5,
+              "type": "Person",
+              "global_pos": [
+                111,
+                111
+              ],
+              "index": "0_1"
+            },
+            {
+              "name": "Cinqu\u00e9 Lee",
+              "pos": [
+                0,
+                2
+              ],
+              "sent_id": 0,
+              "type": "Person",
+              "global_pos": [
+                0,
+                0
+              ],
+              "index": "0_2"
+            }
+          ],
+          [
+            {
+              "type": "Time",
+              "pos": [
+                4,
+                6
+              ],
+              "name": "July 1966",
+              "sent_id": 0,
+              "global_pos": [
+                4,
+                4
+              ],
+              "index": "1_0"
+            }
+          ],
+          [
+            {
+              "name": "American",
+              "pos": [
+                9,
+                10
+              ],
+              "sent_id": 0,
+              "type": "Location",
+              "global_pos": [
+                9,
+                9
+              ],
+              "index": "2_0"
+            }
+          ],
+          [
+            {
+              "name": "Spike Lee",
+              "pos": [
+                7,
+                9
+              ],
+              "sent_id": 1,
+              "type": "Person",
+              "global_pos": [
+                21,
+                21
+              ],
+              "index": "3_0"
+            }
+          ],
+          [
+            {
+              "type": "Time",
+              "pos": [
+                32,
+                33
+              ],
+              "name": "1994",
+              "sent_id": 2,
+              "global_pos": [
+                56,
+                56
+              ],
+              "index": "4_0"
+            }
+          ],
+          [
+            {
+              "name": "Crooklyn",
+              "pos": [
+                34,
+                35
+              ],
+              "sent_id": 2,
+              "type": "Other",
+              "global_pos": [
+                58,
+                58
+              ],
+              "index": "5_0"
+            }
+          ],
+          [
+            {
+              "type": "Other",
+              "pos": [
+                6,
+                8
+              ],
+              "name": "School Daze",
+              "sent_id": 3,
+              "global_pos": [
+                66,
+                66
+              ],
+              "index": "6_0"
+            }
+          ],
+          [
+            {
+              "type": "Time",
+              "pos": [
+                9,
+                10
+              ],
+              "name": "1988",
+              "sent_id": 3,
+              "global_pos": [
+                69,
+                69
+              ],
+              "index": "7_0"
+            }
+          ],
+          [
+            {
+              "name": "Oldboy",
+              "pos": [
+                12,
+                13
+              ],
+              "sent_id": 3,
+              "type": "Other",
+              "global_pos": [
+                72,
+                72
+              ],
+              "index": "8_0"
+            }
+          ],
+          [
+            {
+              "type": "Time",
+              "pos": [
+                14,
+                15
+              ],
+              "name": "2013",
+              "sent_id": 3,
+              "global_pos": [
+                74,
+                74
+              ],
+              "index": "9_0"
+            }
+          ],
+          [
+            {
+              "name": "Jim Jarmusch",
+              "pos": [
+                8,
+                10
+              ],
+              "sent_id": 4,
+              "type": "Person",
+              "global_pos": [
+                85,
+                85
+              ],
+              "index": "10_0"
+            }
+          ],
+          [
+            {
+              "type": "Other",
+              "pos": [
+                13,
+                15
+              ],
+              "name": "Mystery Train",
+              "sent_id": 4,
+              "global_pos": [
+                90,
+                90
+              ],
+              "index": "11_0"
+            }
+          ],
+          [
+            {
+              "type": "Time",
+              "pos": [
+                16,
+                17
+              ],
+              "name": "1989",
+              "sent_id": 4,
+              "global_pos": [
+                93,
+                93
+              ],
+              "index": "12_0"
+            }
+          ],
+          [
+            {
+              "type": "Other",
+              "pos": [
+                19,
+                22
+              ],
+              "name": "Coffee and Cigarettes",
+              "sent_id": 4,
+              "global_pos": [
+                96,
+                96
+              ],
+              "index": "13_0"
+            }
+          ],
+          [
+            {
+              "type": "Time",
+              "pos": [
+                23,
+                24
+              ],
+              "name": "2003",
+              "sent_id": 4,
+              "global_pos": [
+                100,
+                100
+              ],
+              "index": "14_0"
+            }
+          ],
+          [
+            {
+              "type": "Other",
+              "pos": [
+                14,
+                16
+              ],
+              "name": "Nowhere Fast",
+              "sent_id": 5,
+              "global_pos": [
+                125,
+                125
+              ],
+              "index": "15_0"
+            }
+          ],
+          [
+            {
+              "type": "Time",
+              "pos": [
+                17,
+                18
+              ],
+              "name": "1997",
+              "sent_id": 5,
+              "global_pos": [
+                128,
+                128
+              ],
+              "index": "16_0"
+            }
+          ],
+          [
+            {
+              "type": "Other",
+              "pos": [
+                20,
+                24
+              ],
+              "name": "Sink Like a Stone",
+              "sent_id": 5,
+              "global_pos": [
+                131,
+                131
+              ],
+              "index": "17_0"
+            }
+          ],
+          [
+            {
+              "type": "Time",
+              "pos": [
+                25,
+                26
+              ],
+              "name": "2000",
+              "sent_id": 5,
+              "global_pos": [
+                136,
+                136
+              ],
+              "index": "18_0"
+            }
+          ],
+          [
+            {
+              "type": "Other",
+              "pos": [
+                31,
+                33
+              ],
+              "name": "UR4 Given",
+              "sent_id": 5,
+              "global_pos": [
+                142,
+                142
+              ],
+              "index": "19_0"
+            }
+          ],
+          [
+            {
+              "type": "Time",
+              "pos": [
+                34,
+                35
+              ],
+              "name": "2004",
+              "sent_id": 5,
+              "global_pos": [
+                145,
+                145
+              ],
+              "index": "20_0"
+            }
+          ],
+          [
+            {
+              "type": "Other",
+              "pos": [
+                37,
+                41
+              ],
+              "name": "Window on Your Present",
+              "sent_id": 5,
+              "global_pos": [
+                148,
+                148
+              ],
+              "index": "21_0"
+            }
+          ],
+          [
+            {
+              "type": "Time",
+              "pos": [
+                42,
+                43
+              ],
+              "name": "2010",
+              "sent_id": 5,
+              "global_pos": [
+                153,
+                153
+              ],
+              "index": "22_0"
+            },
+            {
+              "type": "Time",
+              "pos": [
+                50,
+                51
+              ],
+              "name": "2010",
+              "sent_id": 5,
+              "global_pos": [
+                161,
+                161
+              ],
+              "index": "22_1"
+            }
+          ],
+          [
+            {
+              "type": "Other",
+              "pos": [
+                45,
+                49
+              ],
+              "name": "Burn Out the Day",
+              "sent_id": 5,
+              "global_pos": [
+                156,
+                156
+              ],
+              "index": "23_0"
+            }
+          ],
+          [
+            {
+              "type": "Person",
+              "pos": [
+                56,
+                58
+              ],
+              "name": "Sean Bohary",
+              "sent_id": 5,
+              "global_pos": [
+                167,
+                167
+              ],
+              "index": "24_0"
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "Date of birth",
+            "h": 0,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Publication date",
+            "h": 21,
+            "t": 22,
+            "evidence": [
+              5
+            ]
+          },
+          {
+            "r": "Publication date",
+            "h": 23,
+            "t": 22,
+            "evidence": [
+              5
+            ]
+          },
+          {
+            "r": "Director",
+            "h": 23,
+            "t": 24,
+            "evidence": [
+              5
+            ]
+          },
+          {
+            "r": "Screenwriter",
+            "h": 5,
+            "t": 0,
+            "evidence": [
+              2
+            ]
+          },
+          {
+            "r": "Publication date",
+            "h": 5,
+            "t": 4,
+            "evidence": [
+              2
+            ]
+          },
+          {
+            "r": "Cast member",
+            "h": 6,
+            "t": 0,
+            "evidence": [
+              3
+            ]
+          },
+          {
+            "r": "Publication date",
+            "h": 6,
+            "t": 7,
+            "evidence": [
+              3
+            ]
+          },
+          {
+            "r": "Publication date",
+            "h": 8,
+            "t": 9,
+            "evidence": [
+              3
+            ]
+          },
+          {
+            "r": "Cast member",
+            "h": 11,
+            "t": 0,
+            "evidence": [
+              4
+            ]
+          },
+          {
+            "r": "Publication date",
+            "h": 11,
+            "t": 12,
+            "evidence": [
+              4
+            ]
+          },
+          {
+            "r": "Director",
+            "h": 11,
+            "t": 10,
+            "evidence": [
+              4
+            ]
+          },
+          {
+            "r": "Cast member",
+            "h": 13,
+            "t": 0,
+            "evidence": [
+              4
+            ]
+          },
+          {
+            "r": "Publication date",
+            "h": 13,
+            "t": 14,
+            "evidence": [
+              4
+            ]
+          },
+          {
+            "r": "Director",
+            "h": 13,
+            "t": 10,
+            "evidence": [
+              4
+            ]
+          },
+          {
+            "r": "Publication date",
+            "h": 15,
+            "t": 16,
+            "evidence": [
+              5
+            ]
+          },
+          {
+            "r": "Publication date",
+            "h": 17,
+            "t": 18,
+            "evidence": [
+              5
+            ]
+          },
+          {
+            "r": "Publication date",
+            "h": 19,
+            "t": 20,
+            "evidence": [
+              5
+            ]
+          },
+          {
+            "h": 17,
+            "t": 0,
+            "r": "Director",
+            "evidence": []
+          },
+          {
+            "h": 23,
+            "t": 0,
+            "r": "Director",
+            "evidence": []
+          },
+          {
+            "h": 8,
+            "t": 0,
+            "r": "Cast member",
+            "evidence": []
+          },
+          {
+            "h": 19,
+            "t": 0,
+            "r": "Screenwriter",
+            "evidence": []
+          },
+          {
+            "h": 15,
+            "t": 0,
+            "r": "Director",
+            "evidence": []
+          },
+          {
+            "h": 21,
+            "t": 0,
+            "r": "Screenwriter",
+            "evidence": []
+          },
+          {
+            "h": 21,
+            "t": 0,
+            "r": "Director",
+            "evidence": []
+          },
+          {
+            "h": 5,
+            "t": 3,
+            "r": "Director",
+            "evidence": []
+          },
+          {
+            "h": 15,
+            "t": 0,
+            "r": "Screenwriter",
+            "evidence": []
+          },
+          {
+            "h": 3,
+            "t": 0,
+            "r": "Sibling",
+            "evidence": []
+          },
+          {
+            "h": 17,
+            "t": 0,
+            "r": "Screenwriter",
+            "evidence": []
+          },
+          {
+            "h": 19,
+            "t": 0,
+            "r": "Director",
+            "evidence": []
+          },
+          {
+            "h": 23,
+            "t": 0,
+            "r": "Screenwriter",
+            "evidence": []
+          },
+          {
+            "h": 0,
+            "t": 3,
+            "r": "Sibling",
+            "evidence": []
+          },
+          {
+            "h": 24,
+            "t": 23,
+            "r": "Notable work",
+            "evidence": [
+              5
+            ]
+          },
+          {
+            "h": 10,
+            "t": 11,
+            "r": "Notable work",
+            "evidence": [
+              4
+            ]
+          },
+          {
+            "h": 10,
+            "t": 13,
+            "r": "Notable work",
+            "evidence": [
+              4
+            ]
+          },
+          {
+            "h": 0,
+            "t": 17,
+            "r": "Notable work",
+            "evidence": []
+          },
+          {
+            "h": 0,
+            "t": 23,
+            "r": "Notable work",
+            "evidence": []
+          },
+          {
+            "h": 0,
+            "t": 15,
+            "r": "Notable work",
+            "evidence": []
+          },
+          {
+            "h": 0,
+            "t": 21,
+            "r": "Notable work",
+            "evidence": []
+          },
+          {
+            "h": 3,
+            "t": 5,
+            "r": "Notable work",
+            "evidence": []
+          },
+          {
+            "h": 0,
+            "t": 19,
+            "r": "Notable work",
+            "evidence": []
+          }
+        ],
+        "entity_types": "['Location', 'Person', 'Other', 'Time']",
+        "relation_types": "['Cast member', 'Date of birth', 'Sibling', 'Notable work', 'Screenwriter', 'Director', 'Publication date']"
+      },
+      {
+        "sentences": "[['`', '`', 'I', 'don', \"'t\", 'think', 'anyone', 'thought', 'things', 'would', 'collapse', 'so', 'quickly', ',', \"'\", \"'\", 'said', 'Angel', 'Pena', ',', 'an', 'economist', 'with', 'the', 'Mediterranean', 'Foundation', 'research', 'group.']]",
+        "entities": [
+          [
+            {
+              "name": "Angel Pena",
+              "pos": [
+                17,
+                19
+              ],
+              "type": "Person",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Mediterranean Foundation",
+              "pos": [
+                24,
+                26
+              ],
+              "type": "Organization",
+              "sent_id": 0
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "Works for",
+            "h": 0,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          }
+        ],
+        "entity_types": "['Person', 'Organization']",
+        "relation_types": "['Works for']"
+      },
+      {
+        "sentences": "[['Mars', 'has', 'four', 'known', 'co-orbital', 'asteroids', '(', '5261', 'Eureka', ',', ',', 'all', 'at', 'the', 'Lagrangian', 'point', 's', ')', ',', 'and', 'Jupiter', 'has', 'many', '(', 'an', 'estimated', 'one', 'million', 'greater', 'than', '1', 'km', 'in', 'diameter', ',', 'the', 'Jovian', 'trojans', ')', ';', 'there', 'are', 'also', 'other', 'small', 'co-orbital', 'moons', 'in', 'the', 'Saturnian', 'system', ':', 'Telesto', 'and', 'Calypso', 'with', 'Tethys', ',', 'and', 'Helene', 'and', 'Polydeuces', 'with', 'Dione', '.']]",
+        "entities": [
+          [
+            {
+              "name": "Mars",
+              "pos": [
+                0,
+                1
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "5261 Eureka",
+              "pos": [
+                7,
+                9
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Jupiter",
+              "pos": [
+                20,
+                21
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Jovian trojans",
+              "pos": [
+                36,
+                38
+              ],
+              "type": "Other",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Telesto",
+              "pos": [
+                52,
+                53
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Saturnian system",
+              "pos": [
+                49,
+                51
+              ],
+              "type": "Other",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Calypso",
+              "pos": [
+                54,
+                55
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Tethys",
+              "pos": [
+                56,
+                57
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Helene",
+              "pos": [
+                59,
+                60
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Polydeuces",
+              "pos": [
+                61,
+                62
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Dione",
+              "pos": [
+                63,
+                64
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Lagrangian point",
+              "pos": [
+                14,
+                16
+              ],
+              "type": "Other",
+              "sent_id": 0
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "Related to",
+            "h": 0,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Compare",
+            "h": 0,
+            "t": 2,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Related to",
+            "h": 2,
+            "t": 3,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Part of",
+            "h": 4,
+            "t": 5,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Part of",
+            "h": 6,
+            "t": 5,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Part of",
+            "h": 7,
+            "t": 5,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Part of",
+            "h": 8,
+            "t": 5,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Part of",
+            "h": 9,
+            "t": 5,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Part of",
+            "h": 10,
+            "t": 5,
+            "evidence": [
+              0
+            ]
+          }
+        ],
+        "entity_types": "['Other', 'Astronomical object']",
+        "relation_types": "['Compare', 'Related to', 'Part of']"
+      },
+      {
+        "sentences": "[['Henry', 'A.', 'Grunwald', ',', 'a', 'refugee', 'from', 'Nazi-dominated', 'Austria', 'who', 'rose', 'to', 'become', 'Time', 'magazine', \"'s\", 'top', 'editor', 'and', 'later', 'returned', 'to', 'Vienna', 'as', 'the', 'United', 'States', 'ambassador', ',', 'died', 'yesterday', 'at', 'his', 'home', 'in', 'Manhattan', '.']]",
+        "entities": [
+          [
+            {
+              "name": "Austria",
+              "pos": [
+                8,
+                9
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Vienna",
+              "pos": [
+                22,
+                23
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "United States",
+              "pos": [
+                25,
+                27
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Manhattan",
+              "pos": [
+                35,
+                36
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "h": 0,
+            "t": 1,
+            "r": "Contains location",
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "h": 1,
+            "t": 0,
+            "r": "Located in",
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "h": 0,
+            "t": 1,
+            "r": "Located in",
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "h": 0,
+            "t": 1,
+            "r": "Capital",
+            "evidence": [
+              0
+            ]
+          }
+        ],
+        "entity_types": "['Location']",
+        "relation_types": "['Located in', 'Capital', 'Contains location']"
+      }
+    ],
+    "signature_instructions": "Given the text in form of Python lists of sentences, a list of dictionaries with entities and a list of relation types find the relations between the entities.\nThe output should be  a list of tuples in the format (entity1, entity2, relation), where:\n- 'entity1' and 'entity2' are the names or terms representing the two entities involved,\n- 'relation' is the specific relationship type between them, as defined in the provided relation types. Use the exact types as defined in the input field, relation_types. \nThis format captures the relationships directly as they appear in the text.",
+    "signature_prefix": "Answer:",
+    "extended_signature_instructions": "Given the text in form of Python lists of sentences, a list of dictionaries with entities and a list of relation types find the relations between the entities.\nThe output should be  a list of tuples in the format (entity1, entity2, relation), where:\n- 'entity1' and 'entity2' are the names or terms representing the two entities involved,\n- 'relation' is the specific relationship type between them, as defined in the provided relation types. Use the exact types as defined in the input field, relation_types. \nThis format captures the relationships directly as they appear in the text.",
+    "extended_signature_prefix": "Answer:"
+  },
+  "tuple_to_json_relation": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "sentences": "[['In', '1930', 'he', 'was', 'nominated', 'for', 'the', 'Nobel', 'Prize', 'in', 'Literature', 'by', 'Swedish', 'author', 'Anders', '\u00d6sterling', ',', 'but', 'was', 'passed', 'over', 'in', 'favor', 'of', 'Sinclair', 'Lewis', '.']]",
+        "entities": [
+          [
+            {
+              "name": "Swedish author",
+              "pos": [
+                12,
+                14
+              ],
+              "type": "Other",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Anders \u00d6sterling",
+              "pos": [
+                14,
+                16
+              ],
+              "type": "Writer",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Nobel Prize in Literature",
+              "pos": [
+                7,
+                11
+              ],
+              "type": "Award",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Sinclair Lewis",
+              "pos": [
+                24,
+                26
+              ],
+              "type": "Writer",
+              "sent_id": 0
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "Named",
+            "h": 0,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Role",
+            "h": 1,
+            "t": 2,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Win defeat",
+            "h": 3,
+            "t": 2,
+            "evidence": [
+              0
+            ]
+          }
+        ],
+        "entity_types": "['Award', 'Other', 'Writer']",
+        "relation_types": "['Role', 'Win defeat', 'Named']"
+      },
+      {
+        "sentences": "[['We', 'argue', 'in', 'favor', 'of', 'the', 'the', 'use', 'of', 'labeled', 'directed', 'graph', 'to', 'represent', 'various', 'types', 'of', 'linguistic', 'structures', ',', 'and', 'illustrate', 'how', 'this', 'allows', 'one', 'to', 'view', 'NLP', 'tasks', 'as', 'graph', 'transformations', '.'], ['We', 'present', 'a', 'general', 'method', 'for', 'learning', 'such', 'transformations', 'from', 'an', 'annotated', 'corpus', 'and', 'describe', 'experiments', 'with', 'two', 'applications', 'of', 'the', 'method', ':', 'identification', 'of', 'non-local', 'depenencies', '-LRB-', 'using', 'Penn', 'Treebank', 'data', '-RRB-', 'and', 'semantic', 'role', 'labeling', '-LRB-', 'using', 'Proposition', 'Bank', 'data', '-RRB-', '.']]",
+        "entities": [
+          [
+            {
+              "name": "labeled directed graph",
+              "pos": [
+                9,
+                11
+              ],
+              "sent_id": 0,
+              "type": "Method"
+            }
+          ],
+          [
+            {
+              "name": "linguistic structures",
+              "pos": [
+                17,
+                18
+              ],
+              "sent_id": 0,
+              "type": "Scientific term"
+            }
+          ],
+          [
+            {
+              "name": "NLP tasks",
+              "pos": [
+                28,
+                29
+              ],
+              "sent_id": 0,
+              "type": "Task"
+            }
+          ],
+          [
+            {
+              "name": "this",
+              "pos": [
+                23,
+                23
+              ],
+              "sent_id": 0,
+              "type": "Other"
+            }
+          ],
+          [
+            {
+              "name": "method",
+              "pos": [
+                4,
+                4
+              ],
+              "sent_id": 1,
+              "type": "Method"
+            }
+          ],
+          [
+            {
+              "name": "transformations",
+              "pos": [
+                8,
+                8
+              ],
+              "sent_id": 1,
+              "type": "Other"
+            }
+          ],
+          [
+            {
+              "name": "annotated corpus",
+              "pos": [
+                11,
+                12
+              ],
+              "sent_id": 1,
+              "type": "Material"
+            }
+          ],
+          [
+            {
+              "name": "method",
+              "pos": [
+                21,
+                21
+              ],
+              "sent_id": 1,
+              "type": "Other"
+            }
+          ],
+          [
+            {
+              "name": "applications",
+              "pos": [
+                18,
+                18
+              ],
+              "sent_id": 1,
+              "type": "Other"
+            }
+          ],
+          [
+            {
+              "name": "identification of non-local depenencies",
+              "pos": [
+                23,
+                26
+              ],
+              "sent_id": 1,
+              "type": "Task"
+            }
+          ],
+          [
+            {
+              "name": "Penn Treebank data",
+              "pos": [
+                29,
+                31
+              ],
+              "sent_id": 1,
+              "type": "Material"
+            }
+          ],
+          [
+            {
+              "name": "semantic role labeling",
+              "pos": [
+                34,
+                36
+              ],
+              "sent_id": 1,
+              "type": "Task"
+            }
+          ],
+          [
+            {
+              "name": "Proposition Bank data",
+              "pos": [
+                39,
+                41
+              ],
+              "sent_id": 1,
+              "type": "Material"
+            }
+          ],
+          [
+            {
+              "name": "graph transformations",
+              "pos": [
+                31,
+                32
+              ],
+              "sent_id": 0,
+              "type": "Task"
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "Used for",
+            "h": 0,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 0,
+            "t": 2,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 3,
+            "t": 2,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 4,
+            "t": 5,
+            "evidence": [
+              1
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 6,
+            "t": 4,
+            "evidence": [
+              1
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 7,
+            "t": 8,
+            "evidence": [
+              1
+            ]
+          },
+          {
+            "r": "Hyponym of",
+            "h": 9,
+            "t": 8,
+            "evidence": [
+              1
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 10,
+            "t": 9,
+            "evidence": [
+              1
+            ]
+          },
+          {
+            "r": "Hyponym of",
+            "h": 11,
+            "t": 8,
+            "evidence": [
+              1
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 12,
+            "t": 11,
+            "evidence": [
+              1
+            ]
+          }
+        ],
+        "entity_types": "['Scientific term', 'Task', 'Other', 'Material', 'Method']",
+        "relation_types": "['Hyponym of', 'Used for']"
+      },
+      {
+        "sentences": "[['The', 'city', 'has', 'become', 'a', 'cultural', 'hothouse', ',', 'in', 'which', 'singers', 'and', 'instrumentalists', 'from', 'Mali', \"'s\", 'myriad', 'tribes', '--', 'the', 'Tuaregs', 'of', 'the', 'Sahara', ',', 'the', 'Sorhai', 'of', 'Timbuktu', ',', 'the', 'Malinkes', 'from', 'the', 'border', 'region', 'south', 'of', 'Bamako', ',', 'the', 'Dogon', 'cliff', 'dwellers', ',', 'the', 'Wassalous', 'near', 'the', 'Ivory', 'Coast', ',', 'the', 'Peuls', 'of', 'central', 'Mali', '--', 'mix', 'and', 'fertilize', 'one', 'another', \"'s\", 'art', '.', \"''\"]]",
+        "entities": [
+          [
+            {
+              "name": "Mali",
+              "pos": [
+                14,
+                57
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Bamako",
+              "pos": [
+                38,
+                39
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Timbuktu",
+              "pos": [
+                28,
+                29
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Sahara",
+              "pos": [
+                23,
+                24
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "h": 0,
+            "t": 1,
+            "r": "Capital",
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "h": 0,
+            "t": 1,
+            "r": "Contains location",
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "h": 1,
+            "t": 0,
+            "r": "Located in",
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "h": 0,
+            "t": 1,
+            "r": "Located in",
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "h": 0,
+            "t": 2,
+            "r": "Contains location",
+            "evidence": [
+              0
+            ]
+          }
+        ],
+        "entity_types": "['Location']",
+        "relation_types": "['Located in', 'Capital', 'Contains location']"
+      },
+      {
+        "sentences": "[['Existing', 'techniques', 'extract', 'term', 'candidates', 'by', 'looking', 'for', 'internal', 'and', 'contextual', 'information', 'associated', 'with', 'domain', 'specific', 'terms', '.'], ['The', 'algorithms', 'always', 'face', 'the', 'dilemma', 'that', 'fewer', 'features', 'are', 'not', 'enough', 'to', 'distinguish', 'terms', 'from', 'non-terms', 'whereas', 'more', 'features', 'lead', 'to', 'more', 'conflicts', 'among', 'selected', 'features', '.'], ['This', 'paper', 'presents', 'a', 'novel', 'approach', 'for', 'term', 'extraction', 'based', 'on', 'delimiters', 'which', 'are', 'much', 'more', 'stable', 'and', 'domain', 'independent', '.'], ['The', 'proposed', 'approach', 'is', 'not', 'as', 'sensitive', 'to', 'term', 'frequency', 'as', 'that', 'of', 'previous', 'works', '.'], ['This', 'approach', 'has', 'no', 'strict', 'limit', 'or', 'hard', 'rules', 'and', 'thus', 'they', 'can', 'deal', 'with', 'all', 'kinds', 'of', 'terms', '.'], ['It', 'also', 'requires', 'no', 'prior', 'domain', 'knowledge', 'and', 'no', 'additional', 'training', 'to', 'adapt', 'to', 'new', 'domains', '.'], ['Consequently', ',', 'the', 'proposed', 'approach', 'can', 'be', 'applied', 'to', 'different', 'domains', 'easily', 'and', 'it', 'is', 'especially', 'useful', 'for', 'resource-limited', 'domains', '.'], ['Evaluations', 'conducted', 'on', 'two', 'different', 'domains', 'for', 'Chinese', 'term', 'extraction', 'show', 'significant', 'improvements', 'over', 'existing', 'techniques', 'which', 'verifies', 'its', 'efficiency', 'and', 'domain', 'independent', 'nature', '.'], ['Experiments', 'on', 'new', 'term', 'extraction', 'indicate', 'that', 'the', 'proposed', 'approach', 'can', 'also', 'serve', 'as', 'an', 'effective', 'tool', 'for', 'domain', 'lexicon', 'expansion', '.']]",
+        "entities": [
+          [
+            {
+              "name": "domain specific terms",
+              "pos": [
+                14,
+                16
+              ],
+              "sent_id": 0,
+              "type": "Scientific term"
+            }
+          ],
+          [
+            {
+              "name": "internal and contextual information",
+              "pos": [
+                8,
+                11
+              ],
+              "sent_id": 0,
+              "type": "Scientific term"
+            }
+          ],
+          [
+            {
+              "name": "approach",
+              "pos": [
+                5,
+                5
+              ],
+              "sent_id": 2,
+              "type": "Other"
+            }
+          ],
+          [
+            {
+              "name": "term extraction",
+              "pos": [
+                7,
+                8
+              ],
+              "sent_id": 2,
+              "type": "Task"
+            }
+          ],
+          [
+            {
+              "name": "delimiters",
+              "pos": [
+                11,
+                11
+              ],
+              "sent_id": 2,
+              "type": "Scientific term"
+            }
+          ],
+          [
+            {
+              "name": "term frequency",
+              "pos": [
+                8,
+                9
+              ],
+              "sent_id": 3,
+              "type": "Scientific term"
+            }
+          ],
+          [
+            {
+              "name": "it",
+              "pos": [
+                13,
+                13
+              ],
+              "sent_id": 6,
+              "type": "Other"
+            }
+          ],
+          [
+            {
+              "name": "resource-limited domains",
+              "pos": [
+                18,
+                19
+              ],
+              "sent_id": 6,
+              "type": "Material"
+            }
+          ],
+          [
+            {
+              "name": "Evaluations",
+              "pos": [
+                0,
+                0
+              ],
+              "sent_id": 7,
+              "type": "Other"
+            }
+          ],
+          [
+            {
+              "name": "Chinese term extraction",
+              "pos": [
+                7,
+                9
+              ],
+              "sent_id": 7,
+              "type": "Task"
+            }
+          ],
+          [
+            {
+              "name": "domain lexicon expansion",
+              "pos": [
+                18,
+                20
+              ],
+              "sent_id": 8,
+              "type": "Task"
+            }
+          ],
+          [
+            {
+              "name": "features",
+              "pos": [
+                8,
+                8
+              ],
+              "sent_id": 1,
+              "type": "Scientific term"
+            }
+          ],
+          [
+            {
+              "name": "hard rules",
+              "pos": [
+                7,
+                8
+              ],
+              "sent_id": 4,
+              "type": "Scientific term"
+            }
+          ],
+          [
+            {
+              "name": "domain knowledge",
+              "pos": [
+                5,
+                6
+              ],
+              "sent_id": 5,
+              "type": "Scientific term"
+            }
+          ],
+          [
+            {
+              "name": "new term extraction",
+              "pos": [
+                2,
+                4
+              ],
+              "sent_id": 8,
+              "type": "Task"
+            }
+          ],
+          [
+            {
+              "name": "tool",
+              "pos": [
+                16,
+                16
+              ],
+              "sent_id": 8,
+              "type": "Other"
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "Feature of ",
+            "h": 0,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 2,
+            "t": 3,
+            "evidence": [
+              2
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 4,
+            "t": 2,
+            "evidence": [
+              2
+            ]
+          },
+          {
+            "r": "Compare",
+            "h": 2,
+            "t": 5,
+            "evidence": [
+              3
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 6,
+            "t": 7,
+            "evidence": [
+              6
+            ]
+          },
+          {
+            "r": "Evaluate for",
+            "h": 8,
+            "t": 9,
+            "evidence": [
+              7
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 2,
+            "t": 10,
+            "evidence": [
+              8
+            ]
+          }
+        ],
+        "entity_types": "['Scientific term', 'Material', 'Task', 'Other']",
+        "relation_types": "['Compare', 'Evaluate for', 'Used for', 'Feature of ']"
+      },
+      {
+        "sentences": "[['Traditional', 'linear', 'Fukunaga-Koontz', 'Transform', '-LRB-', 'FKT', '-RRB-', '-LSB-', '1', '-RSB-', 'is', 'a', 'powerful', 'discriminative', 'subspaces', 'building', 'approach', '.'], ['Previous', 'work', 'has', 'successfully', 'extended', 'FKT', 'to', 'be', 'able', 'to', 'deal', 'with', 'small-sample-size', '.'], ['In', 'this', 'paper', ',', 'we', 'extend', 'traditional', 'linear', 'FKT', 'to', 'enable', 'it', 'to', 'work', 'in', 'multi-class', 'problem', 'and', 'also', 'in', 'higher', 'dimensional', '-LRB-', 'kernel', '-RRB-', 'subspaces', 'and', 'therefore', 'provide', 'enhanced', 'discrimination', 'ability', '.'], ['We', 'verify', 'the', 'effectiveness', 'of', 'the', 'proposed', 'Kernel', 'Fukunaga-Koontz', 'Transform', 'by', 'demonstrating', 'its', 'effectiveness', 'in', 'face', 'recognition', 'applications', ';', 'however', 'the', 'proposed', 'non-linear', 'generalization', 'can', 'be', 'applied', 'to', 'any', 'other', 'domain', 'specific', 'problems', '.']]",
+        "entities": [
+          [
+            {
+              "name": "linear Fukunaga-Koontz Transform -LRB- FKT -RRB-",
+              "pos": [
+                1,
+                6
+              ],
+              "sent_id": 0,
+              "type": "Method"
+            }
+          ],
+          [
+            {
+              "name": "discriminative subspaces building approach",
+              "pos": [
+                13,
+                16
+              ],
+              "sent_id": 0,
+              "type": "Method"
+            }
+          ],
+          [
+            {
+              "name": "FKT",
+              "pos": [
+                5,
+                5
+              ],
+              "sent_id": 1,
+              "type": "Method"
+            }
+          ],
+          [
+            {
+              "name": "small-sample-size",
+              "pos": [
+                12,
+                12
+              ],
+              "sent_id": 1,
+              "type": "Scientific term"
+            }
+          ],
+          [
+            {
+              "name": "linear FKT",
+              "pos": [
+                7,
+                8
+              ],
+              "sent_id": 2,
+              "type": "Method"
+            }
+          ],
+          [
+            {
+              "name": "it",
+              "pos": [
+                11,
+                11
+              ],
+              "sent_id": 2,
+              "type": "Other"
+            }
+          ],
+          [
+            {
+              "name": "multi-class problem",
+              "pos": [
+                15,
+                16
+              ],
+              "sent_id": 2,
+              "type": "Task"
+            }
+          ],
+          [
+            {
+              "name": "higher dimensional -LRB- kernel -RRB- subspaces",
+              "pos": [
+                20,
+                25
+              ],
+              "sent_id": 2,
+              "type": "Scientific term"
+            }
+          ],
+          [
+            {
+              "name": "discrimination ability",
+              "pos": [
+                30,
+                31
+              ],
+              "sent_id": 2,
+              "type": "Scientific term"
+            }
+          ],
+          [
+            {
+              "name": "face recognition applications",
+              "pos": [
+                15,
+                17
+              ],
+              "sent_id": 3,
+              "type": "Task"
+            }
+          ],
+          [
+            {
+              "name": "Kernel Fukunaga-Koontz Transform",
+              "pos": [
+                7,
+                9
+              ],
+              "sent_id": 3,
+              "type": "Method"
+            }
+          ],
+          [
+            {
+              "name": "non-linear generalization",
+              "pos": [
+                22,
+                23
+              ],
+              "sent_id": 3,
+              "type": "Method"
+            }
+          ],
+          [
+            {
+              "name": "domain specific problems",
+              "pos": [
+                30,
+                32
+              ],
+              "sent_id": 3,
+              "type": "Task"
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "Hyponym of",
+            "h": 0,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 2,
+            "t": 3,
+            "evidence": [
+              1
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 4,
+            "t": 5,
+            "evidence": [
+              2
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 5,
+            "t": 6,
+            "evidence": [
+              2
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 5,
+            "t": 7,
+            "evidence": [
+              2
+            ]
+          },
+          {
+            "r": "Feature of ",
+            "h": 5,
+            "t": 8,
+            "evidence": [
+              2
+            ]
+          },
+          {
+            "r": "Conjunction",
+            "h": 6,
+            "t": 7,
+            "evidence": [
+              2
+            ]
+          },
+          {
+            "r": "Evaluate for",
+            "h": 9,
+            "t": 10,
+            "evidence": [
+              3
+            ]
+          },
+          {
+            "r": "Used for",
+            "h": 11,
+            "t": 12,
+            "evidence": [
+              3
+            ]
+          }
+        ],
+        "entity_types": "['Method', 'Other', 'Task', 'Scientific term']",
+        "relation_types": "['Conjunction', 'Feature of ', 'Evaluate for', 'Hyponym of', 'Used for']"
+      },
+      {
+        "sentences": "[['Pakistan', \"'s\", 'prime', 'minister', ',', 'Shaukat', 'Aziz', ',', 'said', 'Wednesday', 'that', 'the', 'death', 'toll', 'had', 'climbed', 'to', '25,000', ',', 'up', 'from', '23,000', 'the', 'day', 'before', '.']]",
+        "entities": [
+          [
+            {
+              "name": "Shaukat Aziz",
+              "pos": [
+                5,
+                7
+              ],
+              "type": "Person",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Pakistan",
+              "pos": [
+                0,
+                1
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "h": 0,
+            "t": 1,
+            "r": "Nationality",
+            "evidence": [
+              0
+            ]
+          }
+        ],
+        "entity_types": "['Location', 'Person']",
+        "relation_types": "['Nationality']"
+      },
+      {
+        "sentences": "[['The', 'Tale', 'of', 'Jemima', 'Puddle-Duck', 'and', 'The', 'Tale', 'of', 'Tom', 'Kitten', 'are', 'representative', 'of', 'Hill', 'Top', 'Farm', 'and', 'her', 'farming', 'life', 'and', 'reflect', 'her', 'happiness', 'with', 'her', 'country', 'life.', 'John', 'Heelis', ',', '(', '1999', ')', 'The', 'Tale', 'of', 'Mrs', 'William', 'Heelis', '-', 'Beatrix', 'Potter', ';', 'Lear', ',', 'Ch', '.']]",
+        "entities": [
+          [
+            {
+              "name": "The Tale of Jemima Puddle-Duck",
+              "pos": [
+                0,
+                5
+              ],
+              "type": "Book",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Hill Top Farm",
+              "pos": [
+                14,
+                17
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "The Tale of Tom Kitten",
+              "pos": [
+                6,
+                11
+              ],
+              "type": "Book",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "The Tale of Mrs William Heelis - Beatrix Potter",
+              "pos": [
+                35,
+                44
+              ],
+              "type": "Book",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "John Heelis",
+              "pos": [
+                29,
+                31
+              ],
+              "type": "Writer",
+              "sent_id": 0
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "Related to",
+            "h": 0,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Related to",
+            "h": 2,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Artifact",
+            "h": 3,
+            "t": 4,
+            "evidence": [
+              0
+            ]
+          }
+        ],
+        "entity_types": "['Book', 'Location', 'Writer']",
+        "relation_types": "['Related to', 'Artifact']"
+      },
+      {
+        "sentences": "[['Henry', 'A.', 'Grunwald', ',', 'a', 'refugee', 'from', 'Nazi-dominated', 'Austria', 'who', 'rose', 'to', 'become', 'Time', 'magazine', \"'s\", 'top', 'editor', 'and', 'later', 'returned', 'to', 'Vienna', 'as', 'the', 'United', 'States', 'ambassador', ',', 'died', 'yesterday', 'at', 'his', 'home', 'in', 'Manhattan', '.']]",
+        "entities": [
+          [
+            {
+              "name": "Austria",
+              "pos": [
+                8,
+                9
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Vienna",
+              "pos": [
+                22,
+                23
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "United States",
+              "pos": [
+                25,
+                27
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Manhattan",
+              "pos": [
+                35,
+                36
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "h": 0,
+            "t": 1,
+            "r": "Contains location",
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "h": 1,
+            "t": 0,
+            "r": "Located in",
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "h": 0,
+            "t": 1,
+            "r": "Located in",
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "h": 0,
+            "t": 1,
+            "r": "Capital",
+            "evidence": [
+              0
+            ]
+          }
+        ],
+        "entity_types": "['Location']",
+        "relation_types": "['Located in', 'Capital', 'Contains location']"
+      },
+      {
+        "sentences": "[['Mars', 'has', 'four', 'known', 'co-orbital', 'asteroids', '(', '5261', 'Eureka', ',', ',', 'all', 'at', 'the', 'Lagrangian', 'point', 's', ')', ',', 'and', 'Jupiter', 'has', 'many', '(', 'an', 'estimated', 'one', 'million', 'greater', 'than', '1', 'km', 'in', 'diameter', ',', 'the', 'Jovian', 'trojans', ')', ';', 'there', 'are', 'also', 'other', 'small', 'co-orbital', 'moons', 'in', 'the', 'Saturnian', 'system', ':', 'Telesto', 'and', 'Calypso', 'with', 'Tethys', ',', 'and', 'Helene', 'and', 'Polydeuces', 'with', 'Dione', '.']]",
+        "entities": [
+          [
+            {
+              "name": "Mars",
+              "pos": [
+                0,
+                1
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "5261 Eureka",
+              "pos": [
+                7,
+                9
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Jupiter",
+              "pos": [
+                20,
+                21
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Jovian trojans",
+              "pos": [
+                36,
+                38
+              ],
+              "type": "Other",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Telesto",
+              "pos": [
+                52,
+                53
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Saturnian system",
+              "pos": [
+                49,
+                51
+              ],
+              "type": "Other",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Calypso",
+              "pos": [
+                54,
+                55
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Tethys",
+              "pos": [
+                56,
+                57
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Helene",
+              "pos": [
+                59,
+                60
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Polydeuces",
+              "pos": [
+                61,
+                62
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Dione",
+              "pos": [
+                63,
+                64
+              ],
+              "type": "Astronomical object",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Lagrangian point",
+              "pos": [
+                14,
+                16
+              ],
+              "type": "Other",
+              "sent_id": 0
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "Related to",
+            "h": 0,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Compare",
+            "h": 0,
+            "t": 2,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Related to",
+            "h": 2,
+            "t": 3,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Part of",
+            "h": 4,
+            "t": 5,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Part of",
+            "h": 6,
+            "t": 5,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Part of",
+            "h": 7,
+            "t": 5,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Part of",
+            "h": 8,
+            "t": 5,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Part of",
+            "h": 9,
+            "t": 5,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Part of",
+            "h": 10,
+            "t": 5,
+            "evidence": [
+              0
+            ]
+          }
+        ],
+        "entity_types": "['Other', 'Astronomical object']",
+        "relation_types": "['Compare', 'Related to', 'Part of']"
+      },
+      {
+        "sentences": "[['Arabella', 'Mansfield', '(', 'May', '23', ',', '1846', '\u2013', 'August', '1', ',', '1911', ')', ',', 'born', 'Belle', 'Aurelia', 'Babb', ',', 'became', 'the', 'first', 'female', 'lawyer', 'in', 'the', 'United', 'States', 'in', '1869', ',', 'admitted', 'to', 'the', 'Iowa', 'bar', ';', 'she', 'made', 'her', 'career', 'as', 'a', 'college', 'educator', 'and', 'administrator', '.'], ['Despite', 'an', 'Iowa', 'state', 'law', 'restricting', 'the', 'bar', 'exam', 'to', 'males', ',', 'Mansfield', 'had', 'taken', 'it', 'and', 'earned', 'high', 'scores', '.'], ['Shortly', 'after', 'her', 'court', 'challenge', ',', 'Iowa', 'amended', 'its', 'licensing', 'statute', 'and', 'became', 'the', 'first', 'state', 'to', 'accept', 'women', 'and', 'minorities', 'into', 'its', 'bar', '.'], ['During', 'her', 'career', ',', 'Mansfield', 'worked', 'primarily', 'as', 'an', 'educator', 'and', 'activist', ',', 'teaching', 'at', 'Iowa', 'Wesleyan', 'College', 'and', 'DePauw', 'University', '.'], ['At', 'the', 'latter', ',', 'she', 'also', 'became', 'a', 'university', 'administrator', ',', 'serving', 'successively', 'as', 'dean', 'in', 'the', '1890s', 'of', 'two', 'different', 'schools', '.']]",
+        "entities": [
+          [
+            {
+              "name": "Mansfield",
+              "pos": [
+                12,
+                13
+              ],
+              "sent_id": 1,
+              "type": "Person",
+              "global_pos": [
+                60,
+                60
+              ],
+              "index": "0_0"
+            },
+            {
+              "name": "Mansfield",
+              "pos": [
+                4,
+                5
+              ],
+              "sent_id": 3,
+              "type": "Person",
+              "global_pos": [
+                98,
+                98
+              ],
+              "index": "0_1"
+            },
+            {
+              "name": "Arabella Mansfield",
+              "pos": [
+                0,
+                2
+              ],
+              "sent_id": 0,
+              "type": "Person",
+              "global_pos": [
+                0,
+                0
+              ],
+              "index": "0_2"
+            }
+          ],
+          [
+            {
+              "type": "Time",
+              "pos": [
+                3,
+                7
+              ],
+              "name": "May 23 , 1846",
+              "sent_id": 0,
+              "global_pos": [
+                3,
+                3
+              ],
+              "index": "1_0"
+            }
+          ],
+          [
+            {
+              "type": "Time",
+              "pos": [
+                8,
+                12
+              ],
+              "name": "August 1 , 1911",
+              "sent_id": 0,
+              "global_pos": [
+                8,
+                8
+              ],
+              "index": "2_0"
+            }
+          ],
+          [
+            {
+              "name": "Belle Aurelia Babb",
+              "pos": [
+                15,
+                18
+              ],
+              "sent_id": 0,
+              "type": "Location",
+              "global_pos": [
+                15,
+                15
+              ],
+              "index": "3_0"
+            }
+          ],
+          [
+            {
+              "name": "the United States",
+              "pos": [
+                25,
+                28
+              ],
+              "sent_id": 0,
+              "type": "Location",
+              "global_pos": [
+                25,
+                25
+              ],
+              "index": "4_0"
+            }
+          ],
+          [
+            {
+              "type": "Time",
+              "pos": [
+                29,
+                30
+              ],
+              "name": "1869",
+              "sent_id": 0,
+              "global_pos": [
+                29,
+                29
+              ],
+              "index": "5_0"
+            }
+          ],
+          [
+            {
+              "type": "Location",
+              "pos": [
+                34,
+                35
+              ],
+              "name": "Iowa",
+              "sent_id": 0,
+              "global_pos": [
+                34,
+                34
+              ],
+              "index": "6_0"
+            },
+            {
+              "name": "Iowa",
+              "pos": [
+                6,
+                7
+              ],
+              "sent_id": 2,
+              "type": "Location",
+              "global_pos": [
+                75,
+                75
+              ],
+              "index": "7_0"
+            },
+            {
+              "name": "Iowa",
+              "pos": [
+                2,
+                3
+              ],
+              "sent_id": 1,
+              "type": "Location",
+              "global_pos": [
+                50,
+                50
+              ],
+              "index": "7_1"
+            }
+          ],
+          [
+            {
+              "name": "Iowa Wesleyan College",
+              "pos": [
+                15,
+                18
+              ],
+              "sent_id": 3,
+              "type": "Organization",
+              "global_pos": [
+                109,
+                109
+              ],
+              "index": "8_0"
+            }
+          ],
+          [
+            {
+              "name": "DePauw University",
+              "pos": [
+                19,
+                21
+              ],
+              "sent_id": 3,
+              "type": "Organization",
+              "global_pos": [
+                113,
+                113
+              ],
+              "index": "9_0"
+            }
+          ],
+          [
+            {
+              "type": "Time",
+              "pos": [
+                16,
+                18
+              ],
+              "name": "the 1890s",
+              "sent_id": 4,
+              "global_pos": [
+                132,
+                132
+              ],
+              "index": "10_0"
+            }
+          ],
+          [
+            {
+              "type": "Number",
+              "pos": [
+                19,
+                20
+              ],
+              "name": "two",
+              "sent_id": 4,
+              "global_pos": [
+                135,
+                135
+              ],
+              "index": "11_0"
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "Contains adminstrative territorial entity",
+            "h": 4,
+            "t": 6,
+            "evidence": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "r": "Country",
+            "h": 7,
+            "t": 4,
+            "evidence": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "r": "Located in",
+            "h": 7,
+            "t": 6,
+            "evidence": []
+          },
+          {
+            "r": "Country of citizenship",
+            "h": 3,
+            "t": 4,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Country",
+            "h": 6,
+            "t": 4,
+            "evidence": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "r": "Located in",
+            "h": 6,
+            "t": 4,
+            "evidence": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "r": "Country of citizenship",
+            "h": 0,
+            "t": 4,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Employer",
+            "h": 0,
+            "t": 8,
+            "evidence": [
+              3
+            ]
+          },
+          {
+            "r": "Date of birth",
+            "h": 0,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "r": "Date of death",
+            "h": 0,
+            "t": 2,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "h": 0,
+            "t": 7,
+            "r": "Employer",
+            "evidence": []
+          },
+          {
+            "h": 8,
+            "t": 6,
+            "r": "Located in",
+            "evidence": []
+          },
+          {
+            "h": 8,
+            "t": 4,
+            "r": "Country",
+            "evidence": []
+          },
+          {
+            "h": 7,
+            "t": 4,
+            "r": "Located in",
+            "evidence": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "h": 8,
+            "t": 4,
+            "r": "Located in",
+            "evidence": []
+          }
+        ],
+        "entity_types": "['Location', 'Person', 'Organization', 'Time', 'Number']",
+        "relation_types": "['Country', 'Date of death', 'Employer', 'Located in', 'Date of birth', 'Contains adminstrative territorial entity', 'Country of citizenship']"
+      }
+    ],
+    "signature_instructions": "Convert text into a structured JSON format representing relationships between entities.\nThe output should be a list of dictionaries, each containing:\n- 'entity1': the first entity in the relationship,\n- 'entity2': the second entity in the relationship,\n- 'relation': the type of relationship between the entities.\nThe output should be formatted as a JSON list.",
+    "signature_prefix": "Answer:",
+    "extended_signature_instructions": "Convert text into a structured JSON format representing relationships between entities.\nThe output should be a list of dictionaries, each containing:\n- 'entity1': the first entity in the relationship,\n- 'entity2': the second entity in the relationship,\n- 'relation': the type of relationship between the entities.\nThe output should be formatted as a JSON list.",
+    "extended_signature_prefix": "Answer:"
+  }
+}

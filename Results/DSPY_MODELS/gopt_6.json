@@ -1,0 +1,154 @@
+{
+  "entity_extraction": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "sentences": "[['Mars', 'has', 'four', 'known', 'co-orbital', 'asteroids', '(', '5261', 'Eureka', ',', ',', 'all', 'at', 'the', 'Lagrangian', 'point', 's', ')', ',', 'and', 'Jupiter', 'has', 'many', '(', 'an', 'estimated', 'one', 'million', 'greater', 'than', '1', 'km', 'in', 'diameter', ',', 'the', 'Jovian', 'trojans', ')', ';', 'there', 'are', 'also', 'other', 'small', 'co-orbital', 'moons', 'in', 'the', 'Saturnian', 'system', ':', 'Telesto', 'and', 'Calypso', 'with', 'Tethys', ',', 'and', 'Helene', 'and', 'Polydeuces', 'with', 'Dione', '.']]",
+        "entity_types": "['Astronomical object', 'Other']",
+        "rationale": "produce the answer. We are looking for entities of type 'Astronomical object' and 'Other'. In the given text, the astronomical objects are 'Mars', 'Jupiter', 'Telesto', 'Calypso', 'Tethys', 'Helene', 'Polydeuces', 'Dione', '5261 Eureka', and 'Saturnian system'. The 'Other' type entities are 'Lagrangian point', 'Jovian trojans', and 'co-orbital moons'.",
+        "answer": "[('Mars', 'Astronomical object', [0, 1], [0]), ('Jupiter', 'Astronomical object', [20, 21], [0]), ('Telesto', 'Astronomical object', [47, 48], [0]), ('Calypso', 'Astronomical object', [49, 50], [0]), ('Tethys', 'Astronomical object', [52, 53], [0]), ('Helene', 'Astronomical object', [55, 56], [0]), ('Polydeuces', 'Astronomical object', [57, 58], [0]), ('Dione', 'Astronomical object', [59, 60], [0]), ('5261 Eureka', 'Astronomical object', [7, 9], [0]), ('Saturnian system', 'Astronomical object', [45, 47], [0]), ('Lagrangian point', 'Other', [14, 16], [0]), ('Jovian trojans', 'Other', [34, 36], [0]), ('co-orbital moons', 'Other', [43, 45], [0])]"
+      },
+      {
+        "augmented": true,
+        "sentences": "[['Mars', 'has', 'four', 'known', 'co-orbital', 'asteroids', '(', '5261', 'Eureka', ',', ',', 'all', 'at', 'the', 'Lagrangian', 'point', 's', ')', ',', 'and', 'Jupiter', 'has', 'many', '(', 'an', 'estimated', 'one', 'million', 'greater', 'than', '1', 'km', 'in', 'diameter', ',', 'the', 'Jovian', 'trojans', ')', ';', 'there', 'are', 'also', 'other', 'small', 'co-orbital', 'moons', 'in', 'the', 'Saturnian', 'system', ':', 'Telesto', 'and', 'Calypso', 'with', 'Tethys', ',', 'and', 'Helene', 'and', 'Polydeuces', 'with', 'Dione', '.']]",
+        "entity_types": "['Astronomical object', 'Other']",
+        "rationale": "produce the answer. We are looking for entities of type 'Astronomical object' and 'Other'. In the given text, the astronomical objects are 'Mars', 'Jupiter', 'Telesto', 'Calypso', 'Tethys', 'Helene', 'Polydeuces', 'Dione', '5261 Eureka', and 'Saturnian system'. The 'Other' type entities are 'Lagrangian point', 'Jovian trojans', and 'co-orbital moons'.",
+        "answer": "[('Mars', 'Astronomical object', [0, 1], [0]), ('Jupiter', 'Astronomical object', [20, 21], [0]), ('Telesto', 'Astronomical object', [47, 48], [0]), ('Calypso', 'Astronomical object', [49, 50], [0]), ('Tethys', 'Astronomical object', [52, 53], [0]), ('Helene', 'Astronomical object', [55, 56], [0]), ('Polydeuces', 'Astronomical object', [57, 58], [0]), ('Dione', 'Astronomical object', [59, 60], [0]), ('5261 Eureka', 'Astronomical object', [7, 9], [0]), ('Saturnian system', 'Astronomical object', [45, 47], [0]), ('Lagrangian point', 'Other', [14, 16], [0]), ('Jovian trojans', 'Other', [34, 36], [0]), ('co-orbital moons', 'Other', [43, 45], [0])]"
+      },
+      {
+        "augmented": true,
+        "sentences": "[['His', 'family', 'in', 'Italy', 'had', 'long', 'had', 'vineyards', 'in', 'Tuscany', ',', 'so', 'he', 'sought', 'a', 'good', 'place', 'to', 'grow', 'grapes', 'and', 'make', 'wine', 'in', 'his', 'adoptive', 'state', ',', 'New', 'Jersey', '.']]",
+        "entity_types": "['Location']",
+        "rationale": "produce the answer. We are looking for entities of type 'Location' in the given text. The locations mentioned in the text are 'Italy', 'Tuscany', and 'New Jersey'.",
+        "answer": "[('Italy', 'Location', [3, 4], [0]), ('Tuscany', 'Location', [9, 10], [0]), ('New Jersey', 'Location', [27, 29], [0])]"
+      },
+      {
+        "augmented": true,
+        "sentences": "[['Pakistan', \"'s\", 'prime', 'minister', ',', 'Shaukat', 'Aziz', ',', 'said', 'Wednesday', 'that', 'the', 'death', 'toll', 'had', 'climbed', 'to', '25,000', ',', 'up', 'from', '23,000', 'the', 'day', 'before', '.']]",
+        "entity_types": "['Person', 'Location']",
+        "rationale": "produce the answer. We are looking for entities of type 'Person' and 'Location'. In the given sentence, 'Pakistan' is a location and 'Shaukat Aziz' is a person. The location of 'Pakistan' in the sentence is at index 0 and 'Shaukat Aziz' is at index 5 and 6. The evidence for both entities is in the first sublist, so the evidence index is [0].",
+        "answer": "[('Pakistan', 'Location', [0, 1], [0]), ('Shaukat Aziz', 'Person', [5, 7], [0])]"
+      }
+    ],
+    "signature_instructions": "Extract entities from a provided text based on specified entity types.\nThe output is a list of tuples in the format (entity, type, location, evidence), where:\n- 'entity' is the extracted term,\n- 'type' is its classification (e.g., Person, Location),\n- 'location' is the index range within the text where the entity is found, represented as a list [Start, End],\n- 'evidence' is a list of indices indicating the specific sublists (within the list of lists) that contain the entity.",
+    "signature_prefix": "Answer:",
+    "extended_signature_instructions": "Extract entities from a provided text based on specified entity types.\nThe output is a list of tuples in the format (entity, type, location, evidence), where:\n- 'entity' is the extracted term,\n- 'type' is its classification (e.g., Person, Location),\n- 'location' is the index range within the text where the entity is found, represented as a list [Start, End],\n- 'evidence' is a list of indices indicating the specific sublists (within the list of lists) that contain the entity.",
+    "extended_signature_prefix": "Answer:"
+  },
+  "tuple_to_json": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "text": "[('Mars', 'Astronomical object', [0, 1], [0]), ('Jupiter', 'Astronomical object', [20, 21], [0]), ('Telesto', 'Astronomical object', [47, 48], [0]), ('Calypso', 'Astronomical object', [49, 50], [0]), ('Tethys', 'Astronomical object', [52, 53], [0]), ('Helene', 'Astronomical object', [55, 56], [0]), ('Polydeuces', 'Astronomical object', [57, 58], [0]), ('Dione', 'Astronomical object', [59, 60], [0]), ('5261 Eureka', 'Astronomical object', [7, 9], [0]), ('Saturnian system', 'Astronomical object', [45, 47], [0]), ('Lagrangian point', 'Other', [14, 16], [0]), ('Jovian trojans', 'Other', [34, 36], [0]), ('co-orbital moons', 'Other', [43, 45], [0])]",
+        "rationale": "produce the answer. We need to convert each tuple into a dictionary with the keys 'entity', 'type', 'location', and 'evidence'. Then, we will put all these dictionaries into a list.",
+        "answer": "[\n    {\"entity\": \"Mars\", \"type\": \"Astronomical object\", \"location\": [0, 1], \"evidence\": [0]},\n    {\"entity\": \"Jupiter\", \"type\": \"Astronomical object\", \"location\": [20, 21], \"evidence\": [0]},\n    {\"entity\": \"Telesto\", \"type\": \"Astronomical object\", \"location\": [47, 48], \"evidence\": [0]},\n    {\"entity\": \"Calypso\", \"type\": \"Astronomical object\", \"location\": [49, 50], \"evidence\": [0]},\n    {\"entity\": \"Tethys\", \"type\": \"Astronomical object\", \"location\": [52, 53], \"evidence\": [0]},\n    {\"entity\": \"Helene\", \"type\": \"Astronomical object\", \"location\": [55, 56], \"evidence\": [0]},\n    {\"entity\": \"Polydeuces\", \"type\": \"Astronomical object\", \"location\": [57, 58], \"evidence\": [0]},\n    {\"entity\": \"Dione\", \"type\": \"Astronomical object\", \"location\": [59, 60], \"evidence\": [0]},\n    {\"entity\": \"5261 Eureka\", \"type\": \"Astronomical object\", \"location\": [7, 9], \"evidence\": [0]},\n    {\"entity\": \"Saturnian system\", \"type\": \"Astronomical object\", \"location\": [45, 47], \"evidence\": [0]},\n    {\"entity\": \"Lagrangian point\", \"type\": \"Other\", \"location\": [14, 16], \"evidence\": [0]},\n    {\"entity\": \"Jovian trojans\", \"type\": \"Other\", \"location\": [34, 36], \"evidence\": [0]},\n    {\"entity\": \"co-orbital moons\", \"type\": \"Other\", \"location\": [43, 45], \"evidence\": [0]}\n]"
+      },
+      {
+        "augmented": true,
+        "text": "[('Mars', 'Astronomical object', [0, 1], [0]), ('Jupiter', 'Astronomical object', [20, 21], [0]), ('Telesto', 'Astronomical object', [47, 48], [0]), ('Calypso', 'Astronomical object', [49, 50], [0]), ('Tethys', 'Astronomical object', [52, 53], [0]), ('Helene', 'Astronomical object', [55, 56], [0]), ('Polydeuces', 'Astronomical object', [57, 58], [0]), ('Dione', 'Astronomical object', [59, 60], [0]), ('5261 Eureka', 'Astronomical object', [7, 9], [0]), ('Saturnian system', 'Astronomical object', [45, 47], [0]), ('Lagrangian point', 'Other', [14, 16], [0]), ('Jovian trojans', 'Other', [34, 36], [0]), ('co-orbital moons', 'Other', [43, 45], [0])]",
+        "rationale": "produce the answer. We need to convert each tuple into a dictionary with the keys 'entity', 'type', 'location', and 'evidence'. Then, we will put all these dictionaries into a list.",
+        "answer": "[\n    {\"entity\": \"Mars\", \"type\": \"Astronomical object\", \"location\": [0, 1], \"evidence\": [0]},\n    {\"entity\": \"Jupiter\", \"type\": \"Astronomical object\", \"location\": [20, 21], \"evidence\": [0]},\n    {\"entity\": \"Telesto\", \"type\": \"Astronomical object\", \"location\": [47, 48], \"evidence\": [0]},\n    {\"entity\": \"Calypso\", \"type\": \"Astronomical object\", \"location\": [49, 50], \"evidence\": [0]},\n    {\"entity\": \"Tethys\", \"type\": \"Astronomical object\", \"location\": [52, 53], \"evidence\": [0]},\n    {\"entity\": \"Helene\", \"type\": \"Astronomical object\", \"location\": [55, 56], \"evidence\": [0]},\n    {\"entity\": \"Polydeuces\", \"type\": \"Astronomical object\", \"location\": [57, 58], \"evidence\": [0]},\n    {\"entity\": \"Dione\", \"type\": \"Astronomical object\", \"location\": [59, 60], \"evidence\": [0]},\n    {\"entity\": \"5261 Eureka\", \"type\": \"Astronomical object\", \"location\": [7, 9], \"evidence\": [0]},\n    {\"entity\": \"Saturnian system\", \"type\": \"Astronomical object\", \"location\": [45, 47], \"evidence\": [0]},\n    {\"entity\": \"Lagrangian point\", \"type\": \"Other\", \"location\": [14, 16], \"evidence\": [0]},\n    {\"entity\": \"Jovian trojans\", \"type\": \"Other\", \"location\": [34, 36], \"evidence\": [0]},\n    {\"entity\": \"co-orbital moons\", \"type\": \"Other\", \"location\": [43, 45], \"evidence\": [0]}\n]"
+      },
+      {
+        "augmented": true,
+        "text": "[('Italy', 'Location', [3, 4], [0]), ('Tuscany', 'Location', [9, 10], [0]), ('New Jersey', 'Location', [27, 29], [0])]",
+        "rationale": "produce the answer. We have three tuples, each representing an entity. We need to convert each tuple into a dictionary with keys 'entity', 'type', 'location', and 'evidence'. Then, we will put all these dictionaries into a list.",
+        "answer": "[\n  {\n    \"entity\": \"Italy\",\n    \"type\": \"Location\",\n    \"location\": [3, 4],\n    \"evidence\": [0]\n  },\n  {\n    \"entity\": \"Tuscany\",\n    \"type\": \"Location\",\n    \"location\": [9, 10],\n    \"evidence\": [0]\n  },\n  {\n    \"entity\": \"New Jersey\",\n    \"type\": \"Location\",\n    \"location\": [27, 29],\n    \"evidence\": [0]\n  }\n]"
+      },
+      {
+        "augmented": true,
+        "text": "[('Pakistan', 'Location', [0, 1], [0]), ('Shaukat Aziz', 'Person', [5, 7], [0])]",
+        "rationale": "produce the answer. We have two tuples here. The first tuple represents the entity 'Pakistan' which is a 'Location' and is found at index range [0, 1] in the text. The evidence for this entity is at index 0. The second tuple represents the entity 'Shaukat Aziz' which is a 'Person' and is found at index range [5, 7] in the text. The evidence for this entity is also at index 0. We need to convert these tuples into JSON format.",
+        "answer": "[{\"entity\": \"Pakistan\", \"type\": \"Location\", \"location\": [0, 1], \"evidence\": [0]}, {\"entity\": \"Shaukat Aziz\", \"type\": \"Person\", \"location\": [5, 7], \"evidence\": [0]}]"
+      }
+    ],
+    "signature_instructions": "Convert extracted entity tuples into JSON format.\nThe output is a list of dictionaries, each containing:\n- 'entity': the extracted term,\n- 'type': its classification (e.g., Person, Location),\n- 'location': the index range within the text where the entity is found,\n- 'evidence': a list of indices indicating the sublists containing the entity.\nThe output should be formatted as a JSON list.",
+    "signature_prefix": "Answer:",
+    "extended_signature_instructions": "Convert extracted entity tuples into JSON format.\nThe output is a list of dictionaries, each containing:\n- 'entity': the extracted term,\n- 'type': its classification (e.g., Person, Location),\n- 'location': the index range within the text where the entity is found,\n- 'evidence': a list of indices indicating the sublists containing the entity.\nThe output should be formatted as a JSON list.",
+    "extended_signature_prefix": "Answer:"
+  },
+  "relation_extraction": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "entities": "[\n    {\"entity\": \"Mars\", \"type\": \"Astronomical object\", \"location\": [0, 1], \"evidence\": [0]},\n    {\"entity\": \"Jupiter\", \"type\": \"Astronomical object\", \"location\": [20, 21], \"evidence\": [0]},\n    {\"entity\": \"Telesto\", \"type\": \"Astronomical object\", \"location\": [47, 48], \"evidence\": [0]},\n    {\"entity\": \"Calypso\", \"type\": \"Astronomical object\", \"location\": [49, 50], \"evidence\": [0]},\n    {\"entity\": \"Tethys\", \"type\": \"Astronomical object\", \"location\": [52, 53], \"evidence\": [0]},\n    {\"entity\": \"Helene\", \"type\": \"Astronomical object\", \"location\": [55, 56], \"evidence\": [0]},\n    {\"entity\": \"Polydeuces\", \"type\": \"Astronomical object\", \"location\": [57, 58], \"evidence\": [0]},\n    {\"entity\": \"Dione\", \"type\": \"Astronomical object\", \"location\": [59, 60], \"evidence\": [0]},\n    {\"entity\": \"5261 Eureka\", \"type\": \"Astronomical object\", \"location\": [7, 9], \"evidence\": [0]},\n    {\"entity\": \"Saturnian system\", \"type\": \"Astronomical object\", \"location\": [45, 47], \"evidence\": [0]},\n    {\"entity\": \"Lagrangian point\", \"type\": \"Other\", \"location\": [14, 16], \"evidence\": [0]},\n    {\"entity\": \"Jovian trojans\", \"type\": \"Other\", \"location\": [34, 36], \"evidence\": [0]},\n    {\"entity\": \"co-orbital moons\", \"type\": \"Other\", \"location\": [43, 45], \"evidence\": [0]}\n]",
+        "sentences": "[['Mars', 'has', 'four', 'known', 'co-orbital', 'asteroids', '(', '5261', 'Eureka', ',', ',', 'all', 'at', 'the', 'Lagrangian', 'point', 's', ')', ',', 'and', 'Jupiter', 'has', 'many', '(', 'an', 'estimated', 'one', 'million', 'greater', 'than', '1', 'km', 'in', 'diameter', ',', 'the', 'Jovian', 'trojans', ')', ';', 'there', 'are', 'also', 'other', 'small', 'co-orbital', 'moons', 'in', 'the', 'Saturnian', 'system', ':', 'Telesto', 'and', 'Calypso', 'with', 'Tethys', ',', 'and', 'Helene', 'and', 'Polydeuces', 'with', 'Dione', '.']]",
+        "relation_types": "['Compare', 'Related to', 'Part of']",
+        "rationale": "produce the answer. We can see that the entities 'Mars' and '5261 Eureka' are related as '5261 Eureka' is a co-orbital asteroid of 'Mars'. This relationship can be classified as 'Related to'. Similarly, 'Jupiter' and 'Jovian trojans' are related as 'Jovian trojans' are co-orbital asteroids of 'Jupiter'. This relationship can also be classified as 'Related to'. The entities 'Telesto', 'Calypso', 'Tethys', 'Helene', 'Polydeuces', and 'Dione' are all part of the 'Saturnian system', so their relationship can be classified as 'Part of'. Lastly, 'Mars' and 'Jupiter' are compared in terms of their co-orbital asteroids, so their relationship can be classified as 'Compare'.",
+        "answer": "[('Mars', '5261 Eureka', 'Related to'), ('Jupiter', 'Jovian trojans', 'Related to'), ('Telesto', 'Saturnian system', 'Part of'), ('Calypso', 'Saturnian system', 'Part of'), ('Tethys', 'Saturnian system', 'Part of'), ('Helene', 'Saturnian system', 'Part of'), ('Polydeuces', 'Saturnian system', 'Part of'), ('Dione', 'Saturnian system', 'Part of'), ('Mars', 'Jupiter', 'Compare')]"
+      },
+      {
+        "augmented": true,
+        "entities": "[\n    {\"entity\": \"Mars\", \"type\": \"Astronomical object\", \"location\": [0, 1], \"evidence\": [0]},\n    {\"entity\": \"Jupiter\", \"type\": \"Astronomical object\", \"location\": [20, 21], \"evidence\": [0]},\n    {\"entity\": \"Telesto\", \"type\": \"Astronomical object\", \"location\": [47, 48], \"evidence\": [0]},\n    {\"entity\": \"Calypso\", \"type\": \"Astronomical object\", \"location\": [49, 50], \"evidence\": [0]},\n    {\"entity\": \"Tethys\", \"type\": \"Astronomical object\", \"location\": [52, 53], \"evidence\": [0]},\n    {\"entity\": \"Helene\", \"type\": \"Astronomical object\", \"location\": [55, 56], \"evidence\": [0]},\n    {\"entity\": \"Polydeuces\", \"type\": \"Astronomical object\", \"location\": [57, 58], \"evidence\": [0]},\n    {\"entity\": \"Dione\", \"type\": \"Astronomical object\", \"location\": [59, 60], \"evidence\": [0]},\n    {\"entity\": \"5261 Eureka\", \"type\": \"Astronomical object\", \"location\": [7, 9], \"evidence\": [0]},\n    {\"entity\": \"Saturnian system\", \"type\": \"Astronomical object\", \"location\": [45, 47], \"evidence\": [0]},\n    {\"entity\": \"Lagrangian point\", \"type\": \"Other\", \"location\": [14, 16], \"evidence\": [0]},\n    {\"entity\": \"Jovian trojans\", \"type\": \"Other\", \"location\": [34, 36], \"evidence\": [0]},\n    {\"entity\": \"co-orbital moons\", \"type\": \"Other\", \"location\": [43, 45], \"evidence\": [0]}\n]",
+        "sentences": "[['Mars', 'has', 'four', 'known', 'co-orbital', 'asteroids', '(', '5261', 'Eureka', ',', ',', 'all', 'at', 'the', 'Lagrangian', 'point', 's', ')', ',', 'and', 'Jupiter', 'has', 'many', '(', 'an', 'estimated', 'one', 'million', 'greater', 'than', '1', 'km', 'in', 'diameter', ',', 'the', 'Jovian', 'trojans', ')', ';', 'there', 'are', 'also', 'other', 'small', 'co-orbital', 'moons', 'in', 'the', 'Saturnian', 'system', ':', 'Telesto', 'and', 'Calypso', 'with', 'Tethys', ',', 'and', 'Helene', 'and', 'Polydeuces', 'with', 'Dione', '.']]",
+        "relation_types": "['Compare', 'Related to', 'Part of']",
+        "rationale": "produce the answer. We can see that the entities 'Mars' and '5261 Eureka' are related as '5261 Eureka' is a co-orbital asteroid of 'Mars'. This relationship can be classified as 'Related to'. Similarly, 'Jupiter' and 'Jovian trojans' are related as 'Jovian trojans' are co-orbital asteroids of 'Jupiter'. This relationship can also be classified as 'Related to'. The entities 'Telesto', 'Calypso', 'Tethys', 'Helene', 'Polydeuces', and 'Dione' are all part of the 'Saturnian system', so their relationship can be classified as 'Part of'. Lastly, 'Mars' and 'Jupiter' are compared in terms of their co-orbital asteroids, so their relationship can be classified as 'Compare'.",
+        "answer": "[('Mars', '5261 Eureka', 'Related to'), ('Jupiter', 'Jovian trojans', 'Related to'), ('Telesto', 'Saturnian system', 'Part of'), ('Calypso', 'Saturnian system', 'Part of'), ('Tethys', 'Saturnian system', 'Part of'), ('Helene', 'Saturnian system', 'Part of'), ('Polydeuces', 'Saturnian system', 'Part of'), ('Dione', 'Saturnian system', 'Part of'), ('Mars', 'Jupiter', 'Compare')]"
+      },
+      {
+        "augmented": true,
+        "entities": "[\n  {\n    \"entity\": \"Italy\",\n    \"type\": \"Location\",\n    \"location\": [3, 4],\n    \"evidence\": [0]\n  },\n  {\n    \"entity\": \"Tuscany\",\n    \"type\": \"Location\",\n    \"location\": [9, 10],\n    \"evidence\": [0]\n  },\n  {\n    \"entity\": \"New Jersey\",\n    \"type\": \"Location\",\n    \"location\": [27, 29],\n    \"evidence\": [0]\n  }\n]",
+        "sentences": "[['His', 'family', 'in', 'Italy', 'had', 'long', 'had', 'vineyards', 'in', 'Tuscany', ',', 'so', 'he', 'sought', 'a', 'good', 'place', 'to', 'grow', 'grapes', 'and', 'make', 'wine', 'in', 'his', 'adoptive', 'state', ',', 'New', 'Jersey', '.']]",
+        "relation_types": "['Located in', 'Contains location']",
+        "rationale": "produce the answer. We can see that the entities are all locations. The sentence mentions that the family in Italy had vineyards in Tuscany, which implies that Tuscany is located in Italy. This matches the 'Located in' relation type. The sentence also mentions that the person sought a good place to grow grapes and make wine in his adoptive state, New Jersey. This implies that the person is in New Jersey, but it does not establish a relationship between New Jersey and the other entities. Therefore, the only relation we can identify is between Italy and Tuscany.",
+        "answer": "[('Tuscany', 'Italy', 'Located in')]"
+      },
+      {
+        "augmented": true,
+        "entities": "[{\"entity\": \"Pakistan\", \"type\": \"Location\", \"location\": [0, 1], \"evidence\": [0]}, {\"entity\": \"Shaukat Aziz\", \"type\": \"Person\", \"location\": [5, 7], \"evidence\": [0]}]",
+        "sentences": "[['Pakistan', \"'s\", 'prime', 'minister', ',', 'Shaukat', 'Aziz', ',', 'said', 'Wednesday', 'that', 'the', 'death', 'toll', 'had', 'climbed', 'to', '25,000', ',', 'up', 'from', '23,000', 'the', 'day', 'before', '.']]",
+        "relation_types": "['Nationality']",
+        "rationale": "produce the answer. We have two entities: \"Pakistan\" and \"Shaukat Aziz\". In the sentence, it is mentioned that Shaukat Aziz is the prime minister of Pakistan. This implies that Shaukat Aziz is of Pakistani nationality. Therefore, the relation between the two entities is 'Nationality'.",
+        "answer": "[('Shaukat Aziz', 'Pakistan', 'Nationality')]"
+      }
+    ],
+    "signature_instructions": "Given the text in form of Python lists of sentences, a list of dictionaries with entities and a list of relation types find the relations between the entities.\nThe output should be  a list of tuples in the format (entity1, entity2, relation), where:\n- 'entity1' and 'entity2' are the names or terms representing the two entities involved,\n- 'relation' is the specific relationship type between them, as defined in the provided relation types. Use the exact types as defined in the input field, relation_types. \nThis format captures the relationships directly as they appear in the text.",
+    "signature_prefix": "Answer:",
+    "extended_signature_instructions": "Given the text in form of Python lists of sentences, a list of dictionaries with entities and a list of relation types find the relations between the entities.\nThe output should be  a list of tuples in the format (entity1, entity2, relation), where:\n- 'entity1' and 'entity2' are the names or terms representing the two entities involved,\n- 'relation' is the specific relationship type between them, as defined in the provided relation types. Use the exact types as defined in the input field, relation_types. \nThis format captures the relationships directly as they appear in the text.",
+    "extended_signature_prefix": "Answer:"
+  },
+  "tuple_to_json_relation": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "text": "[('Mars', '5261 Eureka', 'Related to'), ('Jupiter', 'Jovian trojans', 'Related to'), ('Telesto', 'Saturnian system', 'Part of'), ('Calypso', 'Saturnian system', 'Part of'), ('Tethys', 'Saturnian system', 'Part of'), ('Helene', 'Saturnian system', 'Part of'), ('Polydeuces', 'Saturnian system', 'Part of'), ('Dione', 'Saturnian system', 'Part of'), ('Mars', 'Jupiter', 'Compare')]",
+        "rationale": "produce the answer. We have several pairs of entities and their relationships. We need to convert each pair into a dictionary with 'entity1', 'entity2', and 'relation' as keys. The first entity in each pair will be 'entity1', the second entity will be 'entity2', and the relationship will be 'relation'.",
+        "answer": "[{\"entity1\": \"Mars\", \"entity2\": \"5261 Eureka\", \"relation\": \"Related to\"}, {\"entity1\": \"Jupiter\", \"entity2\": \"Jovian trojans\", \"relation\": \"Related to\"}, {\"entity1\": \"Telesto\", \"entity2\": \"Saturnian system\", \"relation\": \"Part of\"}, {\"entity1\": \"Calypso\", \"entity2\": \"Saturnian system\", \"relation\": \"Part of\"}, {\"entity1\": \"Tethys\", \"entity2\": \"Saturnian system\", \"relation\": \"Part of\"}, {\"entity1\": \"Helene\", \"entity2\": \"Saturnian system\", \"relation\": \"Part of\"}, {\"entity1\": \"Polydeuces\", \"entity2\": \"Saturnian system\", \"relation\": \"Part of\"}, {\"entity1\": \"Dione\", \"entity2\": \"Saturnian system\", \"relation\": \"Part of\"}, {\"entity1\": \"Mars\", \"entity2\": \"Jupiter\", \"relation\": \"Compare\"}]"
+      },
+      {
+        "augmented": true,
+        "text": "[('Mars', '5261 Eureka', 'Related to'), ('Jupiter', 'Jovian trojans', 'Related to'), ('Telesto', 'Saturnian system', 'Part of'), ('Calypso', 'Saturnian system', 'Part of'), ('Tethys', 'Saturnian system', 'Part of'), ('Helene', 'Saturnian system', 'Part of'), ('Polydeuces', 'Saturnian system', 'Part of'), ('Dione', 'Saturnian system', 'Part of'), ('Mars', 'Jupiter', 'Compare')]",
+        "rationale": "produce the answer. We have several pairs of entities and their relationships. We need to convert each pair into a dictionary with 'entity1', 'entity2', and 'relation' as keys. The first entity in each pair will be 'entity1', the second entity will be 'entity2', and the relationship will be 'relation'.",
+        "answer": "[{\"entity1\": \"Mars\", \"entity2\": \"5261 Eureka\", \"relation\": \"Related to\"}, {\"entity1\": \"Jupiter\", \"entity2\": \"Jovian trojans\", \"relation\": \"Related to\"}, {\"entity1\": \"Telesto\", \"entity2\": \"Saturnian system\", \"relation\": \"Part of\"}, {\"entity1\": \"Calypso\", \"entity2\": \"Saturnian system\", \"relation\": \"Part of\"}, {\"entity1\": \"Tethys\", \"entity2\": \"Saturnian system\", \"relation\": \"Part of\"}, {\"entity1\": \"Helene\", \"entity2\": \"Saturnian system\", \"relation\": \"Part of\"}, {\"entity1\": \"Polydeuces\", \"entity2\": \"Saturnian system\", \"relation\": \"Part of\"}, {\"entity1\": \"Dione\", \"entity2\": \"Saturnian system\", \"relation\": \"Part of\"}, {\"entity1\": \"Mars\", \"entity2\": \"Jupiter\", \"relation\": \"Compare\"}]"
+      },
+      {
+        "augmented": true,
+        "text": "[('Tuscany', 'Italy', 'Located in')]",
+        "rationale": "produce the answer. We have three entities here: 'Tuscany', 'Italy', and 'Located in'. 'Tuscany' is the first entity, 'Italy' is the second entity, and 'Located in' is the relationship between the two entities.",
+        "answer": "[{\"entity1\": \"Tuscany\", \"entity2\": \"Italy\", \"relation\": \"Located in\"}]"
+      },
+      {
+        "augmented": true,
+        "text": "[('Shaukat Aziz', 'Pakistan', 'Nationality')]",
+        "rationale": "produce the answer. We have three entities here: 'Shaukat Aziz', 'Pakistan', and 'Nationality'. 'Shaukat Aziz' is the first entity, 'Pakistan' is the second entity, and 'Nationality' is the type of relationship between the two entities.",
+        "answer": "[{\"entity1\": \"Shaukat Aziz\", \"entity2\": \"Pakistan\", \"relation\": \"Nationality\"}]"
+      }
+    ],
+    "signature_instructions": "Convert text into a structured JSON format representing relationships between entities.\nThe output should be a list of dictionaries, each containing:\n- 'entity1': the first entity in the relationship,\n- 'entity2': the second entity in the relationship,\n- 'relation': the type of relationship between the entities.\nThe output should be formatted as a JSON list.",
+    "signature_prefix": "Answer:",
+    "extended_signature_instructions": "Convert text into a structured JSON format representing relationships between entities.\nThe output should be a list of dictionaries, each containing:\n- 'entity1': the first entity in the relationship,\n- 'entity2': the second entity in the relationship,\n- 'relation': the type of relationship between the entities.\nThe output should be formatted as a JSON list.",
+    "extended_signature_prefix": "Answer:"
+  }
+}

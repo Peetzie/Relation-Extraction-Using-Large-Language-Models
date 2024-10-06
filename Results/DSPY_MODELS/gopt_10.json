@@ -1,0 +1,310 @@
+{
+  "entity_extraction": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "sentences": "[['Mars', 'has', 'four', 'known', 'co-orbital', 'asteroids', '(', '5261', 'Eureka', ',', ',', 'all', 'at', 'the', 'Lagrangian', 'point', 's', ')', ',', 'and', 'Jupiter', 'has', 'many', '(', 'an', 'estimated', 'one', 'million', 'greater', 'than', '1', 'km', 'in', 'diameter', ',', 'the', 'Jovian', 'trojans', ')', ';', 'there', 'are', 'also', 'other', 'small', 'co-orbital', 'moons', 'in', 'the', 'Saturnian', 'system', ':', 'Telesto', 'and', 'Calypso', 'with', 'Tethys', ',', 'and', 'Helene', 'and', 'Polydeuces', 'with', 'Dione', '.']]",
+        "entity_types": "['Astronomical object', 'Other']",
+        "rationale": "produce the answer. We are looking for entities of type 'Astronomical object' and 'Other'. In the given text, the astronomical objects are 'Mars', 'Jupiter', 'Telesto', 'Calypso', 'Tethys', 'Helene', 'Polydeuces', 'Dione', '5261 Eureka', and 'Saturnian system'. The 'Other' type entities are 'Lagrangian point', 'Jovian trojans', and 'co-orbital moons'.",
+        "answer": "[('Mars', 'Astronomical object', [0, 1], [0]), ('Jupiter', 'Astronomical object', [20, 21], [0]), ('Telesto', 'Astronomical object', [47, 48], [0]), ('Calypso', 'Astronomical object', [49, 50], [0]), ('Tethys', 'Astronomical object', [52, 53], [0]), ('Helene', 'Astronomical object', [55, 56], [0]), ('Polydeuces', 'Astronomical object', [57, 58], [0]), ('Dione', 'Astronomical object', [59, 60], [0]), ('5261 Eureka', 'Astronomical object', [7, 9], [0]), ('Saturnian system', 'Astronomical object', [45, 47], [0]), ('Lagrangian point', 'Other', [14, 16], [0]), ('Jovian trojans', 'Other', [34, 36], [0]), ('co-orbital moons', 'Other', [43, 45], [0])]"
+      },
+      {
+        "augmented": true,
+        "sentences": "[['Hough', 'voting', 'in', 'a', 'geometric', 'transformation', 'space', 'allows', 'us', 'to', 'realize', 'spatial', 'verification', ',', 'but', 'remains', 'sensitive', 'to', 'feature', 'detection', 'errors', 'because', 'of', 'the', 'inflexible', 'quan-tization', 'of', 'single', 'feature', 'correspondences', '.'], ['To', 'handle', 'this', 'problem', ',', 'we', 'propose', 'a', 'new', 'method', ',', 'called', 'adaptive', 'dither', 'voting', ',', 'for', 'robust', 'spatial', 'verification', '.'], ['For', 'each', 'correspondence', ',', 'instead', 'of', 'hard-mapping', 'it', 'to', 'a', 'single', 'transformation', ',', 'the', 'method', 'augments', 'its', 'description', 'by', 'using', 'multiple', 'dithered', 'transformations', 'that', 'are', 'deterministically', 'generated', 'by', 'the', 'other', 'correspondences', '.'], ['The', 'method', 'reduces', 'the', 'probability', 'of', 'losing', 'correspondences', 'during', 'transformation', 'quantization', ',', 'and', 'provides', 'high', 'robustness', 'as', 'regards', 'mismatches', 'by', 'imposing', 'three', 'geometric', 'constraints', 'on', 'the', 'dithering', 'process', '.'], ['We', 'also', 'propose', 'exploiting', 'the', 'non-uniformity', 'of', 'a', 'Hough', 'histogram', 'as', 'the', 'spatial', 'similarity', 'to', 'handle', 'multiple', 'matching', 'surfaces', '.'], ['Extensive', 'experiments', 'conducted', 'on', 'four', 'datasets', 'show', 'the', 'superiority', 'of', 'our', 'method', '.'], ['The', 'method', 'outperforms', 'its', 'state-of-the-art', 'counterparts', 'in', 'both', 'accuracy', 'and', 'scalability', ',', 'especially', 'when', 'it', 'comes', 'to', 'the', 'retrieval', 'of', 'small', ',', 'rotated', 'objects', '.']]",
+        "entity_types": "['Method', 'Other', 'Task', 'Metric', 'Scientific term']",
+        "rationale": "produce the answer. We need to extract entities from the text based on the specified types: 'Method', 'Other', 'Task', 'Metric', 'Scientific term'. \n\nFirst, we identify the 'Method' entities. The text mentions 'Hough voting', 'adaptive dither voting', and 'the method' multiple times, referring to the proposed method. \n\nNext, we look for 'Task' entities. The text mentions 'spatial verification' and 'feature detection' as tasks. \n\nFor 'Metric' entities, the text mentions 'accuracy' and 'scalability'. \n\nFinally, for 'Scientific term' entities, we have 'geometric transformation', 'feature correspondences', 'transformation quantization', 'geometric constraints', 'Hough histogram', and 'multiple matching surfaces'. \n\nThe 'Other' category does not have any clear entities in this text.",
+        "answer": "[('Hough voting', 'Method', [0, 1], [0]), ('adaptive dither voting', 'Method', [11, 14], [1]), ('the method', 'Method', [0, 2], [2, 3, 5, 6]), ('spatial verification', 'Task', [11, 13], [0, 1]), ('feature detection', 'Task', [18, 20], [0]), ('accuracy', 'Metric', [21, 22], [6]), ('scalability', 'Metric', [23, 24], [6]), ('geometric transformation', 'Scientific term', [3, 5], [0]), ('feature correspondences', 'Scientific term', [27, 29], [0]), ('transformation quantization', 'Scientific term', [22, 24], [3]), ('geometric constraints', 'Scientific term', [32, 34], [3]), ('Hough histogram', 'Scientific term', [5, 7], [4]), ('multiple matching surfaces', 'Scientific term', [9, 12], [4])]"
+      },
+      {
+        "augmented": true,
+        "sentences": "[['When', 'the', 'Nelson-Atkins', 'Museum', 'of', 'Art', 'in', 'Kansas', 'City', ',', 'Mo.', ',', 'was', 'planning', 'its', 'expansion', ',', 'designed', 'by', 'the', 'New', 'York', 'architect', 'Steven', 'Holl', 'and', 'scheduled', 'to', 'open', 'in', 'May', 'or', 'June', '2007', ',', 'it', 'was', 'to', 'include', 'new', 'galleries', 'to', 'display', 'a', 'selection', 'of', 'works', 'from', 'the', 'Hallmark', 'Photographic', 'Collection', 'of', 'Kansas', 'City', '.']]",
+        "entity_types": "['Person', 'Location', 'Organization']",
+        "rationale": "produce the answer. We need to identify the entities in the text that match the types 'Person', 'Location', and 'Organization'. \n\n- The 'Nelson-Atkins Museum of Art' is an organization. It is found between indices 2 and 7.\n- 'Kansas City' is a location. It is found between indices 7 and 9.\n- 'Mo.' is also a location. It is found at index 10.\n- 'New York' is a location. It is found between indices 19 and 21.\n- 'Steven Holl' is a person. It is found between indices 21 and 23.\n- 'May' and 'June 2007' could be considered a time entity, but since we are not looking for time entities, we will ignore it.\n- 'Hallmark Photographic Collection of Kansas City' is an organization. It is found between indices 44 and 50.",
+        "answer": "[('Nelson-Atkins Museum of Art', 'Organization', [2, 7], [0]), ('Kansas City', 'Location', [7, 9], [0]), ('Mo.', 'Location', [10, 10], [0]), ('New York', 'Location', [19, 21], [0]), ('Steven Holl', 'Person', [21, 23], [0]), ('Hallmark Photographic Collection of Kansas City', 'Organization', [44, 50], [0])]"
+      },
+      {
+        "augmented": true,
+        "sentences": "[['Since', 'Malta', \"'s\", 'Independence', 'in', '1964', ',', 'there', 'has', 'been', 'a', 'rapid', 'increase', 'in', 'buildings', 'all', 'over', 'the', 'country', '.'], ['However', ',', 'most', 'of', 'the', 'urban', 'areas', 'are', 'concentrated', 'around', 'the', 'Grand', 'Harbour', 'and', 'Marsamxett', 'Harbour', 'areas', 'where', 'some', 'of', 'the', 'country', \"'s\", 'most', 'busy', 'places', 'are', 'situated', ';', 'Sliema', ',', 'Saint', 'Julian', \"'s\", ',', 'Paceville', ',', 'Msida', ',', 'G\u017cira', ',', 'Ta', \"'\", 'Xbiex', 'and', 'Piet\u00e0', '.'], ['As', 'cars', 'and', 'road', 'transport', 'grew', 'more', 'and', 'more', 'popular', 'in', 'the', 'country', ',', 'the', 'population', 'started', 'to', 'spread', 'out', 'to', 'farther', 'areas', 'and', 'nowadays', 'some', 'other', 'urban', 'areas', 'have', 'developed', ';', 'Saint', 'Paul', \"'s\", 'Bay', '(', 'including', 'Qawra', ',', 'Bu\u0121ibba', 'and', 'Xemxija', ')', 'and', 'Mellie\u0127a', 'in', 'the', 'North', ',', 'whilst', 'having', 'Marsaskala', 'and', 'the', 'Malta', 'Freeport', 'area', 'in', 'the', 'South', 'of', 'the', 'country', '.'], ['Some', 'of', 'the', 'tall', 'buildings', 'in', 'Malta', ',', 'such', 'as', 'the', 'Metropolis', 'Plaza', 'in', 'G\u017cira', ',', 'are', 'still', 'under', 'construction', '.'], ['The', 'highest', 'structure', 'ever', 'built', 'in', 'Malta', 'was', 'the', 'Delimara', 'Power', 'Station', 'chimney', ',', 'standing', 'above', 'ground', ',', 'until', 'its', 'demolition', 'in', '2017', '\u2013', '18', '.'], ['The', 'tallest', 'building', 'will', 'be', 'one', 'of', 'the', 'towers', 'at', 'the', 'Metropolis', 'Plaza', 'in', 'G\u017cira', ',', 'with', '33', 'storeys', '.']]",
+        "entity_types": "['Number', 'Time', 'Location', 'Other']",
+        "rationale": "produce the answer. We will go through each sentence and look for entities that match the specified types. \n\nIn the first sentence, 'Malta' is a Location, '1964' is a Time, and 'Independence' is an Other entity. \n\nIn the second sentence, 'Grand Harbour', 'Marsamxett Harbour', 'Sliema', 'Saint Julian', 'Paceville', 'Msida', 'G\u017cira', 'Ta', 'Xbiex', and 'Piet\u00e0' are all Locations. \n\nIn the third sentence, 'Saint Paul', 'Bay', 'Qawra', 'Bu\u0121ibba', 'Xemxija', 'Mellie\u0127a', 'North', 'Marsaskala', 'Malta Freeport', and 'South' are Locations. \n\nIn the fourth sentence, 'Malta' and 'Metropolis Plaza' are Locations, and 'G\u017cira' is a Location. \n\nIn the fifth sentence, 'Malta', 'Delimara Power Station' are Locations, and '2017 \u2013 18' is a Time entity. \n\nIn the sixth sentence, 'Metropolis Plaza', 'G\u017cira', and '33' are Locations and Number entities respectively.",
+        "answer": "[('Malta', 'Location', [1,2], [0]), ('1964', 'Time', [5,6], [0]), ('Independence', 'Other', [3,4], [0]), ('Grand Harbour', 'Location', [11,13], [1]), ('Marsamxett Harbour', 'Location', [14,16], [1]), ('Sliema', 'Location', [37,38], [1]), ('Saint Julian', 'Location', [39,41], [1]), ('Paceville', 'Location', [43,44], [1]), ('Msida', 'Location', [45,46], [1]), ('G\u017cira', 'Location', [47,48], [1]), ('Ta', 'Location', [49,50], [1]), ('Xbiex', 'Location', [51,52], [1]), ('Piet\u00e0', 'Location', [53,54], [1]), ('Saint Paul', 'Location', [37,39], [2]), ('Bay', 'Location', [39,40], [2]), ('Qawra', 'Location', [42,43], [2]), ('Bu\u0121ibba', 'Location', [44,45], [2]), ('Xemxija', 'Location', [46,47], [2]), ('Mellie\u0127a', 'Location', [48,49], [2]), ('North', 'Location', [50,51], [2]), ('Marsaskala', 'Location', [53,54], [2]), ('Malta Freeport', 'Location', [55,57], [2]), ('South', 'Location', [60,61], [2]), ('Malta', 'Location', [4,5], [3]), ('Metropolis Plaza', 'Location', [7,9], [3]), ('G\u017cira', 'Location', [11,12], [3]), ('Malta', 'Location', [6,7], [4]), ('Delimara Power Station', 'Location', [8,11], [4]), ('2017 \u2013 18', 'Time', [23,26], [4]), ('Metropolis Plaza', 'Location', [7,9], [5]), ('G\u017cira', 'Location', [11,12], [5]), ('33', 'Number', [14,15], [5])]"
+      },
+      {
+        "sentences": "[['May', '15', 'v', 'Duke', 'of', 'Norfolk', \"'s\", 'XI', '(', 'at', 'Arundel', ')']]",
+        "entities": [
+          [
+            {
+              "name": "Duke of Norfolk 's XI",
+              "pos": [
+                3,
+                8
+              ],
+              "type": "Organization",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Arundel",
+              "pos": [
+                10,
+                11
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "Physical",
+            "h": 0,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          }
+        ],
+        "entity_types": "['Location', 'Organization']",
+        "relation_types": "['Physical']"
+      }
+    ],
+    "signature_instructions": "Extract entities from a provided text based on specified entity types.\nThe output is a list of tuples in the format (entity, type, location, evidence), where:\n- 'entity' is the extracted term,\n- 'type' is its classification (e.g., Person, Location),\n- 'location' is the index range within the text where the entity is found, represented as a list [Start, End],\n- 'evidence' is a list of indices indicating the specific sublists (within the list of lists) that contain the entity.",
+    "signature_prefix": "Answer:",
+    "extended_signature_instructions": "Extract entities from a provided text based on specified entity types.\nThe output is a list of tuples in the format (entity, type, location, evidence), where:\n- 'entity' is the extracted term,\n- 'type' is its classification (e.g., Person, Location),\n- 'location' is the index range within the text where the entity is found, represented as a list [Start, End],\n- 'evidence' is a list of indices indicating the specific sublists (within the list of lists) that contain the entity.",
+    "extended_signature_prefix": "Answer:"
+  },
+  "tuple_to_json": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "text": "[('Mars', 'Astronomical object', [0, 1], [0]), ('Jupiter', 'Astronomical object', [20, 21], [0]), ('Telesto', 'Astronomical object', [47, 48], [0]), ('Calypso', 'Astronomical object', [49, 50], [0]), ('Tethys', 'Astronomical object', [52, 53], [0]), ('Helene', 'Astronomical object', [55, 56], [0]), ('Polydeuces', 'Astronomical object', [57, 58], [0]), ('Dione', 'Astronomical object', [59, 60], [0]), ('5261 Eureka', 'Astronomical object', [7, 9], [0]), ('Saturnian system', 'Astronomical object', [45, 47], [0]), ('Lagrangian point', 'Other', [14, 16], [0]), ('Jovian trojans', 'Other', [34, 36], [0]), ('co-orbital moons', 'Other', [43, 45], [0])]",
+        "rationale": "produce the answer. We need to convert each tuple into a dictionary with the keys 'entity', 'type', 'location', and 'evidence'. Then, we will put all these dictionaries into a list.",
+        "answer": "[\n    {\"entity\": \"Mars\", \"type\": \"Astronomical object\", \"location\": [0, 1], \"evidence\": [0]},\n    {\"entity\": \"Jupiter\", \"type\": \"Astronomical object\", \"location\": [20, 21], \"evidence\": [0]},\n    {\"entity\": \"Telesto\", \"type\": \"Astronomical object\", \"location\": [47, 48], \"evidence\": [0]},\n    {\"entity\": \"Calypso\", \"type\": \"Astronomical object\", \"location\": [49, 50], \"evidence\": [0]},\n    {\"entity\": \"Tethys\", \"type\": \"Astronomical object\", \"location\": [52, 53], \"evidence\": [0]},\n    {\"entity\": \"Helene\", \"type\": \"Astronomical object\", \"location\": [55, 56], \"evidence\": [0]},\n    {\"entity\": \"Polydeuces\", \"type\": \"Astronomical object\", \"location\": [57, 58], \"evidence\": [0]},\n    {\"entity\": \"Dione\", \"type\": \"Astronomical object\", \"location\": [59, 60], \"evidence\": [0]},\n    {\"entity\": \"5261 Eureka\", \"type\": \"Astronomical object\", \"location\": [7, 9], \"evidence\": [0]},\n    {\"entity\": \"Saturnian system\", \"type\": \"Astronomical object\", \"location\": [45, 47], \"evidence\": [0]},\n    {\"entity\": \"Lagrangian point\", \"type\": \"Other\", \"location\": [14, 16], \"evidence\": [0]},\n    {\"entity\": \"Jovian trojans\", \"type\": \"Other\", \"location\": [34, 36], \"evidence\": [0]},\n    {\"entity\": \"co-orbital moons\", \"type\": \"Other\", \"location\": [43, 45], \"evidence\": [0]}\n]"
+      },
+      {
+        "augmented": true,
+        "text": "[('Hough voting', 'Method', [0, 1], [0]), ('adaptive dither voting', 'Method', [11, 14], [1]), ('the method', 'Method', [0, 2], [2, 3, 5, 6]), ('spatial verification', 'Task', [11, 13], [0, 1]), ('feature detection', 'Task', [18, 20], [0]), ('accuracy', 'Metric', [21, 22], [6]), ('scalability', 'Metric', [23, 24], [6]), ('geometric transformation', 'Scientific term', [3, 5], [0]), ('feature correspondences', 'Scientific term', [27, 29], [0]), ('transformation quantization', 'Scientific term', [22, 24], [3]), ('geometric constraints', 'Scientific term', [32, 34], [3]), ('Hough histogram', 'Scientific term', [5, 7], [4]), ('multiple matching surfaces', 'Scientific term', [9, 12], [4])]",
+        "rationale": "produce the answer. We need to convert each tuple into a dictionary with the keys 'entity', 'type', 'location', and 'evidence'. Each value in the tuple corresponds to the respective key in the dictionary. We then format this list of dictionaries as a JSON list.",
+        "answer": "[\n    {\"entity\": \"Hough voting\", \"type\": \"Method\", \"location\": [0, 1], \"evidence\": [0]},\n    {\"entity\": \"adaptive dither voting\", \"type\": \"Method\", \"location\": [11, 14], \"evidence\": [1]},\n    {\"entity\": \"the method\", \"type\": \"Method\", \"location\": [0, 2], \"evidence\": [2, 3, 5, 6]},\n    {\"entity\": \"spatial verification\", \"type\": \"Task\", \"location\": [11, 13], \"evidence\": [0, 1]},\n    {\"entity\": \"feature detection\", \"type\": \"Task\", \"location\": [18, 20], \"evidence\": [0]},\n    {\"entity\": \"accuracy\", \"type\": \"Metric\", \"location\": [21, 22], \"evidence\": [6]},\n    {\"entity\": \"scalability\", \"type\": \"Metric\", \"location\": [23, 24], \"evidence\": [6]},\n    {\"entity\": \"geometric transformation\", \"type\": \"Scientific term\", \"location\": [3, 5], \"evidence\": [0]},\n    {\"entity\": \"feature correspondences\", \"type\": \"Scientific term\", \"location\": [27, 29], \"evidence\": [0]},\n    {\"entity\": \"transformation quantization\", \"type\": \"Scientific term\", \"location\": [22, 24], \"evidence\": [3]},\n    {\"entity\": \"geometric constraints\", \"type\": \"Scientific term\", \"location\": [32, 34], \"evidence\": [3]},\n    {\"entity\": \"Hough histogram\", \"type\": \"Scientific term\", \"location\": [5, 7], \"evidence\": [4]},\n    {\"entity\": \"multiple matching surfaces\", \"type\": \"Scientific term\", \"location\": [9, 12], \"evidence\": [4]}\n]"
+      },
+      {
+        "augmented": true,
+        "text": "[('Nelson-Atkins Museum of Art', 'Organization', [2, 7], [0]), ('Kansas City', 'Location', [7, 9], [0]), ('Mo.', 'Location', [10, 10], [0]), ('New York', 'Location', [19, 21], [0]), ('Steven Holl', 'Person', [21, 23], [0]), ('Hallmark Photographic Collection of Kansas City', 'Organization', [44, 50], [0])]",
+        "rationale": "produce the answer. We need to convert each tuple into a dictionary with the keys 'entity', 'type', 'location', and 'evidence'. The values for these keys will be the corresponding elements from each tuple.",
+        "answer": "[\n    {\n        \"entity\": \"Nelson-Atkins Museum of Art\",\n        \"type\": \"Organization\",\n        \"location\": [2, 7],\n        \"evidence\": [0]\n    },\n    {\n        \"entity\": \"Kansas City\",\n        \"type\": \"Location\",\n        \"location\": [7, 9],\n        \"evidence\": [0]\n    },\n    {\n        \"entity\": \"Mo.\",\n        \"type\": \"Location\",\n        \"location\": [10, 10],\n        \"evidence\": [0]\n    },\n    {\n        \"entity\": \"New York\",\n        \"type\": \"Location\",\n        \"location\": [19, 21],\n        \"evidence\": [0]\n    },\n    {\n        \"entity\": \"Steven Holl\",\n        \"type\": \"Person\",\n        \"location\": [21, 23],\n        \"evidence\": [0]\n    },\n    {\n        \"entity\": \"Hallmark Photographic Collection of Kansas City\",\n        \"type\": \"Organization\",\n        \"location\": [44, 50],\n        \"evidence\": [0]\n    }\n]"
+      },
+      {
+        "augmented": true,
+        "text": "[('Malta', 'Location', [1,2], [0]), ('1964', 'Time', [5,6], [0]), ('Independence', 'Other', [3,4], [0]), ('Grand Harbour', 'Location', [11,13], [1]), ('Marsamxett Harbour', 'Location', [14,16], [1]), ('Sliema', 'Location', [37,38], [1]), ('Saint Julian', 'Location', [39,41], [1]), ('Paceville', 'Location', [43,44], [1]), ('Msida', 'Location', [45,46], [1]), ('G\u017cira', 'Location', [47,48], [1]), ('Ta', 'Location', [49,50], [1]), ('Xbiex', 'Location', [51,52], [1]), ('Piet\u00e0', 'Location', [53,54], [1]), ('Saint Paul', 'Location', [37,39], [2]), ('Bay', 'Location', [39,40], [2]), ('Qawra', 'Location', [42,43], [2]), ('Bu\u0121ibba', 'Location', [44,45], [2]), ('Xemxija', 'Location', [46,47], [2]), ('Mellie\u0127a', 'Location', [48,49], [2]), ('North', 'Location', [50,51], [2]), ('Marsaskala', 'Location', [53,54], [2]), ('Malta Freeport', 'Location', [55,57], [2]), ('South', 'Location', [60,61], [2]), ('Malta', 'Location', [4,5], [3]), ('Metropolis Plaza', 'Location', [7,9], [3]), ('G\u017cira', 'Location', [11,12], [3]), ('Malta', 'Location', [6,7], [4]), ('Delimara Power Station', 'Location', [8,11], [4]), ('2017 \u2013 18', 'Time', [23,26], [4]), ('Metropolis Plaza', 'Location', [7,9], [5]), ('G\u017cira', 'Location', [11,12], [5]), ('33', 'Number', [14,15], [5])]",
+        "rationale": "produce the answer. We need to convert each tuple into a dictionary with keys 'entity', 'type', 'location', and 'evidence'. Each value in the dictionary corresponds to the respective value in the tuple. We then convert the list of dictionaries into a JSON-formatted string.",
+        "answer": "[{\"entity\": \"Malta\", \"type\": \"Location\", \"location\": [1,2], \"evidence\": [0]}, {\"entity\": \"1964\", \"type\": \"Time\", \"location\": [5,6], \"evidence\": [0]}, {\"entity\": \"Independence\", \"type\": \"Other\", \"location\": [3,4], \"evidence\": [0]}, {\"entity\": \"Grand Harbour\", \"type\": \"Location\", \"location\": [11,13], \"evidence\": [1]}, {\"entity\": \"Marsamxett Harbour\", \"type\": \"Location\", \"location\": [14,16], \"evidence\": [1]}, {\"entity\": \"Sliema\", \"type\": \"Location\", \"location\": [37,38], \"evidence\": [1]}, {\"entity\": \"Saint Julian\", \"type\": \"Location\", \"location\": [39,41], \"evidence\": [1]}, {\"entity\": \"Paceville\", \"type\": \"Location\", \"location\": [43,44], \"evidence\": [1]}, {\"entity\": \"Msida\", \"type\": \"Location\", \"location\": [45,46], \"evidence\": [1]}, {\"entity\": \"G\u017cira\", \"type\": \"Location\", \"location\": [47,48], \"evidence\": [1]}, {\"entity\": \"Ta\", \"type\": \"Location\", \"location\": [49,50], \"evidence\": [1]}, {\"entity\": \"Xbiex\", \"type\": \"Location\", \"location\": [51,52], \"evidence\": [1]}, {\"entity\": \"Piet\u00e0\", \"type\": \"Location\", \"location\": [53,54], \"evidence\": [1]}, {\"entity\": \"Saint Paul\", \"type\": \"Location\", \"location\": [37,39], \"evidence\": [2]}, {\"entity\": \"Bay\", \"type\": \"Location\", \"location\": [39,40], \"evidence\": [2]}, {\"entity\": \"Qawra\", \"type\": \"Location\", \"location\": [42,43], \"evidence\": [2]}, {\"entity\": \"Bu\u0121ibba\", \"type\": \"Location\", \"location\": [44,45], \"evidence\": [2]}, {\"entity\": \"Xemxija\", \"type\": \"Location\", \"location\": [46,47], \"evidence\": [2]}, {\"entity\": \"Mellie\u0127a\", \"type\": \"Location\", \"location\": [48,49], \"evidence\": [2]}, {\"entity\": \"North\", \"type\": \"Location\", \"location\": [50,51], \"evidence\": [2]}, {\"entity\": \"Marsaskala\", \"type\": \"Location\", \"location\": [53,54], \"evidence\": [2]}, {\"entity\": \"Malta Freeport\", \"type\": \"Location\", \"location\": [55,57], \"evidence\": [2]}, {\"entity\": \"South\", \"type\": \"Location\", \"location\": [60,61], \"evidence\": [2]}, {\"entity\": \"Malta\", \"type\": \"Location\", \"location\": [4,5], \"evidence\": [3]}, {\"entity\": \"Metropolis Plaza\", \"type\": \"Location\", \"location\": [7,9], \"evidence\": [3]}, {\"entity\": \"G\u017cira\", \"type\": \"Location\", \"location\": [11,12], \"evidence\": [3]}, {\"entity\": \"Malta\", \"type\": \"Location\", \"location\": [6,7], \"evidence\": [4]}, {\"entity\": \"Delimara Power Station\", \"type\": \"Location\", \"location\": [8,11], \"evidence\": [4]}, {\"entity\": \"2017 \u2013 18\", \"type\": \"Time\", \"location\": [23,26], \"evidence\": [4]}, {\"entity\": \"Metropolis Plaza\", \"type\": \"Location\", \"location\": [7,9], \"evidence\": [5]}, {\"entity\": \"G\u017cira\", \"type\": \"Location\", \"location\": [11,12], \"evidence\": [5]}, {\"entity\": \"33\", \"type\": \"Number\", \"location\": [14,15], \"evidence\": [5]}]"
+      },
+      {
+        "sentences": "[['May', '15', 'v', 'Duke', 'of', 'Norfolk', \"'s\", 'XI', '(', 'at', 'Arundel', ')']]",
+        "entities": [
+          [
+            {
+              "name": "Duke of Norfolk 's XI",
+              "pos": [
+                3,
+                8
+              ],
+              "type": "Organization",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Arundel",
+              "pos": [
+                10,
+                11
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "Physical",
+            "h": 0,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          }
+        ],
+        "entity_types": "['Location', 'Organization']",
+        "relation_types": "['Physical']"
+      }
+    ],
+    "signature_instructions": "Convert extracted entity tuples into JSON format.\nThe output is a list of dictionaries, each containing:\n- 'entity': the extracted term,\n- 'type': its classification (e.g., Person, Location),\n- 'location': the index range within the text where the entity is found,\n- 'evidence': a list of indices indicating the sublists containing the entity.\nThe output should be formatted as a JSON list.",
+    "signature_prefix": "Answer:",
+    "extended_signature_instructions": "Convert extracted entity tuples into JSON format.\nThe output is a list of dictionaries, each containing:\n- 'entity': the extracted term,\n- 'type': its classification (e.g., Person, Location),\n- 'location': the index range within the text where the entity is found,\n- 'evidence': a list of indices indicating the sublists containing the entity.\nThe output should be formatted as a JSON list.",
+    "extended_signature_prefix": "Answer:"
+  },
+  "relation_extraction": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "entities": "[\n    {\"entity\": \"Mars\", \"type\": \"Astronomical object\", \"location\": [0, 1], \"evidence\": [0]},\n    {\"entity\": \"Jupiter\", \"type\": \"Astronomical object\", \"location\": [20, 21], \"evidence\": [0]},\n    {\"entity\": \"Telesto\", \"type\": \"Astronomical object\", \"location\": [47, 48], \"evidence\": [0]},\n    {\"entity\": \"Calypso\", \"type\": \"Astronomical object\", \"location\": [49, 50], \"evidence\": [0]},\n    {\"entity\": \"Tethys\", \"type\": \"Astronomical object\", \"location\": [52, 53], \"evidence\": [0]},\n    {\"entity\": \"Helene\", \"type\": \"Astronomical object\", \"location\": [55, 56], \"evidence\": [0]},\n    {\"entity\": \"Polydeuces\", \"type\": \"Astronomical object\", \"location\": [57, 58], \"evidence\": [0]},\n    {\"entity\": \"Dione\", \"type\": \"Astronomical object\", \"location\": [59, 60], \"evidence\": [0]},\n    {\"entity\": \"5261 Eureka\", \"type\": \"Astronomical object\", \"location\": [7, 9], \"evidence\": [0]},\n    {\"entity\": \"Saturnian system\", \"type\": \"Astronomical object\", \"location\": [45, 47], \"evidence\": [0]},\n    {\"entity\": \"Lagrangian point\", \"type\": \"Other\", \"location\": [14, 16], \"evidence\": [0]},\n    {\"entity\": \"Jovian trojans\", \"type\": \"Other\", \"location\": [34, 36], \"evidence\": [0]},\n    {\"entity\": \"co-orbital moons\", \"type\": \"Other\", \"location\": [43, 45], \"evidence\": [0]}\n]",
+        "sentences": "[['Mars', 'has', 'four', 'known', 'co-orbital', 'asteroids', '(', '5261', 'Eureka', ',', ',', 'all', 'at', 'the', 'Lagrangian', 'point', 's', ')', ',', 'and', 'Jupiter', 'has', 'many', '(', 'an', 'estimated', 'one', 'million', 'greater', 'than', '1', 'km', 'in', 'diameter', ',', 'the', 'Jovian', 'trojans', ')', ';', 'there', 'are', 'also', 'other', 'small', 'co-orbital', 'moons', 'in', 'the', 'Saturnian', 'system', ':', 'Telesto', 'and', 'Calypso', 'with', 'Tethys', ',', 'and', 'Helene', 'and', 'Polydeuces', 'with', 'Dione', '.']]",
+        "relation_types": "['Compare', 'Related to', 'Part of']",
+        "rationale": "produce the answer. We can see that the entities 'Mars' and '5261 Eureka' are related as '5261 Eureka' is a co-orbital asteroid of 'Mars'. This relationship can be classified as 'Related to'. Similarly, 'Jupiter' and 'Jovian trojans' are related as 'Jovian trojans' are co-orbital asteroids of 'Jupiter'. This relationship can also be classified as 'Related to'. The entities 'Telesto', 'Calypso', 'Tethys', 'Helene', 'Polydeuces', and 'Dione' are all part of the 'Saturnian system', so their relationship can be classified as 'Part of'. Lastly, 'Mars' and 'Jupiter' are compared in terms of their co-orbital asteroids, so their relationship can be classified as 'Compare'.",
+        "answer": "[('Mars', '5261 Eureka', 'Related to'), ('Jupiter', 'Jovian trojans', 'Related to'), ('Telesto', 'Saturnian system', 'Part of'), ('Calypso', 'Saturnian system', 'Part of'), ('Tethys', 'Saturnian system', 'Part of'), ('Helene', 'Saturnian system', 'Part of'), ('Polydeuces', 'Saturnian system', 'Part of'), ('Dione', 'Saturnian system', 'Part of'), ('Mars', 'Jupiter', 'Compare')]"
+      },
+      {
+        "augmented": true,
+        "entities": "[\n    {\"entity\": \"Hough voting\", \"type\": \"Method\", \"location\": [0, 1], \"evidence\": [0]},\n    {\"entity\": \"adaptive dither voting\", \"type\": \"Method\", \"location\": [11, 14], \"evidence\": [1]},\n    {\"entity\": \"the method\", \"type\": \"Method\", \"location\": [0, 2], \"evidence\": [2, 3, 5, 6]},\n    {\"entity\": \"spatial verification\", \"type\": \"Task\", \"location\": [11, 13], \"evidence\": [0, 1]},\n    {\"entity\": \"feature detection\", \"type\": \"Task\", \"location\": [18, 20], \"evidence\": [0]},\n    {\"entity\": \"accuracy\", \"type\": \"Metric\", \"location\": [21, 22], \"evidence\": [6]},\n    {\"entity\": \"scalability\", \"type\": \"Metric\", \"location\": [23, 24], \"evidence\": [6]},\n    {\"entity\": \"geometric transformation\", \"type\": \"Scientific term\", \"location\": [3, 5], \"evidence\": [0]},\n    {\"entity\": \"feature correspondences\", \"type\": \"Scientific term\", \"location\": [27, 29], \"evidence\": [0]},\n    {\"entity\": \"transformation quantization\", \"type\": \"Scientific term\", \"location\": [22, 24], \"evidence\": [3]},\n    {\"entity\": \"geometric constraints\", \"type\": \"Scientific term\", \"location\": [32, 34], \"evidence\": [3]},\n    {\"entity\": \"Hough histogram\", \"type\": \"Scientific term\", \"location\": [5, 7], \"evidence\": [4]},\n    {\"entity\": \"multiple matching surfaces\", \"type\": \"Scientific term\", \"location\": [9, 12], \"evidence\": [4]}\n]",
+        "sentences": "[['Hough', 'voting', 'in', 'a', 'geometric', 'transformation', 'space', 'allows', 'us', 'to', 'realize', 'spatial', 'verification', ',', 'but', 'remains', 'sensitive', 'to', 'feature', 'detection', 'errors', 'because', 'of', 'the', 'inflexible', 'quan-tization', 'of', 'single', 'feature', 'correspondences', '.'], ['To', 'handle', 'this', 'problem', ',', 'we', 'propose', 'a', 'new', 'method', ',', 'called', 'adaptive', 'dither', 'voting', ',', 'for', 'robust', 'spatial', 'verification', '.'], ['For', 'each', 'correspondence', ',', 'instead', 'of', 'hard-mapping', 'it', 'to', 'a', 'single', 'transformation', ',', 'the', 'method', 'augments', 'its', 'description', 'by', 'using', 'multiple', 'dithered', 'transformations', 'that', 'are', 'deterministically', 'generated', 'by', 'the', 'other', 'correspondences', '.'], ['The', 'method', 'reduces', 'the', 'probability', 'of', 'losing', 'correspondences', 'during', 'transformation', 'quantization', ',', 'and', 'provides', 'high', 'robustness', 'as', 'regards', 'mismatches', 'by', 'imposing', 'three', 'geometric', 'constraints', 'on', 'the', 'dithering', 'process', '.'], ['We', 'also', 'propose', 'exploiting', 'the', 'non-uniformity', 'of', 'a', 'Hough', 'histogram', 'as', 'the', 'spatial', 'similarity', 'to', 'handle', 'multiple', 'matching', 'surfaces', '.'], ['Extensive', 'experiments', 'conducted', 'on', 'four', 'datasets', 'show', 'the', 'superiority', 'of', 'our', 'method', '.'], ['The', 'method', 'outperforms', 'its', 'state-of-the-art', 'counterparts', 'in', 'both', 'accuracy', 'and', 'scalability', ',', 'especially', 'when', 'it', 'comes', 'to', 'the', 'retrieval', 'of', 'small', ',', 'rotated', 'objects', '.']]",
+        "relation_types": "['Compare', 'Used for', 'Evaluate for', 'Feature of ']",
+        "rationale": "produce the answer. We can see that the text is about different methods and their applications. The first sentence introduces the method \"Hough voting\" and its application in \"spatial verification\". It also mentions that it is sensitive to \"feature detection\" errors. The second sentence introduces a new method called \"adaptive dither voting\" which is also used for \"spatial verification\". The third and fourth sentences describe features of \"the method\" (which refers to \"adaptive dither voting\" from the previous sentence). The fifth sentence proposes a feature of the \"Hough histogram\". The last two sentences evaluate \"the method\" (again referring to \"adaptive dither voting\") for \"accuracy\" and \"scalability\".",
+        "answer": "[('Hough voting', 'spatial verification', 'Used for'), ('adaptive dither voting', 'spatial verification', 'Used for'), ('the method', 'multiple dithered transformations', 'Feature of '), ('the method', 'geometric constraints', 'Feature of '), ('Hough histogram', 'multiple matching surfaces', 'Feature of '), ('the method', 'accuracy', 'Evaluate for'), ('the method', 'scalability', 'Evaluate for')]"
+      },
+      {
+        "augmented": true,
+        "entities": "[\n    {\n        \"entity\": \"Nelson-Atkins Museum of Art\",\n        \"type\": \"Organization\",\n        \"location\": [2, 7],\n        \"evidence\": [0]\n    },\n    {\n        \"entity\": \"Kansas City\",\n        \"type\": \"Location\",\n        \"location\": [7, 9],\n        \"evidence\": [0]\n    },\n    {\n        \"entity\": \"Mo.\",\n        \"type\": \"Location\",\n        \"location\": [10, 10],\n        \"evidence\": [0]\n    },\n    {\n        \"entity\": \"New York\",\n        \"type\": \"Location\",\n        \"location\": [19, 21],\n        \"evidence\": [0]\n    },\n    {\n        \"entity\": \"Steven Holl\",\n        \"type\": \"Person\",\n        \"location\": [21, 23],\n        \"evidence\": [0]\n    },\n    {\n        \"entity\": \"Hallmark Photographic Collection of Kansas City\",\n        \"type\": \"Organization\",\n        \"location\": [44, 50],\n        \"evidence\": [0]\n    }\n]",
+        "sentences": "[['When', 'the', 'Nelson-Atkins', 'Museum', 'of', 'Art', 'in', 'Kansas', 'City', ',', 'Mo.', ',', 'was', 'planning', 'its', 'expansion', ',', 'designed', 'by', 'the', 'New', 'York', 'architect', 'Steven', 'Holl', 'and', 'scheduled', 'to', 'open', 'in', 'May', 'or', 'June', '2007', ',', 'it', 'was', 'to', 'include', 'new', 'galleries', 'to', 'display', 'a', 'selection', 'of', 'works', 'from', 'the', 'Hallmark', 'Photographic', 'Collection', 'of', 'Kansas', 'City', '.']]",
+        "relation_types": "['Contains location']",
+        "rationale": "produce the answer. We can see that the entity \"Nelson-Atkins Museum of Art\" is located in \"Kansas City\", as indicated by the sentence \"When the Nelson-Atkins Museum of Art in Kansas City, Mo., was planning its expansion...\". Therefore, we can say that the relation between \"Nelson-Atkins Museum of Art\" and \"Kansas City\" is \"Contains location\". Similarly, the \"Hallmark Photographic Collection of Kansas City\" is also located in \"Kansas City\", so the relation between \"Hallmark Photographic Collection of Kansas City\" and \"Kansas City\" is also \"Contains location\".",
+        "answer": "[('Nelson-Atkins Museum of Art', 'Kansas City', 'Contains location'), ('Hallmark Photographic Collection of Kansas City', 'Kansas City', 'Contains location')]"
+      },
+      {
+        "augmented": true,
+        "entities": "[{\"entity\": \"Malta\", \"type\": \"Location\", \"location\": [1,2], \"evidence\": [0]}, {\"entity\": \"1964\", \"type\": \"Time\", \"location\": [5,6], \"evidence\": [0]}, {\"entity\": \"Independence\", \"type\": \"Other\", \"location\": [3,4], \"evidence\": [0]}, {\"entity\": \"Grand Harbour\", \"type\": \"Location\", \"location\": [11,13], \"evidence\": [1]}, {\"entity\": \"Marsamxett Harbour\", \"type\": \"Location\", \"location\": [14,16], \"evidence\": [1]}, {\"entity\": \"Sliema\", \"type\": \"Location\", \"location\": [37,38], \"evidence\": [1]}, {\"entity\": \"Saint Julian\", \"type\": \"Location\", \"location\": [39,41], \"evidence\": [1]}, {\"entity\": \"Paceville\", \"type\": \"Location\", \"location\": [43,44], \"evidence\": [1]}, {\"entity\": \"Msida\", \"type\": \"Location\", \"location\": [45,46], \"evidence\": [1]}, {\"entity\": \"G\u017cira\", \"type\": \"Location\", \"location\": [47,48], \"evidence\": [1]}, {\"entity\": \"Ta\", \"type\": \"Location\", \"location\": [49,50], \"evidence\": [1]}, {\"entity\": \"Xbiex\", \"type\": \"Location\", \"location\": [51,52], \"evidence\": [1]}, {\"entity\": \"Piet\u00e0\", \"type\": \"Location\", \"location\": [53,54], \"evidence\": [1]}, {\"entity\": \"Saint Paul\", \"type\": \"Location\", \"location\": [37,39], \"evidence\": [2]}, {\"entity\": \"Bay\", \"type\": \"Location\", \"location\": [39,40], \"evidence\": [2]}, {\"entity\": \"Qawra\", \"type\": \"Location\", \"location\": [42,43], \"evidence\": [2]}, {\"entity\": \"Bu\u0121ibba\", \"type\": \"Location\", \"location\": [44,45], \"evidence\": [2]}, {\"entity\": \"Xemxija\", \"type\": \"Location\", \"location\": [46,47], \"evidence\": [2]}, {\"entity\": \"Mellie\u0127a\", \"type\": \"Location\", \"location\": [48,49], \"evidence\": [2]}, {\"entity\": \"North\", \"type\": \"Location\", \"location\": [50,51], \"evidence\": [2]}, {\"entity\": \"Marsaskala\", \"type\": \"Location\", \"location\": [53,54], \"evidence\": [2]}, {\"entity\": \"Malta Freeport\", \"type\": \"Location\", \"location\": [55,57], \"evidence\": [2]}, {\"entity\": \"South\", \"type\": \"Location\", \"location\": [60,61], \"evidence\": [2]}, {\"entity\": \"Malta\", \"type\": \"Location\", \"location\": [4,5], \"evidence\": [3]}, {\"entity\": \"Metropolis Plaza\", \"type\": \"Location\", \"location\": [7,9], \"evidence\": [3]}, {\"entity\": \"G\u017cira\", \"type\": \"Location\", \"location\": [11,12], \"evidence\": [3]}, {\"entity\": \"Malta\", \"type\": \"Location\", \"location\": [6,7], \"evidence\": [4]}, {\"entity\": \"Delimara Power Station\", \"type\": \"Location\", \"location\": [8,11], \"evidence\": [4]}, {\"entity\": \"2017 \u2013 18\", \"type\": \"Time\", \"location\": [23,26], \"evidence\": [4]}, {\"entity\": \"Metropolis Plaza\", \"type\": \"Location\", \"location\": [7,9], \"evidence\": [5]}, {\"entity\": \"G\u017cira\", \"type\": \"Location\", \"location\": [11,12], \"evidence\": [5]}, {\"entity\": \"33\", \"type\": \"Number\", \"location\": [14,15], \"evidence\": [5]}]",
+        "sentences": "[['Since', 'Malta', \"'s\", 'Independence', 'in', '1964', ',', 'there', 'has', 'been', 'a', 'rapid', 'increase', 'in', 'buildings', 'all', 'over', 'the', 'country', '.'], ['However', ',', 'most', 'of', 'the', 'urban', 'areas', 'are', 'concentrated', 'around', 'the', 'Grand', 'Harbour', 'and', 'Marsamxett', 'Harbour', 'areas', 'where', 'some', 'of', 'the', 'country', \"'s\", 'most', 'busy', 'places', 'are', 'situated', ';', 'Sliema', ',', 'Saint', 'Julian', \"'s\", ',', 'Paceville', ',', 'Msida', ',', 'G\u017cira', ',', 'Ta', \"'\", 'Xbiex', 'and', 'Piet\u00e0', '.'], ['As', 'cars', 'and', 'road', 'transport', 'grew', 'more', 'and', 'more', 'popular', 'in', 'the', 'country', ',', 'the', 'population', 'started', 'to', 'spread', 'out', 'to', 'farther', 'areas', 'and', 'nowadays', 'some', 'other', 'urban', 'areas', 'have', 'developed', ';', 'Saint', 'Paul', \"'s\", 'Bay', '(', 'including', 'Qawra', ',', 'Bu\u0121ibba', 'and', 'Xemxija', ')', 'and', 'Mellie\u0127a', 'in', 'the', 'North', ',', 'whilst', 'having', 'Marsaskala', 'and', 'the', 'Malta', 'Freeport', 'area', 'in', 'the', 'South', 'of', 'the', 'country', '.'], ['Some', 'of', 'the', 'tall', 'buildings', 'in', 'Malta', ',', 'such', 'as', 'the', 'Metropolis', 'Plaza', 'in', 'G\u017cira', ',', 'are', 'still', 'under', 'construction', '.'], ['The', 'highest', 'structure', 'ever', 'built', 'in', 'Malta', 'was', 'the', 'Delimara', 'Power', 'Station', 'chimney', ',', 'standing', 'above', 'ground', ',', 'until', 'its', 'demolition', 'in', '2017', '\u2013', '18', '.'], ['The', 'tallest', 'building', 'will', 'be', 'one', 'of', 'the', 'towers', 'at', 'the', 'Metropolis', 'Plaza', 'in', 'G\u017cira', ',', 'with', '33', 'storeys', '.']]",
+        "relation_types": "['Located in', 'Country', 'Inception', 'Contains adminstrative territorial entity']",
+        "rationale": "produce the answer. We can see that the entities are mostly locations and times. The relationships between these entities can be determined by their context in the sentences. For example, \"Malta\" and \"1964\" are related by the \"Inception\" relation because Malta gained independence in 1964. Similarly, \"Grand Harbour\" and \"Marsamxett Harbour\" are related to \"Malta\" by the \"Located in\" relation because they are located in Malta. The \"Metropolis Plaza\" is related to \"G\u017cira\" by the \"Located in\" relation because it is located in G\u017cira. The \"Delimara Power Station\" is related to \"Malta\" by the \"Located in\" relation because it is located in Malta. The \"Metropolis Plaza\" is related to \"33\" by the \"Contains adminstrative territorial entity\" relation because it will have 33 storeys.",
+        "answer": "[('Malta', '1964', 'Inception'), ('Grand Harbour', 'Malta', 'Located in'), ('Marsamxett Harbour', 'Malta', 'Located in'), ('Metropolis Plaza', 'G\u017cira', 'Located in'), ('Delimara Power Station', 'Malta', 'Located in'), ('Metropolis Plaza', '33', 'Contains adminstrative territorial entity')]"
+      },
+      {
+        "sentences": "[['May', '15', 'v', 'Duke', 'of', 'Norfolk', \"'s\", 'XI', '(', 'at', 'Arundel', ')']]",
+        "entities": [
+          [
+            {
+              "name": "Duke of Norfolk 's XI",
+              "pos": [
+                3,
+                8
+              ],
+              "type": "Organization",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Arundel",
+              "pos": [
+                10,
+                11
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "Physical",
+            "h": 0,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          }
+        ],
+        "entity_types": "['Location', 'Organization']",
+        "relation_types": "['Physical']"
+      }
+    ],
+    "signature_instructions": "Given the text in form of Python lists of sentences, a list of dictionaries with entities and a list of relation types find the relations between the entities.\nThe output should be  a list of tuples in the format (entity1, entity2, relation), where:\n- 'entity1' and 'entity2' are the names or terms representing the two entities involved,\n- 'relation' is the specific relationship type between them, as defined in the provided relation types. Use the exact types as defined in the input field, relation_types. \nThis format captures the relationships directly as they appear in the text.",
+    "signature_prefix": "Answer:",
+    "extended_signature_instructions": "Given the text in form of Python lists of sentences, a list of dictionaries with entities and a list of relation types find the relations between the entities.\nThe output should be  a list of tuples in the format (entity1, entity2, relation), where:\n- 'entity1' and 'entity2' are the names or terms representing the two entities involved,\n- 'relation' is the specific relationship type between them, as defined in the provided relation types. Use the exact types as defined in the input field, relation_types. \nThis format captures the relationships directly as they appear in the text.",
+    "extended_signature_prefix": "Answer:"
+  },
+  "tuple_to_json_relation": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "text": "[('Mars', '5261 Eureka', 'Related to'), ('Jupiter', 'Jovian trojans', 'Related to'), ('Telesto', 'Saturnian system', 'Part of'), ('Calypso', 'Saturnian system', 'Part of'), ('Tethys', 'Saturnian system', 'Part of'), ('Helene', 'Saturnian system', 'Part of'), ('Polydeuces', 'Saturnian system', 'Part of'), ('Dione', 'Saturnian system', 'Part of'), ('Mars', 'Jupiter', 'Compare')]",
+        "rationale": "produce the answer. We have several pairs of entities and their relationships. We need to convert each pair into a dictionary with 'entity1', 'entity2', and 'relation' as keys. The first entity in each pair will be 'entity1', the second entity will be 'entity2', and the relationship will be 'relation'.",
+        "answer": "[{\"entity1\": \"Mars\", \"entity2\": \"5261 Eureka\", \"relation\": \"Related to\"}, {\"entity1\": \"Jupiter\", \"entity2\": \"Jovian trojans\", \"relation\": \"Related to\"}, {\"entity1\": \"Telesto\", \"entity2\": \"Saturnian system\", \"relation\": \"Part of\"}, {\"entity1\": \"Calypso\", \"entity2\": \"Saturnian system\", \"relation\": \"Part of\"}, {\"entity1\": \"Tethys\", \"entity2\": \"Saturnian system\", \"relation\": \"Part of\"}, {\"entity1\": \"Helene\", \"entity2\": \"Saturnian system\", \"relation\": \"Part of\"}, {\"entity1\": \"Polydeuces\", \"entity2\": \"Saturnian system\", \"relation\": \"Part of\"}, {\"entity1\": \"Dione\", \"entity2\": \"Saturnian system\", \"relation\": \"Part of\"}, {\"entity1\": \"Mars\", \"entity2\": \"Jupiter\", \"relation\": \"Compare\"}]"
+      },
+      {
+        "augmented": true,
+        "text": "[('Hough voting', 'spatial verification', 'Used for'), ('adaptive dither voting', 'spatial verification', 'Used for'), ('the method', 'multiple dithered transformations', 'Feature of '), ('the method', 'geometric constraints', 'Feature of '), ('Hough histogram', 'multiple matching surfaces', 'Feature of '), ('the method', 'accuracy', 'Evaluate for'), ('the method', 'scalability', 'Evaluate for')]",
+        "rationale": "produce the answer. We can see that each tuple in the text represents a relationship between two entities. The first element of each tuple is the first entity, the second element is the second entity, and the third element is the type of relationship between the two entities.",
+        "answer": "[\n  {\n    \"entity1\": \"Hough voting\",\n    \"entity2\": \"spatial verification\",\n    \"relation\": \"Used for\"\n  },\n  {\n    \"entity1\": \"adaptive dither voting\",\n    \"entity2\": \"spatial verification\",\n    \"relation\": \"Used for\"\n  },\n  {\n    \"entity1\": \"the method\",\n    \"entity2\": \"multiple dithered transformations\",\n    \"relation\": \"Feature of\"\n  },\n  {\n    \"entity1\": \"the method\",\n    \"entity2\": \"geometric constraints\",\n    \"relation\": \"Feature of\"\n  },\n  {\n    \"entity1\": \"Hough histogram\",\n    \"entity2\": \"multiple matching surfaces\",\n    \"relation\": \"Feature of\"\n  },\n  {\n    \"entity1\": \"the method\",\n    \"entity2\": \"accuracy\",\n    \"relation\": \"Evaluate for\"\n  },\n  {\n    \"entity1\": \"the method\",\n    \"entity2\": \"scalability\",\n    \"relation\": \"Evaluate for\"\n  }\n]"
+      },
+      {
+        "augmented": true,
+        "text": "[('Nelson-Atkins Museum of Art', 'Kansas City', 'Contains location'), ('Hallmark Photographic Collection of Kansas City', 'Kansas City', 'Contains location')]",
+        "rationale": "produce the answer. We have two relationships described here. The first one is between 'Nelson-Atkins Museum of Art' and 'Kansas City', with the relationship being 'Contains location'. The second one is between 'Hallmark Photographic Collection of Kansas City' and 'Kansas City', with the same relationship 'Contains location'.",
+        "answer": "[{\"entity1\": \"Kansas City\", \"entity2\": \"Nelson-Atkins Museum of Art\", \"relation\": \"Contains location\"}, {\"entity1\": \"Kansas City\", \"entity2\": \"Hallmark Photographic Collection of Kansas City\", \"relation\": \"Contains location\"}]"
+      },
+      {
+        "augmented": true,
+        "text": "[('Malta', '1964', 'Inception'), ('Grand Harbour', 'Malta', 'Located in'), ('Marsamxett Harbour', 'Malta', 'Located in'), ('Metropolis Plaza', 'G\u017cira', 'Located in'), ('Delimara Power Station', 'Malta', 'Located in'), ('Metropolis Plaza', '33', 'Contains adminstrative territorial entity')]",
+        "rationale": "produce the answer. We can see that the text is already structured in a way that represents relationships between entities. Each tuple contains two entities and the relationship between them. We just need to convert this into the required JSON format.",
+        "answer": "[\n  {\n    \"entity1\": \"Malta\",\n    \"entity2\": \"1964\",\n    \"relation\": \"Inception\"\n  },\n  {\n    \"entity1\": \"Grand Harbour\",\n    \"entity2\": \"Malta\",\n    \"relation\": \"Located in\"\n  },\n  {\n    \"entity1\": \"Marsamxett Harbour\",\n    \"entity2\": \"Malta\",\n    \"relation\": \"Located in\"\n  },\n  {\n    \"entity1\": \"Metropolis Plaza\",\n    \"entity2\": \"G\u017cira\",\n    \"relation\": \"Located in\"\n  },\n  {\n    \"entity1\": \"Delimara Power Station\",\n    \"entity2\": \"Malta\",\n    \"relation\": \"Located in\"\n  },\n  {\n    \"entity1\": \"Metropolis Plaza\",\n    \"entity2\": \"33\",\n    \"relation\": \"Contains adminstrative territorial entity\"\n  }\n]"
+      },
+      {
+        "sentences": "[['May', '15', 'v', 'Duke', 'of', 'Norfolk', \"'s\", 'XI', '(', 'at', 'Arundel', ')']]",
+        "entities": [
+          [
+            {
+              "name": "Duke of Norfolk 's XI",
+              "pos": [
+                3,
+                8
+              ],
+              "type": "Organization",
+              "sent_id": 0
+            }
+          ],
+          [
+            {
+              "name": "Arundel",
+              "pos": [
+                10,
+                11
+              ],
+              "type": "Location",
+              "sent_id": 0
+            }
+          ]
+        ],
+        "relations": [
+          {
+            "r": "Physical",
+            "h": 0,
+            "t": 1,
+            "evidence": [
+              0
+            ]
+          }
+        ],
+        "entity_types": "['Location', 'Organization']",
+        "relation_types": "['Physical']"
+      }
+    ],
+    "signature_instructions": "Convert text into a structured JSON format representing relationships between entities.\nThe output should be a list of dictionaries, each containing:\n- 'entity1': the first entity in the relationship,\n- 'entity2': the second entity in the relationship,\n- 'relation': the type of relationship between the entities.\nThe output should be formatted as a JSON list.",
+    "signature_prefix": "Answer:",
+    "extended_signature_instructions": "Convert text into a structured JSON format representing relationships between entities.\nThe output should be a list of dictionaries, each containing:\n- 'entity1': the first entity in the relationship,\n- 'entity2': the second entity in the relationship,\n- 'relation': the type of relationship between the entities.\nThe output should be formatted as a JSON list.",
+    "extended_signature_prefix": "Answer:"
+  }
+}

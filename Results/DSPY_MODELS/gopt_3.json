@@ -1,0 +1,73 @@
+{
+  "entity_extraction": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "sentences": "[['When', 'the', 'Nelson-Atkins', 'Museum', 'of', 'Art', 'in', 'Kansas', 'City', ',', 'Mo.', ',', 'was', 'planning', 'its', 'expansion', ',', 'designed', 'by', 'the', 'New', 'York', 'architect', 'Steven', 'Holl', 'and', 'scheduled', 'to', 'open', 'in', 'May', 'or', 'June', '2007', ',', 'it', 'was', 'to', 'include', 'new', 'galleries', 'to', 'display', 'a', 'selection', 'of', 'works', 'from', 'the', 'Hallmark', 'Photographic', 'Collection', 'of', 'Kansas', 'City', '.']]",
+        "entity_types": "['Person', 'Location', 'Organization']",
+        "rationale": "produce the answer. We need to identify the entities in the text that match the types 'Person', 'Location', and 'Organization'. \n\n- The 'Nelson-Atkins Museum of Art' is an organization. It is found between indices 2 and 7.\n- 'Kansas City' is a location. It is found between indices 7 and 9.\n- 'Mo.' is also a location. It is found at index 10.\n- 'New York' is a location. It is found between indices 19 and 21.\n- 'Steven Holl' is a person. It is found between indices 21 and 23.\n- 'May' and 'June 2007' could be considered a time entity, but since we are not looking for time entities, we will ignore it.\n- 'Hallmark Photographic Collection of Kansas City' is an organization. It is found between indices 44 and 50.",
+        "answer": "[('Nelson-Atkins Museum of Art', 'Organization', [2, 7], [0]), ('Kansas City', 'Location', [7, 9], [0]), ('Mo.', 'Location', [10, 10], [0]), ('New York', 'Location', [19, 21], [0]), ('Steven Holl', 'Person', [21, 23], [0]), ('Hallmark Photographic Collection of Kansas City', 'Organization', [44, 50], [0])]"
+      }
+    ],
+    "signature_instructions": "Extract entities from a provided text based on specified entity types.\nThe output is a list of tuples in the format (entity, type, location, evidence), where:\n- 'entity' is the extracted term,\n- 'type' is its classification (e.g., Person, Location),\n- 'location' is the index range within the text where the entity is found, represented as a list [Start, End],\n- 'evidence' is a list of indices indicating the specific sublists (within the list of lists) that contain the entity.",
+    "signature_prefix": "Answer:",
+    "extended_signature_instructions": "Extract entities from a provided text based on specified entity types.\nThe output is a list of tuples in the format (entity, type, location, evidence), where:\n- 'entity' is the extracted term,\n- 'type' is its classification (e.g., Person, Location),\n- 'location' is the index range within the text where the entity is found, represented as a list [Start, End],\n- 'evidence' is a list of indices indicating the specific sublists (within the list of lists) that contain the entity.",
+    "extended_signature_prefix": "Answer:"
+  },
+  "tuple_to_json": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "text": "[('Nelson-Atkins Museum of Art', 'Organization', [2, 7], [0]), ('Kansas City', 'Location', [7, 9], [0]), ('Mo.', 'Location', [10, 10], [0]), ('New York', 'Location', [19, 21], [0]), ('Steven Holl', 'Person', [21, 23], [0]), ('Hallmark Photographic Collection of Kansas City', 'Organization', [44, 50], [0])]",
+        "rationale": "produce the answer. We need to convert each tuple into a dictionary with the keys 'entity', 'type', 'location', and 'evidence'. The values for these keys will be the corresponding elements from each tuple.",
+        "answer": "[\n    {\n        \"entity\": \"Nelson-Atkins Museum of Art\",\n        \"type\": \"Organization\",\n        \"location\": [2, 7],\n        \"evidence\": [0]\n    },\n    {\n        \"entity\": \"Kansas City\",\n        \"type\": \"Location\",\n        \"location\": [7, 9],\n        \"evidence\": [0]\n    },\n    {\n        \"entity\": \"Mo.\",\n        \"type\": \"Location\",\n        \"location\": [10, 10],\n        \"evidence\": [0]\n    },\n    {\n        \"entity\": \"New York\",\n        \"type\": \"Location\",\n        \"location\": [19, 21],\n        \"evidence\": [0]\n    },\n    {\n        \"entity\": \"Steven Holl\",\n        \"type\": \"Person\",\n        \"location\": [21, 23],\n        \"evidence\": [0]\n    },\n    {\n        \"entity\": \"Hallmark Photographic Collection of Kansas City\",\n        \"type\": \"Organization\",\n        \"location\": [44, 50],\n        \"evidence\": [0]\n    }\n]"
+      }
+    ],
+    "signature_instructions": "Convert extracted entity tuples into JSON format.\nThe output is a list of dictionaries, each containing:\n- 'entity': the extracted term,\n- 'type': its classification (e.g., Person, Location),\n- 'location': the index range within the text where the entity is found,\n- 'evidence': a list of indices indicating the sublists containing the entity.\nThe output should be formatted as a JSON list.",
+    "signature_prefix": "Answer:",
+    "extended_signature_instructions": "Convert extracted entity tuples into JSON format.\nThe output is a list of dictionaries, each containing:\n- 'entity': the extracted term,\n- 'type': its classification (e.g., Person, Location),\n- 'location': the index range within the text where the entity is found,\n- 'evidence': a list of indices indicating the sublists containing the entity.\nThe output should be formatted as a JSON list.",
+    "extended_signature_prefix": "Answer:"
+  },
+  "relation_extraction": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "entities": "[\n    {\n        \"entity\": \"Nelson-Atkins Museum of Art\",\n        \"type\": \"Organization\",\n        \"location\": [2, 7],\n        \"evidence\": [0]\n    },\n    {\n        \"entity\": \"Kansas City\",\n        \"type\": \"Location\",\n        \"location\": [7, 9],\n        \"evidence\": [0]\n    },\n    {\n        \"entity\": \"Mo.\",\n        \"type\": \"Location\",\n        \"location\": [10, 10],\n        \"evidence\": [0]\n    },\n    {\n        \"entity\": \"New York\",\n        \"type\": \"Location\",\n        \"location\": [19, 21],\n        \"evidence\": [0]\n    },\n    {\n        \"entity\": \"Steven Holl\",\n        \"type\": \"Person\",\n        \"location\": [21, 23],\n        \"evidence\": [0]\n    },\n    {\n        \"entity\": \"Hallmark Photographic Collection of Kansas City\",\n        \"type\": \"Organization\",\n        \"location\": [44, 50],\n        \"evidence\": [0]\n    }\n]",
+        "sentences": "[['When', 'the', 'Nelson-Atkins', 'Museum', 'of', 'Art', 'in', 'Kansas', 'City', ',', 'Mo.', ',', 'was', 'planning', 'its', 'expansion', ',', 'designed', 'by', 'the', 'New', 'York', 'architect', 'Steven', 'Holl', 'and', 'scheduled', 'to', 'open', 'in', 'May', 'or', 'June', '2007', ',', 'it', 'was', 'to', 'include', 'new', 'galleries', 'to', 'display', 'a', 'selection', 'of', 'works', 'from', 'the', 'Hallmark', 'Photographic', 'Collection', 'of', 'Kansas', 'City', '.']]",
+        "relation_types": "['Contains location']",
+        "rationale": "produce the answer. We can see that the entity \"Nelson-Atkins Museum of Art\" is located in \"Kansas City\", as indicated by the sentence \"When the Nelson-Atkins Museum of Art in Kansas City, Mo., was planning its expansion...\". Therefore, we can say that the relation between \"Nelson-Atkins Museum of Art\" and \"Kansas City\" is \"Contains location\". Similarly, the \"Hallmark Photographic Collection of Kansas City\" is also located in \"Kansas City\", so the relation between \"Hallmark Photographic Collection of Kansas City\" and \"Kansas City\" is also \"Contains location\".",
+        "answer": "[('Nelson-Atkins Museum of Art', 'Kansas City', 'Contains location'), ('Hallmark Photographic Collection of Kansas City', 'Kansas City', 'Contains location')]"
+      }
+    ],
+    "signature_instructions": "Given the text in form of Python lists of sentences, a list of dictionaries with entities and a list of relation types find the relations between the entities.\nThe output should be  a list of tuples in the format (entity1, entity2, relation), where:\n- 'entity1' and 'entity2' are the names or terms representing the two entities involved,\n- 'relation' is the specific relationship type between them, as defined in the provided relation types. Use the exact types as defined in the input field, relation_types. \nThis format captures the relationships directly as they appear in the text.",
+    "signature_prefix": "Answer:",
+    "extended_signature_instructions": "Given the text in form of Python lists of sentences, a list of dictionaries with entities and a list of relation types find the relations between the entities.\nThe output should be  a list of tuples in the format (entity1, entity2, relation), where:\n- 'entity1' and 'entity2' are the names or terms representing the two entities involved,\n- 'relation' is the specific relationship type between them, as defined in the provided relation types. Use the exact types as defined in the input field, relation_types. \nThis format captures the relationships directly as they appear in the text.",
+    "extended_signature_prefix": "Answer:"
+  },
+  "tuple_to_json_relation": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "text": "[('Nelson-Atkins Museum of Art', 'Kansas City', 'Contains location'), ('Hallmark Photographic Collection of Kansas City', 'Kansas City', 'Contains location')]",
+        "rationale": "produce the answer. We have two relationships described here. The first one is between 'Nelson-Atkins Museum of Art' and 'Kansas City', with the relationship being 'Contains location'. The second one is between 'Hallmark Photographic Collection of Kansas City' and 'Kansas City', with the same relationship 'Contains location'.",
+        "answer": "[{\"entity1\": \"Kansas City\", \"entity2\": \"Nelson-Atkins Museum of Art\", \"relation\": \"Contains location\"}, {\"entity1\": \"Kansas City\", \"entity2\": \"Hallmark Photographic Collection of Kansas City\", \"relation\": \"Contains location\"}]"
+      }
+    ],
+    "signature_instructions": "Convert text into a structured JSON format representing relationships between entities.\nThe output should be a list of dictionaries, each containing:\n- 'entity1': the first entity in the relationship,\n- 'entity2': the second entity in the relationship,\n- 'relation': the type of relationship between the entities.\nThe output should be formatted as a JSON list.",
+    "signature_prefix": "Answer:",
+    "extended_signature_instructions": "Convert text into a structured JSON format representing relationships between entities.\nThe output should be a list of dictionaries, each containing:\n- 'entity1': the first entity in the relationship,\n- 'entity2': the second entity in the relationship,\n- 'relation': the type of relationship between the entities.\nThe output should be formatted as a JSON list.",
+    "extended_signature_prefix": "Answer:"
+  }
+}

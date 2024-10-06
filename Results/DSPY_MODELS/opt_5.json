@@ -1,0 +1,100 @@
+{
+  "entity_extraction": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "sentences": "[['`', '`', 'Weather', 'like', 'this', 'is', 'awful', 'for', 'restaurants', ',', \"'\", \"'\", 'said', 'Lou', 'Ray', ',', 'owner', 'of', 'the', 'Smokehouse', 'cafe', 'in', 'Fontana', '.']]",
+        "entity_types": "['Location', 'Person']",
+        "rationale": "extract the entities from the provided text. \n\n1. **Identify the text segments**: The text segments are contained within the inner list: \n   - `['`', '`', 'Weather', 'like', 'this', 'is', 'awful', 'for', 'restaurants', ',', \"'\", \"'\", 'said', 'Lou', 'Ray', ',', 'owner', 'of', 'the', 'Smokehouse', 'cafe', 'in', 'Fontana', '.']`\n\n2. **Look for entities**: We need to find entities that match the specified types: Location and Person.\n   - **Person**: The name \"Lou Ray\" is present in the text. It is a person's name and can be classified as a Person entity.\n   - **Location**: The term \"Fontana\" is also present, which is a city and can be classified as a Location entity.\n\n3. **Determine the index range**: \n   - For \"Lou Ray\":\n     - \"Lou\" starts at index 11 and ends at index 14 (inclusive).\n     - \"Ray\" starts at index 15 and ends at index 18 (inclusive).\n     - Therefore, the overall range for \"Lou Ray\" is [11, 18].\n   - For \"Fontana\":\n     - \"Fontana\" starts at index 24 and ends at index 31 (inclusive).\n     - Therefore, the range for \"Fontana\" is [24, 31].\n\n4. **Identify evidence indices**: \n   - For \"Lou Ray\", the evidence is found in the sublist at index 0 (the entire inner list).\n   - For \"Fontana\", the evidence is also found in the sublist at index 0.\n\n5. **Compile the results**: We now have the entities, their types, locations, and evidence indices.",
+        "answer": "[('Lou Ray', 'Person', [11, 18], [0]), ('Fontana', 'Location', [24, 31], [0])]"
+      },
+      {
+        "augmented": true,
+        "sentences": "[['International', 'who', \"'s\", 'who', 'in', 'popular', 'music', ',', 'Volume', '4', 'p.37.', 'Routledge', ',', '2002', 'The', 'band', 'was', 'renamed', 'Rocket', 'Baby', 'Dolls', 'and', 'adopted', 'a', 'Gothic', 'rock', '-', 'Glam', 'rock', 'image', '.']]",
+        "entity_types": "['Band', 'Music genre', 'Organization']",
+        "rationale": "extract the relevant entities from the provided text. \n\n1. **Identify potential entities**: We will look for terms that could be classified as a Band, Music genre, or Organization within the text segments provided.\n2. **Analyze the text**: The text mentions \"Rocket Baby Dolls,\" which is a band name, and \"Gothic rock\" and \"Glam rock,\" which are music genres. There are no organizations mentioned in the text.\n3. **Determine the index ranges**: We will find the start and end indices of each identified entity within the text.\n4. **Compile evidence indices**: We will note which sublists contain the identified entities.\n\nNow, let's extract the entities:\n\n- **Entity 1**: \"Rocket Baby Dolls\"\n  - Type: Band\n  - Location: [15, 32] (the indices of \"Rocket Baby Dolls\" in the text)\n  - Evidence: [0] (the first sublist contains this entity)\n\n- **Entity 2**: \"Gothic rock\"\n  - Type: Music genre\n  - Location: [34, 45] (the indices of \"Gothic rock\" in the text)\n  - Evidence: [0] (the first sublist contains this entity)\n\n- **Entity 3**: \"Glam rock\"\n  - Type: Music genre\n  - Location: [47, 56] (the indices of \"Glam rock\" in the text)\n  - Evidence: [0] (the first sublist contains this entity)\n\nNow we can compile the extracted entities into the required format.",
+        "answer": "[('Rocket Baby Dolls', 'Band', [15, 32], [0]), ('Gothic rock', 'Music genre', [34, 45], [0]), ('Glam rock', 'Music genre', [47, 56], [0])]"
+      }
+    ],
+    "signature_instructions": "Extract entities from a provided text based on specified entity types.\nThe output is a list of tuples in the format (entity, type, location, evidence), where:\n- 'entity' is the extracted term,\n- 'type' is its classification (e.g., Person, Location),\n- 'location' is the index range within the text where the entity is found, represented as a list [Start, End],\n- 'evidence' is a list of indices indicating the specific sublists (within the list of lists) that contain the entity.",
+    "signature_prefix": "Answer:",
+    "extended_signature_instructions": "Extract entities from a provided text based on specified entity types.\nThe output is a list of tuples in the format (entity, type, location, evidence), where:\n- 'entity' is the extracted term,\n- 'type' is its classification (e.g., Person, Location),\n- 'location' is the index range within the text where the entity is found, represented as a list [Start, End],\n- 'evidence' is a list of indices indicating the specific sublists (within the list of lists) that contain the entity.",
+    "extended_signature_prefix": "Answer:"
+  },
+  "tuple_to_json": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "text": "[('Lou Ray', 'Person', [11, 18], [0]), ('Fontana', 'Location', [24, 31], [0])]",
+        "rationale": "produce the answer. We have two extracted entities: 'Lou Ray' classified as a Person and 'Fontana' classified as a Location. Each entity has its respective index range and evidence. We will format this information into a JSON list of dictionaries, ensuring that each dictionary contains the keys 'entity', 'type', 'location', and 'evidence' with the corresponding values.",
+        "answer": "[\n    {\n        \"entity\": \"Lou Ray\",\n        \"type\": \"Person\",\n        \"location\": [11, 18],\n        \"evidence\": [0]\n    },\n    {\n        \"entity\": \"Fontana\",\n        \"type\": \"Location\",\n        \"location\": [24, 31],\n        \"evidence\": [0]\n    }\n]"
+      },
+      {
+        "augmented": true,
+        "text": "[('Rocket Baby Dolls', 'Band', [15, 32], [0]), ('Gothic rock', 'Music genre', [34, 45], [0]), ('Glam rock', 'Music genre', [47, 56], [0])]",
+        "rationale": "produce the answer. We have a list of tuples, each containing an entity, its type, the location index range, and evidence indices. We will convert each tuple into a dictionary format with the specified keys: 'entity', 'type', 'location', and 'evidence'. Finally, we will compile these dictionaries into a JSON list.",
+        "answer": "[\n    {\n        \"entity\": \"Rocket Baby Dolls\",\n        \"type\": \"Band\",\n        \"location\": [15, 32],\n        \"evidence\": [0]\n    },\n    {\n        \"entity\": \"Gothic rock\",\n        \"type\": \"Music genre\",\n        \"location\": [34, 45],\n        \"evidence\": [0]\n    },\n    {\n        \"entity\": \"Glam rock\",\n        \"type\": \"Music genre\",\n        \"location\": [47, 56],\n        \"evidence\": [0]\n    }\n]"
+      }
+    ],
+    "signature_instructions": "Convert extracted entity tuples into JSON format.\nThe output is a list of dictionaries, each containing:\n- 'entity': the extracted term,\n- 'type': its classification (e.g., Person, Location),\n- 'location': the index range within the text where the entity is found,\n- 'evidence': a list of indices indicating the sublists containing the entity.\nThe output should be formatted as a JSON list.",
+    "signature_prefix": "Answer:",
+    "extended_signature_instructions": "Convert extracted entity tuples into JSON format.\nThe output is a list of dictionaries, each containing:\n- 'entity': the extracted term,\n- 'type': its classification (e.g., Person, Location),\n- 'location': the index range within the text where the entity is found,\n- 'evidence': a list of indices indicating the sublists containing the entity.\nThe output should be formatted as a JSON list.",
+    "extended_signature_prefix": "Answer:"
+  },
+  "relation_extraction": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "entities": "[\n    {\n        \"entity\": \"Lou Ray\",\n        \"type\": \"Person\",\n        \"location\": [11, 18],\n        \"evidence\": [0]\n    },\n    {\n        \"entity\": \"Fontana\",\n        \"type\": \"Location\",\n        \"location\": [24, 31],\n        \"evidence\": [0]\n    }\n]",
+        "sentences": "[['`', '`', 'Weather', 'like', 'this', 'is', 'awful', 'for', 'restaurants', ',', \"'\", \"'\", 'said', 'Lou', 'Ray', ',', 'owner', 'of', 'the', 'Smokehouse', 'cafe', 'in', 'Fontana', '.']]",
+        "relation_types": "['Live in']",
+        "rationale": "produce the answer. We have identified two entities: \"Lou Ray\" and \"Fontana\". The sentence indicates that Lou Ray is the owner of a cafe located in Fontana. The relationship we are looking for is whether Lou Ray lives in Fontana. Given that he owns a cafe there, it is reasonable to infer that he likely resides in the same location. Therefore, we can establish the relationship.",
+        "answer": "('Lou Ray', 'Fontana', 'Live in')"
+      },
+      {
+        "augmented": true,
+        "entities": "[\n    {\n        \"entity\": \"Rocket Baby Dolls\",\n        \"type\": \"Band\",\n        \"location\": [15, 32],\n        \"evidence\": [0]\n    },\n    {\n        \"entity\": \"Gothic rock\",\n        \"type\": \"Music genre\",\n        \"location\": [34, 45],\n        \"evidence\": [0]\n    },\n    {\n        \"entity\": \"Glam rock\",\n        \"type\": \"Music genre\",\n        \"location\": [47, 56],\n        \"evidence\": [0]\n    }\n]",
+        "sentences": "[['International', 'who', \"'s\", 'who', 'in', 'popular', 'music', ',', 'Volume', '4', 'p.37.', 'Routledge', ',', '2002', 'The', 'band', 'was', 'renamed', 'Rocket', 'Baby', 'Dolls', 'and', 'adopted', 'a', 'Gothic', 'rock', '-', 'Glam', 'rock', 'image', '.']]",
+        "relation_types": "['General affiliation']",
+        "rationale": "produce the answer. We have three entities: \"Rocket Baby Dolls\" (a band), \"Gothic rock\" (a music genre), and \"Glam rock\" (another music genre). The sentence indicates that the band \"Rocket Baby Dolls\" adopted a \"Gothic rock\" and \"Glam rock\" image. This suggests a relationship between the band and the music genres. \n\n1. The first relationship we can identify is between \"Rocket Baby Dolls\" and \"Gothic rock\". The text states that the band adopted a Gothic rock image, which implies a general affiliation.\n2. The second relationship is between \"Rocket Baby Dolls\" and \"Glam rock\". Similarly, the text indicates that the band also adopted a Glam rock image, indicating another general affiliation.\n\nThus, we can summarize the identified relationships as follows:",
+        "answer": "(Rocket Baby Dolls, Gothic rock, General affiliation), (Rocket Baby Dolls, Glam rock, General affiliation)"
+      }
+    ],
+    "signature_instructions": "Given the text in form of Python lists of sentences, a list of dictionaries with entities and a list of relation types find the relations between the entities.\nThe output should be  a list of tuples in the format (entity1, entity2, relation), where:\n- 'entity1' and 'entity2' are the names or terms representing the two entities involved,\n- 'relation' is the specific relationship type between them, as defined in the provided relation types. Use the exact types as defined in the input field, relation_types. \nThis format captures the relationships directly as they appear in the text.",
+    "signature_prefix": "Answer:",
+    "extended_signature_instructions": "Given the text in form of Python lists of sentences, a list of dictionaries with entities and a list of relation types find the relations between the entities.\nThe output should be  a list of tuples in the format (entity1, entity2, relation), where:\n- 'entity1' and 'entity2' are the names or terms representing the two entities involved,\n- 'relation' is the specific relationship type between them, as defined in the provided relation types. Use the exact types as defined in the input field, relation_types. \nThis format captures the relationships directly as they appear in the text.",
+    "extended_signature_prefix": "Answer:"
+  },
+  "tuple_to_json_relation": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "text": "('Lou Ray', 'Fontana', 'Live in')",
+        "rationale": "produce the answer. We have two entities: 'Lou Ray' and 'Fontana'. The relationship described is 'Live in', indicating that Lou Ray resides in Fontana. Therefore, we can structure this information in a JSON format.",
+        "answer": "[\n    {\n        \"entity1\": \"Lou Ray\",\n        \"entity2\": \"Fontana\",\n        \"relation\": \"Live in\"\n    }\n]"
+      },
+      {
+        "augmented": true,
+        "text": "(Rocket Baby Dolls, Gothic rock, General affiliation), (Rocket Baby Dolls, Glam rock, General affiliation)",
+        "rationale": "produce the answer. We identify the entities and their relationships from the provided text. The first entity is \"Rocket Baby Dolls,\" and it has a general affiliation with two music genres: \"Gothic rock\" and \"Glam rock.\" Therefore, we will create two entries in our JSON list to represent these relationships.",
+        "answer": "[\n    {\n        \"entity1\": \"Rocket Baby Dolls\",\n        \"entity2\": \"Gothic rock\",\n        \"relation\": \"General affiliation\"\n    },\n    {\n        \"entity1\": \"Rocket Baby Dolls\",\n        \"entity2\": \"Glam rock\",\n        \"relation\": \"General affiliation\"\n    }\n]"
+      }
+    ],
+    "signature_instructions": "Convert text into a structured JSON format representing relationships between entities.\nThe output should be a list of dictionaries, each containing:\n- 'entity1': the first entity in the relationship,\n- 'entity2': the second entity in the relationship,\n- 'relation': the type of relationship between the entities.\nThe output should be formatted as a JSON list.",
+    "signature_prefix": "Answer:",
+    "extended_signature_instructions": "Convert text into a structured JSON format representing relationships between entities.\nThe output should be a list of dictionaries, each containing:\n- 'entity1': the first entity in the relationship,\n- 'entity2': the second entity in the relationship,\n- 'relation': the type of relationship between the entities.\nThe output should be formatted as a JSON list.",
+    "extended_signature_prefix": "Answer:"
+  }
+}

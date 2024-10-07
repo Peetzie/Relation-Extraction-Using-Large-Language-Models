@@ -206,7 +206,7 @@ def filter_dataframe(df):
     return filtered_df
 
 
-def main(data_dir=None, output_dir=None, download=True, verbose=True):
+def main(data_dir=None, file_no=-1, output_dir=None, download=True, verbose=True):
     if data_dir is None:
         data_dir = Path(root_folder, "data", "raw_data")
     if not os.path.exists(data_dir):
@@ -223,7 +223,11 @@ def main(data_dir=None, output_dir=None, download=True, verbose=True):
     # Load the JSON files
     json_files = list_files_in_folder(crossRE_data_dir)
 
-    # json_files = json_files[file_no]
+    if file_no == -1:
+        # Do all files else single file
+        json_files = json_files
+    else:
+        json_files = json_files[file_no]
 
     df = load_json_files(json_files)
     df = transform_sentences(df)
@@ -262,7 +266,9 @@ if __name__ == "__main__":
         required=False,
         help="The directory to download JSON files to or load from.",
     )
-
+    parser.add_argument(
+        "--file_no", type=int, default=None, help="Number of JSON files to load."
+    )
     parser.add_argument(
         "--output_dir",
         type=str,
@@ -281,6 +287,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     main(
         args.data_dir,
+        args.file_no,
         args.output_dir,
         args.download,
         args.verbose,

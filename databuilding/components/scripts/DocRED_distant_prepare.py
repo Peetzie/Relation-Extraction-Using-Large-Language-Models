@@ -155,7 +155,7 @@ def fix_types(df, relations_file):
     return df
 
 
-def main(data_dir=None, output_dir=None, download=True, verbose=True):
+def main(data_dir=None, file_no=-1, output_dir=None, download=True, verbose=True):
     if data_dir is None:
         data_dir = Path(root_folder, "data", "raw_data")
     docred_data_dir = Path(data_dir, "DocRED_Distant")
@@ -178,49 +178,51 @@ def main(data_dir=None, output_dir=None, download=True, verbose=True):
     json_files = [file for file in json_files if "rel_info.json" not in file]
     # Copy over the relations file
     shutil.copy(types_file, output_dir)
-    # if file_no == -1:
-    dfs = []
-    print(Fore.RED + "Processing all files.")
-    output_dir.mkdir(parents=True, exist_ok=True)
-    for i in range(len(json_files)):
-        print(Fore.GREEN + f"Processing file {i+1}/{len(json_files)}" + Fore.WHITE)
-        df, _ = load_data(json_files, i, types_file)
-        # df["sentences"] = df["sentences"].apply(sentences_to_dict)
+    if file_no == -1:
+        dfs = []
+        print(Fore.RED + "Processing all files.")
+        output_dir.mkdir(parents=True, exist_ok=True)
+        for i in range(len(json_files)):
+            print(Fore.GREEN + f"Processing file {i+1}/{len(json_files)}" + Fore.WHITE)
+            df, _ = load_data(json_files, i, types_file)
+            # df["sentences"] = df["sentences"].apply(sentences_to_dict)
 
-        df["file_path"] = json_files[i]
+            df["file_path"] = json_files[i]
+            df["domains"] = "general"
+            dfs.append(df)
+        df = pd.concat(dfs, ignore_index=True)
+        df = fix_types(df, types_file)
+        # df = flattenassist(df)
+
+        df = save_json_with_progress(
+            df, Path(output_dir, "DocRED_Distant_modified.json")
+        )
+        print(
+            f"{Fore.GREEN}Dataframe saved to {Path(output_dir, 'DocRED_Distant_modified.json')}{Style.RESET_ALL}"
+        )
+        print(df.head())
+        print(df.columns)
+
+    else:
+        print(Fore.GREEN + f"Processing file {file_no}" + Fore.WHITE)
+        df, _ = load_data(json_files, file_no, types_file)
+        df["sentences"] = df["sentences"].apply(sentences_to_dict)
+
+        output_dir.mkdir(parents=True, exist_ok=True)
+        # add the domains type
         df["domains"] = "general"
-        dfs.append(df)
-    df = pd.concat(dfs, ignore_index=True)
-    df = fix_types(df, types_file)
-    # df = flattenassist(df)
+        df = save_json_with_progress(
+            df, Path(output_dir, "DocRED_Distant_modified.json")
+        )
+        print(
+            f"{Fore.GREEN}Dataframe saved to {Path(output_dir, 'DocRED_Distant_modified.json')}{Style.RESET_ALL}"
+        )
+        print(df.head())
+        print(df.columns)
 
-    df = save_json_with_progress(df, Path(output_dir, "DocRED_Distant_modified.json"))
-    print(
-        f"{Fore.GREEN}Dataframe saved to {Path(output_dir, 'DocRED_Distant_modified.json')}{Style.RESET_ALL}"
-    )
-    print(df.head())
-    print(df.columns)
-
-    # # else:
-    #     print(Fore.GREEN + f"Processing file {file_no}" + Fore.WHITE)
-    #     df, _ = load_data(json_files, file_no, types_file)
-    #     df["sentences"] = df["sentences"].apply(sentences_to_dict)
-
-    #     output_dir.mkdir(parents=True, exist_ok=True)
-    #     # add the domains type
-    #     df["domains"] = "general"
-    #     df = save_json_with_progress(
-    #         df, Path(output_dir, "DocRED_Distant_modified.json")
-    #     )
-    #     print(
-    #         f"{Fore.GREEN}Dataframe saved to {Path(output_dir, 'DocRED_Distant_modified.json')}{Style.RESET_ALL}"
-    #     )
-    #     print(df.head())
-    #     print(df.columns)
-
-    #     # examples = generate_examples_test(
-    #     #     Path(output_dir, f"{filename}.json"), lines=False
-    #     # )
+        # examples = generate_examples_test(
+        #     Path(output_dir, f"{filename}.json"), lines=False
+        # )
 
 
 if __name__ == "__main__":
@@ -230,6 +232,12 @@ if __name__ == "__main__":
         type=str,
         required=False,
         help="Location to match JSON files.",
+    )
+    parser.add_argument(
+        "--file_no",
+        type=int,
+        required=True,
+        help="File number to process. -1 for all files",
     )
     parser.add_argument(
         "--output_dir",
@@ -252,6 +260,7 @@ if __name__ == "__main__":
 
     main(
         args.data_dir,
+        args.file_no,
         args.output_dir,
         args.download,
         args.verbose,

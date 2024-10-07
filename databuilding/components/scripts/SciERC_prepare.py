@@ -151,7 +151,7 @@ def adjust_entity_word_idx_relative_to_sentence_position(df):
     return df
 
 
-def main(data_dir=None, output_dir=None, download=True, verbose=True):
+def main(data_dir=None, file_no=-1, output_dir=None, download=True, verbose=True):
     if data_dir is None:
 
         data_dir = Path(root_folder, "data", "raw_data")
@@ -166,40 +166,40 @@ def main(data_dir=None, output_dir=None, download=True, verbose=True):
         download_and_extract(url, sciERC_data_dir, verbose)  # type: ignore
 
     json_files = glob.glob(str(sciERC_data_dir / "*.json"))
-    # if file_no == -1:
-    print(Fore.RED + "Processing all files.")
-    dfs = []
-    for i in range(len(json_files)):
-        print(i)
-        print(Fore.GREEN + f"Processing file {i+1}/{len(json_files)}")
-        df_sciERC = process_file(json_files, i)
-        dfs.append(df_sciERC)
-    print(len(dfs))
-    df = pd.concat(dfs, ignore_index=True)
-    df = adjust_entity_word_idx_relative_to_sentence_position(df)
-    df = back_to_words(df)
-    df = fix_grouped_entities(df)
-    output_dir.mkdir(parents=True, exist_ok=True)
-    df = save_json_with_progress(df, Path(output_dir, "SciERC_modified.json"))
-    print(
-        f"{Fore.GREEN}Dataframe saved to {Path(output_dir, 'SciERC_modified.json')}{Style.RESET_ALL}"
-    )
-    print(df.head())
-    print(df.columns)
+    if file_no == -1:
+        print(Fore.RED + "Processing all files.")
+        dfs = []
+        for i in range(len(json_files)):
+            print(i)
+            print(Fore.GREEN + f"Processing file {i+1}/{len(json_files)}")
+            df_sciERC = process_file(json_files, i)
+            dfs.append(df_sciERC)
+        print(len(dfs))
+        df = pd.concat(dfs, ignore_index=True)
+        df = adjust_entity_word_idx_relative_to_sentence_position(df)
+        df = back_to_words(df)
+        df = fix_grouped_entities(df)
+        output_dir.mkdir(parents=True, exist_ok=True)
+        df = save_json_with_progress(df, Path(output_dir, "SciERC_modified.json"))
+        print(
+            f"{Fore.GREEN}Dataframe saved to {Path(output_dir, 'SciERC_modified.json')}{Style.RESET_ALL}"
+        )
+        print(df.head())
+        print(df.columns)
 
-    # else:
-    #     print(Fore.GREEN + f"Processing file {file_no}")
-    #     df_sciERC = process_file(json_files, file_no)
-    #     df = adjust_entity_word_idx_relative_to_sentence_position(df_sciERC)
-    #     df = back_to_words(df)
-    #     df = fix_grouped_entities(df)
-    #     output_dir.mkdir(parents=True, exist_ok=True)
-    #     df = save_json_with_progress(df, Path(output_dir, "SciERC_modified.json"))
-    #     print(
-    #         f"{Fore.GREEN}Dataframe saved to {Path(output_dir, 'SciERC_modified.json')}{Style.RESET_ALL}"
-    #     )
-    #     print(df.head())
-    #     print(df.columns)
+    else:
+        print(Fore.GREEN + f"Processing file {file_no}")
+        df_sciERC = process_file(json_files, file_no)
+        df = adjust_entity_word_idx_relative_to_sentence_position(df_sciERC)
+        df = back_to_words(df)
+        df = fix_grouped_entities(df)
+        output_dir.mkdir(parents=True, exist_ok=True)
+        df = save_json_with_progress(df, Path(output_dir, "SciERC_modified.json"))
+        print(
+            f"{Fore.GREEN}Dataframe saved to {Path(output_dir, 'SciERC_modified.json')}{Style.RESET_ALL}"
+        )
+        print(df.head())
+        print(df.columns)
 
 
 def back_to_words(df):
@@ -286,6 +286,12 @@ if __name__ == "__main__":
         help="Location to match JSON files.",
     )
     parser.add_argument(
+        "--file_no",
+        type=int,
+        required=True,
+        help="File number to process. -1 for all files",
+    )
+    parser.add_argument(
         "--output_dir",
         type=str,
         required=False,
@@ -306,6 +312,7 @@ if __name__ == "__main__":
 
     main(
         args.data_dir,
+        args.file_no,
         args.output_dir,
         args.download,
         args.verbose,

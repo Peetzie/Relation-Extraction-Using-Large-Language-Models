@@ -173,3 +173,13 @@ All scripts related to data building are located in the `databuilding/` director
   python training/finalized/finalized_RoBERTa.py -p <no 1-4>
   ```
   Where the input is an integer 1-4 depending on the training part. 
+
+  ### Testing
+  - Testing is performed by running the test script, including a path to the student checkpoint. First it must be run with argument "dev" and later "test" to apply the tresholds. 
+  ```
+  python training/test.py "checkpoint dir" "dev"
+  ```
+  ```
+  python training/test.py "checkpoint dir" "test"
+  ```
+  Where checkpoint refers to the path of the student folder containing the last.cpt file. 
